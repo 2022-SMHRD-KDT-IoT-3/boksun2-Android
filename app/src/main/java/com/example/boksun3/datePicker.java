@@ -44,14 +44,14 @@ public class datePicker extends AppCompatActivity {
     }
 
     public void mOnClick(View v){
-        Intent intent = new Intent(getApplicationContext(),adminJoin.class);
-        intent.putExtra("mYear",mYear);
-        intent.putExtra("mMonth",mMonth);
-        intent.putExtra("mDay",mDay);
+        Intent intent2 = new Intent(datePicker.this,adminJoin.class);
+        intent2.putExtra("mYear",mYear);
+        intent2.putExtra("mMonth",mMonth);
+        intent2.putExtra("mDay",mDay);
 
 
 
-        setResult(RESULT_OK,intent);
+        startActivity(intent2);
         finish();
     }
 

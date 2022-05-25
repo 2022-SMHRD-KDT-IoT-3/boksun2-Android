@@ -195,41 +195,58 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="27dp"
         android:text="주소"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="417dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <EditText
         android:id="@+id/edt_address"
         android:layout_width="160sp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="9dp"
         android:ems="10"
         android:hint="ADDRESS"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="407dp" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_address"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
 
     <Button
-        android:id="@+id/btn_search"
+        android:id="@+id/btn_address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="13dp"
         android:text="우편번호 찾기"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="305dp"
-        tools:layout_editor_absoluteY="403dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/edt_address"
+        app:layout_constraintTop_toBottomOf="@+id/edt_phone" />
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="105dp"
         android:ems="10"
         android:hint="상세주소"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="137dp"
-        tools:layout_editor_absoluteY="454dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_address" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
