@@ -12,4 +12,11 @@
         app:fontStyle="normal"
         app:fontWeight="500"/>
 
+    <font
+        android:fontStyle="normal"
+        android:font="@font/nanumbarungothiclight"
+        android:fontWeight="400"
+        app:font="@font/nanumbarungothiclight"
+        app:fontStyle="normal"
+        app:fontWeight="500"/>
 </font-family>

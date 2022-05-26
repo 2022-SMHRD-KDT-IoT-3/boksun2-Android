@@ -98,7 +98,7 @@ public class adminJoin extends AppCompatActivity {
              public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
 
-                 if(adapterView.getSelectedItem().equals("대전광역시")){
+                 if(adapterView.getSelectedItem().equals("서울특별시")){
                      s2.setVisibility(View.VISIBLE);
                      s2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                          @Override
@@ -146,8 +146,6 @@ public class adminJoin extends AppCompatActivity {
 
              }
          });
-
-
 
 
 
