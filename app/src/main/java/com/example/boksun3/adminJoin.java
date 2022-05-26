@@ -2,6 +2,7 @@ package com.example.boksun3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DownloadManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,13 +10,18 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.StringRequest;
+
 public class adminJoin extends AppCompatActivity {
 
     TextView edt_date;
     EditText edt_address;
     Button btn_date, btn_address;
 
-
+    // volley
+    private RequestQueue requestQueue;
+    private StringRequest stringRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +72,10 @@ public class adminJoin extends AppCompatActivity {
         int mDay = intent2.getIntExtra("mDay",28);
 
         edt_date.setText(" 예 : " + mYear+ "년 " + mMonth + "월 " + mDay + "일");
+
+
+        // 복지관명 intent로 가져오기
+
 
 
 

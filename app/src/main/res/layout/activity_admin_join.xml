@@ -259,7 +259,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName13"
+                android:id="@+id/edt_com"
                 android:layout_width="370dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="15sp"
@@ -282,7 +282,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName14"
+                android:id="@+id/edt_comTel"
                 android:layout_width="370dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="15sp"
@@ -305,7 +305,7 @@
                 android:textSize="15sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName15"
+                android:id="@+id/edt_license"
                 android:layout_width="370dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="15sp"
