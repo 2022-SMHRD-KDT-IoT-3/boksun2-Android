@@ -64,6 +64,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+        <activity
+            android:name=".adminLogin"
+            android:exported="true" />
     </application>
 
 </manifest>

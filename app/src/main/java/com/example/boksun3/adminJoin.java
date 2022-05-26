@@ -251,6 +251,9 @@ public class adminJoin extends AppCompatActivity {
 
                 if (response.length() > 0) {
                     Toast.makeText(getApplicationContext(), "회원가입 완료", Toast.LENGTH_SHORT).show();
+
+                    Intent intent = new Intent(getApplicationContext(), adminLogin.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(getApplicationContext(), "회원가입 실패", Toast.LENGTH_SHORT).show();
                 }
