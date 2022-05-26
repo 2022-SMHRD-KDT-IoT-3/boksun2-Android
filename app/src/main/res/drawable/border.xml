@@ -9,13 +9,15 @@
 
      </item>
 
-    <item android:top="1dp"
-        android:right="1dp"
-        android:left="1dp"
-        android:bottom="1dp">
+    <item android:top="1.5dp"
+        android:right="1.5dp"
+        android:left="1.5dp"
+        android:bottom="1.5dp">
 
         <shape android:shape="rectangle">
-            <solid android:color="#ffffff"></solid>
+            <solid android:color="#FFFFFF"></solid>
+
+            <corners android:radius="9dp" />
         </shape>
 
 
