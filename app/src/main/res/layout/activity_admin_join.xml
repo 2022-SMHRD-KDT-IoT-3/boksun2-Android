@@ -22,6 +22,7 @@
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="5sp"
             android:text="아이디"
+
             android:textColor="#000000"
             android:textSize="15sp" />
 
@@ -48,8 +49,9 @@
                 android:layout_marginLeft="10sp"
                 android:background="@drawable/gr_btn"
                 android:text="중복확인"
+                android:fontFamily="@font/nanumbarunpenb"
                 android:textColor="#FFFFFF"
-                android:textSize="17sp" />
+                android:textSize="19sp" />
 
         </LinearLayout>
 
@@ -145,106 +147,27 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="5sp"
-            android:text="생년월일"
+            android:text="복지사 면허번호
+"
             android:textColor="#000000"
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/edt_date"
-            android:layout_width="370dp"
-            android:layout_height="50sp"
-            android:layout_marginLeft="15sp"
-            android:layout_marginBottom="10sp"
-            android:background="@drawable/border"
-            android:ems="10"
-            android:gravity="center|left"
-            android:hint="생년월일을 입력해주세요."
-            android:inputType="textPersonName"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
-            android:layout_marginBottom="5sp"
-            android:text="성별"
-            android:textColor="#000000"
-            android:textSize="15sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/rb_m"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginBottom="10sp"
-                android:text="남" />
-
-            <RadioButton
-                android:id="@+id/rb_w"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="여" />
-
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
-            android:layout_marginBottom="5sp"
-            android:text="주소"
-            android:textColor="#000000"
-            android:textSize="15sp" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/edt_address"
-                android:layout_width="250dp"
-                android:layout_height="50sp"
-                android:layout_marginLeft="15sp"
-                android:layout_marginBottom="10sp"
-                android:background="@drawable/border"
-                android:ems="10"
-                android:hint=" 주소를 입력해주세요."
-                android:inputType="textPersonName" />
-
-            <Button
-                android:id="@+id/btn_address"
-                android:layout_width="111dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:background="@drawable/gr_btn"
-                android:text="주소 찾기"
-                android:textColor="#FFFFFF"
-                android:textSize="17sp" />
-        </LinearLayout>
-
-        <EditText
-            android:id="@+id/editTextTextPersonName12"
             android:layout_width="370dp"
             android:layout_height="50sp"
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="50sp"
             android:background="@drawable/border"
             android:ems="10"
-            android:hint=" 상세주소"
-            android:inputType="textPersonName" />
+            android:gravity="center|left"
+            android:hint=" 면허번호를 입력해주세요."
+            android:inputType="textPersonName"
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="5sp"
             android:orientation="vertical">
 
             <TextView
@@ -254,7 +177,7 @@
                 android:layout_marginLeft="15sp"
                 android:layout_marginBottom="5sp"
                 android:layout_weight="1"
-                android:text="복지관 명"
+                android:text="소속 복지관 명"
                 android:textColor="#000000"
                 android:textSize="15sp" />
 
@@ -290,8 +213,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/border"
                 android:ems="10"
-                android:hint="복지관 전화번호를 입력해주세요."
-                android:inputType="phone"  />
+                android:hint=" 복지관 전화번호를 입력해주세요."
+                android:inputType="phone" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -300,23 +223,62 @@
                 android:layout_marginLeft="15sp"
                 android:layout_marginBottom="5sp"
                 android:layout_weight="1"
-                android:text="복지관 면허번호"
+                android:text="관할 주소지"
                 android:textColor="#000000"
                 android:textSize="15sp" />
 
-            <EditText
-                android:id="@+id/edt_license"
-                android:layout_width="370dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="15sp"
-                android:layout_marginBottom="100sp"
-                android:layout_weight="1"
-                android:background="@drawable/border"
-                android:ems="10"
-                android:hint="복지관 면허번호를 입력해주세요."
-                android:inputType="textPersonName" />
-
         </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="190dp"
+                android:layout_height="34dp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginBottom="10sp"
+                android:entries="@array/city"
+                tools:ignore="MissingConstraints" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="190dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="15dp"
+                android:entries="@array/daejeon"
+                android:visibility="invisible"
+                app:layout_constraintStart_toEndOf="@+id/spinner1"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="190dp"
+                android:layout_height="34dp"
+                android:layout_marginEnd="16dp"
+                android:layout_weight="1"
+                android:entries="@array/gwangju"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="370sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/border"
+            android:gravity="center|left"
+            android:text=" "
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -333,8 +295,9 @@
                 android:background="@drawable/btn_ground_gray"
                 android:text="취소"
                 android:textColor="#FFFFFF"
-                android:textSize="19sp"
-                android:textStyle="bold" />
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumbarunpenb"/>
 
             <Button
                 android:id="@+id/button12"
@@ -344,8 +307,9 @@
                 android:background="@drawable/btn_round"
                 android:text="등록"
                 android:textColor="#FFFFFF"
-                android:textSize="19sp"
-                android:textStyle="bold" />
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanumbarunpenb"/>
         </LinearLayout>
 
     </LinearLayout>
