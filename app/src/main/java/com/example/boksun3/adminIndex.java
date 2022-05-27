@@ -1,9 +1,7 @@
 package com.example.boksun3;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +31,7 @@ public class adminIndex extends AppCompatActivity {
         btn_life.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),adminUserList.class);
+                Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
                 menu = "life";
                 intent.putExtra("menu", menu);
                 startActivity(intent);
@@ -43,7 +41,7 @@ public class adminIndex extends AppCompatActivity {
         btn_userlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),adminUserList.class);
+                Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
                 menu = "userlist";
                 intent.putExtra("menu", menu);
                 startActivity(intent);
@@ -52,7 +50,7 @@ public class adminIndex extends AppCompatActivity {
         btn_useradd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),adminUserList.class);
+                Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
                 menu = "useradd";
                 intent.putExtra("menu", menu);
                 startActivity(intent);
@@ -61,7 +59,7 @@ public class adminIndex extends AppCompatActivity {
         btn_set.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),adminUserList.class);
+                Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
                 menu = "set";
                 intent.putExtra("menu", menu);
                 startActivity(intent);
