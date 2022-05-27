@@ -43,7 +43,7 @@ public class handiJoin extends AppCompatActivity {
 
 
         // 생년월일 intent로 가져오기
-        handi_date =findViewById(R.id.handi_date);
+
         Intent intent2 = getIntent();
         int mYear = intent2.getIntExtra("mYear",0);
         int mMonth = intent2.getIntExtra("mMonth",0);

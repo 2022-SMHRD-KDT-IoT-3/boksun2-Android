@@ -21,7 +21,7 @@
         android:layout_marginTop="4sp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="@string/Join"
-        android:textColor="#FFFFFF"
+        android:textColor="#000000"
         android:textSize="26sp"
         android:textStyle="bold" />
 

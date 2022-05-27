@@ -14,19 +14,42 @@
         android:theme="@style/Theme.Boksun3"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".handiJoin"
-            android:exported="true" >
+            android:name=".clickAddAlarm"
+            android:exported="false"
+            android:theme="@style/PopupTheme">
 
 
         </activity>
+
+
+        <activity
+            android:name=".adminAddAlarm"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
+        <activity
+            android:name=".adminBoxResister"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".adminBox"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".handiJoin"
+            android:exported="true" />
         <activity
             android:name=".adminJoin"
             android:exported="true"
-            android:label="@string/Join">
-
-
-
-        </activity>
+            android:label="@string/Join" />
         <activity
             android:name=".settings"
             android:exported="false" />
@@ -35,9 +58,7 @@
             android:exported="false" />
         <activity
             android:name=".adminUserList"
-            android:exported="true">
-
-        </activity>>
+            android:exported="true" />
         <activity
             android:name=".adminLifeManage"
             android:exported="false" />
@@ -54,23 +75,16 @@
         <activity
             android:name=".handiLogin"
             android:exported="true" >
-
-
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".adminLogin"
-            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
 
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

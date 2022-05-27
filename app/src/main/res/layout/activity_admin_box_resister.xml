@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminBoxResister"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:text="1번"
+                android:textAlignment="textEnd"
+                android:textSize="35sp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:text="보관함"
+                android:textSize="35dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                app:srcCompat="@drawable/boksonlogo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:fontFamily="@font/nanumbarunpenb"
+
+            android:layout_marginBottom="5sp"
+            android:text="약 이름"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/med_name"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="10sp"
+
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:hint=" 예 : 고혈압"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:layout_marginBottom="5sp"
+            android:text="처방 의료기관"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/med_hosp"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:hint=" 예 : 광주병원"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="5sp"
+            android:text="투약 방법"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/med_way"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:layout_marginBottom="5sp"
+            android:text="투약 횟수"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/med_times"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:hint=" 2회"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="5sp"
+            android:text="처방 일자"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/med_date"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:layout_marginBottom="5sp"
+            android:text="메모"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/med_memo"
+            android:layout_width="370dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:inputType="textPersonName" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30sp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="7sp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:text="알람추가"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7sp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:text="초기화"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15sp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_round"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:text="완료"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
