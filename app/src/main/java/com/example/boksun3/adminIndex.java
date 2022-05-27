@@ -25,6 +25,9 @@ public class adminIndex extends AppCompatActivity {
         btn_set = findViewById(R.id.btn_set);
 
 
+        // 복지사 로그인 정보
+        WorkerVO wInfo = LoginCheck.wInfo;
+
 
         //생활관리
         btn_life.setOnClickListener(new View.OnClickListener() {
