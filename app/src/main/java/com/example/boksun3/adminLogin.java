@@ -32,8 +32,8 @@ import java.util.Map;
 public class adminLogin extends AppCompatActivity {
 
     EditText edt_id, edt_pw;
-    Button btn_login;
-    TextView tv_join;
+    Button btn_login ,tv_join;
+
 
     // volley
     private RequestQueue requestQueue;

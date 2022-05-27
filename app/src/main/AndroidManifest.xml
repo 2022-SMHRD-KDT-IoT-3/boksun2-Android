@@ -16,97 +16,71 @@
 
 
         <activity
-            android:name=".clickAddAlarm"
-            android:exported="false"
-            android:theme="@style/PopupTheme">
-
+            android:name=".adminLifeManage2"
+            android:exported="true"
+            android:label="@string/title_activity_admin_life_manage2"
+            android:theme="@style/Theme.Boksun3.NoActionBar" >
 
         </activity>
 
 
+        <activity
+            android:name=".adminLogin"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".adminCall"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
+
+        </activity>
+        <activity
+            android:name=".clickAddAlarm"
+            android:exported="false"
+            android:theme="@style/PopupTheme" />
         <activity
             android:name=".adminAddAlarm"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-
-
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".adminBoxResister"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".adminBox"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".handiJoin"
-            android:exported="true" >
-        </activity>
-
             android:exported="true" />
         <activity
             android:name=".adminJoin"
             android:exported="true"
-            android:label="@string/Join">
-        </activity>
-
             android:label="@string/Join" />
-        <activity
-            android:name=".adminMainActivity"
-            android:theme="@style/Theme.Boksun3.NoActionBar"
-            android:windowSoftInputMode="adjustPan"
-            android:exported="true">
-        </activity>
-
-            android:name=".settings"
-            android:exported="false" />
-        <activity
-            android:name=".adminUserAdd"
-            android:exported="false" />
-        <activity
-            android:name=".adminUserList"
-            android:exported="true" />
         <activity
             android:name=".adminLifeManage"
             android:exported="false" />
         <activity
-            android:name=".adminIndex"
-            android:theme="@style/Theme.Boksun3.NoActionBar"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name=".addressSearch"
             android:exported="false" />
-
         <activity
             android:name=".datePicker"
             android:exported="false"
             android:theme="@style/PopupTheme" />
-
         <activity
             android:name=".handiLogin"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
