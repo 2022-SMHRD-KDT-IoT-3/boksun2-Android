@@ -4,13 +4,16 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 public class handiJoin extends AppCompatActivity {
 
     EditText handi_date;
+    ImageButton img_sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,11 @@ public class handiJoin extends AppCompatActivity {
         }
         setContentView(R.layout.activity_handi_join);
         getSupportActionBar().setTitle("회원가입");
+
+        img_sound = findViewById(R.id.img_sound);
+
+        img_sound.setColorFilter(Color.parseColor("#8B8989"));
+
 
 
         // 생년월일 intent로 가져오기

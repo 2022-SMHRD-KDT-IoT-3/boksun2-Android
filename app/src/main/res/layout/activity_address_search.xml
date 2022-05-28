@@ -10,7 +10,7 @@
     <WebView
         android:id="@+id/daum_webview"
         android:layout_width="match_parent"
-        android:layout_height="490dp"
+        android:layout_height="605dp"
         tools:layout_editor_absoluteX="3dp"
         tools:layout_editor_absoluteY="16dp">
 
