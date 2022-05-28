@@ -41,7 +41,7 @@ public class SearchAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup viewGroup) {
         if(convertView == null){
-            convertView = inflate.inflate(R.layout.row_listview,null);
+            convertView = LayoutInflater.from(context).inflate(R.layout.row_listview,null);
 
             viewHolder = new ViewHolder();
             viewHolder.label = (TextView) convertView.findViewById(R.id.label);

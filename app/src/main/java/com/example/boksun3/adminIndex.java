@@ -1,15 +1,17 @@
 package com.example.boksun3;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class adminIndex extends AppCompatActivity {
 
     private Button btn_life, btn_userlist, btn_useradd, btn_set;
+    private TextView tv_name;
     private String menu;
 
     @Override
@@ -17,15 +19,16 @@ public class adminIndex extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_index);
 
+        // 복지사 로그인 정보
+        WorkerVO wInfo = LoginCheck.wInfo;
+
         btn_life = findViewById(R.id.btn_life);
         btn_userlist =findViewById(R.id.btn_userlist);
         btn_useradd = findViewById(R.id.btn_useradd);
         btn_set = findViewById(R.id.btn_set);
 
-
-        // 복지사 로그인 정보
-        WorkerVO wInfo = LoginCheck.wInfo;
-
+        tv_name = findViewById(R.id.tv_name);
+        //tv_name.setText(wInfo.getWorker_name());
 
         //생활관리
         btn_life.setOnClickListener(new View.OnClickListener() {

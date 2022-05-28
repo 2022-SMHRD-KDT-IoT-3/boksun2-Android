@@ -5,7 +5,6 @@
     <item
         android:id="@+id/life_manage"
         android:icon="@drawable/ic_baseline_supervisor_account_pressed24"
-
         android:title="생활관리"
         />
     <item

@@ -16,6 +16,9 @@
 
 
         <activity
+            android:name=".clickAddAlarm"
+            android:exported="false"
+            android:theme="@style/PopupTheme">
             android:name=".adminLifeManage2"
             android:exported="true"
             android:label="@string/title_activity_admin_life_manage2"
@@ -52,7 +55,7 @@
         <activity
             android:name=".adminBoxResister"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".adminBox"
             android:exported="true"
@@ -68,10 +71,35 @@
         <activity
             android:name=".adminJoin"
             android:exported="true"
+            android:label="@string/Join">
+        </activity>
+
+
             android:label="@string/Join" />
         <activity
             android:name=".adminLifeManage"
             android:exported="false" />
+            android:name=".adminMainActivity"
+            android:theme="@style/Theme.Boksun3.NoActionBar"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+
+        </activity>
+
+
+
+        <activity
+            android:name=".adminIndex"
+            android:theme="@style/Theme.Boksun3.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
         <activity
             android:name=".addressSearch"
             android:exported="false" />
@@ -87,6 +115,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
 
         </activity>
         <activity

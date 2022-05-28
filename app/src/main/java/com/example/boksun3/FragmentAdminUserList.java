@@ -15,36 +15,35 @@ import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
 
-public class FragmentUserList extends Fragment {
+public class FragmentAdminUserList extends Fragment {
     private ListView listView;  // 검색을 보여줄 리스트변수
     private EditText editSearch; // 검색어를 입력할 Input 창
 
     private SearchAdapter adapter;      // 리스트뷰에 연결할 아답터
 
-    private ArrayList<String> items = new ArrayList<>();  // 데이터를 넣은 리스트변수
+    private ArrayList<String> items = new ArrayList<>();  // 회원목록 list
 
     private ArrayList<String> arraylist;
     // 리스트의 모든 데이터를 arraylist에 복사한다.// items 복사본을 만든다.
 
-    //private ArrayAdapter<String> adapter;
-    //private SearchAdapter searchAdapter;
 
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View fragement = inflater.inflate(R.layout.userlist, container, false);
-        //setContentView(R.layout.activity_main);
+        View fragement = inflater.inflate(R.layout.fg_admin_userlist, container, false);
 
         editSearch = fragement.findViewById(R.id.edt_userserach);
         listView = fragement.findViewById(R.id.lv_userlist);
 
-        items.add("송다민 " + "광주 광산구 수완 양우내안애 아파트102-702");
+        //등록된 회원리스
+        items = new ArrayList<String>(); //데이터를 넣은 리스트 변수
+        items.add("송다민 " + "("+"광주 광산구 수완 양우내안애 아파트102-702"+")");
         items.add("2.김민근");
         items.add("3.김민정");
         items.add("4.신지수");
         items.add("5.윤솔아");
-        items = new ArrayList<String>(); //데이터를 넣은 리스트 변수
+
 
         arraylist = new ArrayList<String>();
         arraylist.addAll(items);
@@ -75,21 +74,9 @@ public class FragmentUserList extends Fragment {
 
             }
         });
-        //adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_dropdown_item_1line,items);
-        //listView.setAdapter(adapter);
-
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                String value = (String)adapterView.getItemAtPosition(i);
-//                Log.v("myvalue", value);
-//            }
-//        });
 
         return fragement;
     }
-
-
 
 
     // 검색을 수행하는 메소드

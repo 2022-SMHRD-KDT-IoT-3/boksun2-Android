@@ -11,10 +11,9 @@
         android:layout_width="177dp"
         android:layout_height="164dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="188dp"
         android:background="@drawable/indexbtnbackground"
-        android:drawableTop="@drawable/statedrawable_btn1"
 
+        android:drawableTop="@drawable/statedrawable_btn1"
         android:drawablePadding="0dp"
         android:elegantTextHeight="false"
         android:gravity="center"
@@ -23,23 +22,24 @@
         android:text="생활관리"
         android:textColor="#E5FFFFFF"
         android:textSize="20sp"
-        android:textStyle="bold"
 
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_useradd"
         app:layout_constraintEnd_toStartOf="@+id/btn_userlist"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <Button
         android:id="@+id/btn_useradd"
         android:layout_width="177dp"
         android:layout_height="164dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="11dp"
+
+        android:layout_marginBottom="32dp"
         android:background="@drawable/btn_bg_sdark"
         android:drawableTop="@drawable/statedrawable_btn_useradd"
-
         android:drawablePadding="0dp"
         android:elegantTextHeight="false"
         android:gravity="center"
@@ -53,14 +53,12 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_set"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_life" />
 
     <Button
         android:id="@+id/btn_userlist"
         android:layout_width="177dp"
         android:layout_height="164dp"
-        android:layout_marginTop="188dp"
         android:background="@drawable/btn_bg_sdark"
         android:drawableTop="@drawable/statedrawable_btn_userlist"
 
@@ -77,16 +75,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.507" />
 
     <Button
         android:id="@+id/btn_set"
         android:layout_width="177dp"
         android:layout_height="164dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="32dp"
+
         android:background="@drawable/indexbtnbackground"
         android:drawableTop="@drawable/state_btn_settings"
-
         android:drawablePadding="0dp"
         android:elegantTextHeight="false"
         android:gravity="center"
@@ -100,7 +100,36 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_userlist" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="220dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="270dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.835" />
+        app:srcCompat="@drawable/boksonlogo" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:text="송다민님 "
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

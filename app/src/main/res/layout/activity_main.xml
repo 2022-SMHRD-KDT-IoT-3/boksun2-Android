@@ -40,7 +40,7 @@
             android:layout_margin="5dip"
             android:layout_weight="1"
 
-            android:background="@drawable/gr_btn"
+            android:background="@drawable/btn_secondary"
             android:text="시각"
             android:textColor="#FFFFFF"
             android:textSize="68sp"
@@ -54,7 +54,7 @@
             android:layout_height="match_parent"
             android:layout_margin="5dip"
             android:layout_weight="1"
-            android:background="@drawable/gr_btn"
+            android:background="@drawable/btn_secondary"
             android:text="비시각"
             android:textColor="#FFFFFF"
             android:textSize="68dp"
