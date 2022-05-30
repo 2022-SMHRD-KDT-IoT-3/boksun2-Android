@@ -116,7 +116,7 @@ public class clickAddAlarm extends AppCompatActivity {
 
 
                 // intent로 값 전달하기
-                Intent intent = new Intent(clickAddAlarm.this, adminAddAlarm.class);
+                Intent intent = new Intent(clickAddAlarm.this, adminBoxResister.class);
 
                 intent.putExtra("hh",hour);
                 intent.putExtra("mm",minute);

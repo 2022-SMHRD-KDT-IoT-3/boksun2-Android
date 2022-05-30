@@ -115,10 +115,11 @@
             android:layout_height="50dp"
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="10sp"
-            android:fontFamily="@font/nanumbarunpenb"
             android:background="@drawable/border"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:fontFamily="@font/nanumbarunpenb"
+            android:inputType="textPersonName"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/textView22"
@@ -160,10 +161,11 @@
             android:layout_height="50dp"
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="10sp"
-            android:fontFamily="@font/nanumbarunpenb"
             android:background="@drawable/border"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:fontFamily="@font/nanumbarunpenb"
+            android:inputType="textPersonName"
+            tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/textView24"
@@ -185,7 +187,56 @@
             android:background="@drawable/border"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textView38"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="5sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="알람"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20sp"
+            android:layout_marginBottom="15sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7sp"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:gravity="right"
+                android:text="7:30"
+                android:textColor="#FFBF00"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_ampm"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:text="am"
+                android:textColor="#717171"
+                android:textColorHighlight="#000000"
+                android:textSize="25sp" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -195,7 +246,7 @@
 
 
             <Button
-                android:id="@+id/button15"
+                android:id="@+id/btn_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15sp"
@@ -203,7 +254,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_round"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="알람추가"
+                android:text="알람설정"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -213,9 +265,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="7sp"
                 android:layout_weight="1"
-                android:background="@drawable/btn_round"
+                android:background="@drawable/btn_lightgray"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="초기화"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -228,6 +281,7 @@
                 android:background="@drawable/btn_round"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="완료"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold" />
         </LinearLayout>

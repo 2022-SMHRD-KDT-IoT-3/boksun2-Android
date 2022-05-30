@@ -28,7 +28,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edt_userserach"
+            android:id="@+id/edt_userserach2"
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_margin="5dp"
@@ -51,7 +51,7 @@
             android:textStyle="bold" />
 
         <ListView
-            android:id="@+id/lv_userlist"
+            android:id="@+id/lv_userlist2"
             android:layout_width="wrap_content"
             android:layout_height="392dp"
             android:layout_margin="5dp"

@@ -11,7 +11,7 @@
         android:layout_width="177dp"
         android:layout_height="164dp"
         android:layout_marginStart="24dp"
-        android:background="@drawable/indexbtnbackground"
+        android:background="@drawable/btn_round"
 
         android:drawableTop="@drawable/statedrawable_btn1"
         android:drawablePadding="0dp"
@@ -85,7 +85,7 @@
         android:layout_marginTop="11dp"
         android:layout_marginBottom="32dp"
 
-        android:background="@drawable/indexbtnbackground"
+        android:background="@drawable/btn_round"
         android:drawableTop="@drawable/state_btn_settings"
         android:drawablePadding="0dp"
         android:elegantTextHeight="false"

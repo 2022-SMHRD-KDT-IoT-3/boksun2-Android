@@ -39,6 +39,7 @@ public class adminCall extends AppCompatActivity  {
         btn_sos = findViewById(R.id.btn_sos);
 
 
+        // btn_sos 클릭시 dial로 이동하여 번호가 입력되도록
         btn_sos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

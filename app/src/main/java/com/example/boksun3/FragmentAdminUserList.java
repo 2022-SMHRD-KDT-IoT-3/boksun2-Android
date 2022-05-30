@@ -60,8 +60,8 @@ public class FragmentAdminUserList extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View fragement = inflater.inflate(R.layout.fg_admin_userlist, container, false);
 
-        editSearch = fragement.findViewById(R.id.edt_userserach);
-        listView = fragement.findViewById(R.id.lv_userlist);
+        editSearch = fragement.findViewById(R.id.edt_userserach2);
+        listView = fragement.findViewById(R.id.lv_userlist2);
 
 /*        //등록된 회원리스트
         items = new ArrayList<String>(); //데이터를 넣은 리스트 변수

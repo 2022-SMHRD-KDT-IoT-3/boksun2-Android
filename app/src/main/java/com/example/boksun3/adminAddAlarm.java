@@ -16,6 +16,7 @@ public class adminAddAlarm extends AppCompatActivity {
     ImageView alarm_set;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +24,8 @@ public class adminAddAlarm extends AppCompatActivity {
 
         alarm_set = findViewById(R.id.alarm_set);
 
-        btn_add = findViewById(R.id.btn_add);
+
+        btn_add = findViewById(R.id.btn_add2);
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,11 +44,13 @@ public class adminAddAlarm extends AppCompatActivity {
         String mAMPM = intent.getStringExtra("a");
 
 
-        tv_ampm = findViewById(R.id.tv_ampm);
-        tv_time = findViewById(R.id.tv_time);
+        tv_ampm = findViewById(R.id.tv_ampm2);
+        tv_time = findViewById(R.id.tv_time2);
 
         tv_time.setText(mHour + " : " + mMinute);
         tv_ampm.setText(mAMPM);
+
+
 
 
 
@@ -61,12 +65,15 @@ public class adminAddAlarm extends AppCompatActivity {
         String mAMPM = intent.getStringExtra("a");
 
 
-        tv_ampm = findViewById(R.id.tv_ampm);
-        tv_time = findViewById(R.id.tv_time);
+
+        tv_ampm = findViewById(R.id.tv_ampm2);
+        tv_time = findViewById(R.id.tv_time2);
 
         tv_time.setText(mHour + " : " + mMinute);
         tv_ampm.setText(mAMPM);
 
 
     }
+
+
 }
