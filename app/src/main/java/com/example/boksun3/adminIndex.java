@@ -13,6 +13,7 @@ public class adminIndex extends AppCompatActivity {
     private Button btn_life, btn_userlist, btn_useradd, btn_set;
     private TextView tv_name;
     private String menu;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +28,9 @@ public class adminIndex extends AppCompatActivity {
         btn_useradd = findViewById(R.id.btn_useradd);
         btn_set = findViewById(R.id.btn_set);
 
+        // 복지사 이름 출력
         tv_name = findViewById(R.id.tv_name);
-        //tv_name.setText(wInfo.getWorker_name());
+        tv_name.setText(wInfo.getWorker_name() + "님");
 
         //생활관리
         btn_life.setOnClickListener(new View.OnClickListener() {

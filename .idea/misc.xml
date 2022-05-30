@@ -40,7 +40,8 @@
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_admin_join.xml" value="0.25" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_admin_join2.xml" value="0.33" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_admin_life_manage.xml" value="0.24635416666666668" />
-        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_admin_login.xml" value="0.2" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_admin_life_manage2.xml" value="0.34010416666666665" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_admin_login.xml" value="0.25" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_admin_main.xml" value="0.18" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_admin_main_activity.xml" value="0.1640625" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_admin_user_list.xml" value="0.30570652173913043" />
@@ -52,8 +53,12 @@
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_handi_login.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_main.xml" value="0.30570652173913043" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/activity_search_main.xml" value="0.1415237134207871" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/app_bar_admin_life_manage2.xml" value="0.259375" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/content_admin_life_manage2.xml" value="0.1" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/custom_bar.xml" value="0.22" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/fg_admin_set.xml" value="0.3111413043478261" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/fg_admin_useradd.xml" value="0.259375" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/fg_admin_userlist.xml" value="0.259375" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/row_listview.xml" value="0.1640625" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/spin.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/layout/spin_dropdown.xml" value="0.18854166666666666" />

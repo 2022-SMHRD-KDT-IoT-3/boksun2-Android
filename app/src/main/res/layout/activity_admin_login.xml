@@ -6,6 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".handiLogin">
 
+    <TextView
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="48dp"
+        android:text="LOGIN"
+        android:textColor="#FC8989"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="139dp"
@@ -79,39 +92,31 @@
                 android:inputType="textPersonName" />
         </LinearLayout>
 
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/btn_login"
         android:layout_width="286dp"
         android:layout_height="57dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/more_gr_btn"
         android:text="로그인"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
-
-    <TextView
-        android:layout_width="73dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        android:text="LOGIN"
-        android:textColor="#FC8989"
-        android:textSize="25sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/tv_join"
         android:layout_width="286dp"
         android:layout_height="57dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/more_gr_gray"
         android:text="회원가입"
         android:textColor="#FFFFFF"
@@ -123,20 +128,24 @@
         android:id="@+id/textView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="120dp"
         android:text="아이디 찾기"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_join" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_join"
+        app:layout_constraintVertical_bias="0.278" />
 
     <TextView
         android:id="@+id/textView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginEnd="112dp"
         android:text="비밀번호 찾기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.766"
         app:layout_constraintStart_toEndOf="@+id/textView28"
-        app:layout_constraintTop_toBottomOf="@+id/tv_join" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_join"
+        app:layout_constraintVertical_bias="0.278" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
