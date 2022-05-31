@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TimePicker;
@@ -26,6 +27,7 @@ public class clickAddAlarm extends AppCompatActivity {
 
     TimePicker timePicker ;
     Button btn_alarm;
+    private AlarmManager alarmManager;
 
 
     @Override
@@ -36,6 +38,8 @@ public class clickAddAlarm extends AppCompatActivity {
         timePicker = findViewById(R.id.timePicker);
         timePicker.setIs24HourView(true);
 
+        // 이전 설정값 보여주기
+        // 없으면 디폴트값은 현재시간
         SharedPreferences sharedPreferences = getSharedPreferences("daily alram", MODE_PRIVATE);
         long millis = sharedPreferences.getLong("nextTime", Calendar.getInstance().getTimeInMillis());
 
@@ -68,25 +72,30 @@ public class clickAddAlarm extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 int hour, hour_24, minute;
-                String am_pm;
+//                String am_pm;
 
-                if(Build.VERSION.SDK_INT >= 23){
-                    hour_24 = timePicker.getHour();
-                    minute = timePicker.getMinute();
-                } else{
-                    hour_24 = timePicker.getCurrentHour();
+//                if(Build.VERSION.SDK_INT >= 23){
+//                    hour_24 = timePicker.getHour();
+//                    minute = timePicker.getMinute();
+//                } else{
+//                    hour_24 = timePicker.getCurrentHour();
+//                    minute = timePicker.getCurrentMinute();
+//                }
+//
+//                if(hour_24 > 12){
+//                    am_pm = "PM";
+//                    hour = hour_24 -12;
+//                }
+//                else{
+//                    hour = hour_24;
+//                    am_pm = "AM";
+//
+//                }
+
+
+                hour_24 = timePicker.getCurrentHour();
                     minute = timePicker.getCurrentMinute();
-                }
-
-                if(hour_24 > 12){
-                    am_pm = "PM";
-                    hour = hour_24 -12;
-                }
-                else{
-                    hour = hour_24;
-                    am_pm = "AM";
-
-                }
+                hour = hour_24;
 
 
                 // 현재 지정된 시간으로 알람 시간 설정
@@ -96,6 +105,8 @@ public class clickAddAlarm extends AppCompatActivity {
                 calendar.set(Calendar.HOUR_OF_DAY, hour_24);
                 calendar.set(Calendar.MINUTE, minute);
                 calendar.set(Calendar.SECOND,0);
+
+
 
                 // 이미 지난 시간을 지정한다면 다음 날 같은 시간으로 설정
                 if(calendar.before(Calendar.getInstance())){
@@ -112,15 +123,15 @@ public class clickAddAlarm extends AppCompatActivity {
                 editor.putLong("nextTime",calendar.getTimeInMillis());
                 editor.apply();
 
+
                 diaryNotification(calendar);
 
 
                 // intent로 값 전달하기
                 Intent intent = new Intent(clickAddAlarm.this, adminBoxResister.class);
-
                 intent.putExtra("hh",hour);
                 intent.putExtra("mm",minute);
-                intent.putExtra("a",am_pm);
+//                intent.putExtra("a",am_pm);
 
                 startActivity(intent);
                 finish();
@@ -133,20 +144,40 @@ public class clickAddAlarm extends AppCompatActivity {
     }
 
 
-    void diaryNotification(Calendar calendar){
+    void diaryNotification(Calendar calendar) {
+
         Boolean dailyNotify = true;
 
         PackageManager pm = this.getPackageManager();
         ComponentName receiver = new ComponentName(this, DeviceBootReceiver.class);
         Intent alarmIntent = new Intent(this, AlarmReceiver.class);
-      //  PendingIntent pendingIntent = PendingIntent.getBroadcast(this,alarmIntent,0);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, alarmIntent, 0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+
+
+        // 사용자가 매일 알람을 허용했다면
+        if (dailyNotify) {
+
+
+            if (alarmManager != null) {
+
+                alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
+                        AlarmManager.INTERVAL_DAY, pendingIntent);
+
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
+                }
+            }
+
+
+            // 부팅 후 실행되는 리시버 사용가능하게 설정
+            pm.setComponentEnabledSetting(receiver,
+                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.DONT_KILL_APP);
+
+        }
+
+
+
     }
-
-    public void alarmCancel(View v){
-        finish();
-    }
-
-
-
 }

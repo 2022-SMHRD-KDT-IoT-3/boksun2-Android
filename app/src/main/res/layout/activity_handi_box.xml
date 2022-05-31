@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".handiBox"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="15sp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_med_sound"
+            android:layout_width="59dp"
+            android:layout_height="62dp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/sound" />
+
+        <TextView
+            android:id="@+id/tv_handi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10sp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="000"
+            android:textAlignment="textEnd"
+            android:textColor="#2B2B2B"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="님의 보관함"
+
+            android:textColor="#2B2B2B"
+            android:textSize="50sp" />
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/h_b_1"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_lightgray"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="1"
+            android:textColor="#FFFFFF"
+            android:textSize="55sp" />
+
+        <Button
+            android:id="@+id/h_b_2"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_lightgray"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="2"
+            android:textColor="#FFFFFF"
+            android:textSize="55sp" />
+
+        <Button
+            android:id="@+id/h_b_3"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_lightgray"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="3"
+            android:textColor="#FFFFFF"
+            android:textSize="55sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/h_b_4"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_lightgray"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="4"
+            android:textColor="#FFFFFF"
+            android:textSize="55sp" />
+
+        <Button
+            android:id="@+id/h_b_5"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_lightgray"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="5"
+            android:textColor="#FFFFFF"
+            android:textSize="55sp" />
+
+        <Button
+            android:id="@+id/h_b_6"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginBottom="10sp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_lightgray"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="6"
+            android:textColor="#FFFFFF"
+            android:textSize="55sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15sp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/h_b_7"
+            android:layout_width="wrap_content"
+            android:layout_height="150sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_lightgray"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="7"
+            android:textColor="#FFFFFF"
+            android:textSize="55sp" />
+    </LinearLayout>
+
+    <View style="@style/Divider"/>
+
+</LinearLayout>

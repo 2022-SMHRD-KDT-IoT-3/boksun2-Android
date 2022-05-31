@@ -29,7 +29,7 @@ public class handiJoin extends AppCompatActivity {
         setContentView(R.layout.activity_handi_join);
         getSupportActionBar().setTitle("회원가입");
 
-        img_sound = findViewById(R.id.img_sound);
+        img_sound = findViewById(R.id.btn_med_sound);
 
         img_sound.setColorFilter(Color.parseColor("#8B8989"));
 
