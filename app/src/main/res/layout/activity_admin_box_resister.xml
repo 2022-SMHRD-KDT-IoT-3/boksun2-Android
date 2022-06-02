@@ -33,9 +33,8 @@
 
             <TextView
                 android:id="@+id/textView19"
-                android:layout_width="10dp"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="보관함"
                 android:textSize="35dp" />
@@ -44,7 +43,7 @@
                 android:id="@+id/imageView5"
                 android:layout_width="10dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="left"
+                android:layout_gravity="start"
                 android:layout_weight="1"
                 android:textAlignment="textStart"
                 app:srcCompat="@drawable/boksonlogo" />
@@ -219,16 +218,6 @@
                 android:textColor="#FFBF00"
                 android:textSize="32sp"
                 android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_ampm"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nanumbarunpenb"
-                android:text="am"
-                android:textColor="#717171"
-                android:textColorHighlight="#000000"
-                android:textSize="25sp" />
 
             <Switch
                 android:id="@+id/switch2"

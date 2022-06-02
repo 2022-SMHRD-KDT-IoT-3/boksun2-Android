@@ -59,9 +59,10 @@
         android:id="@+id/btn_userlist"
         android:layout_width="177dp"
         android:layout_height="164dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/btn_bg_sdark"
-        android:drawableTop="@drawable/statedrawable_btn_userlist"
 
+        android:drawableTop="@drawable/statedrawable_btn_userlist"
         android:drawablePadding="0dp"
         android:elegantTextHeight="false"
         android:gravity="center"
@@ -73,8 +74,6 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_set"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.931"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:layout_constraintVertical_bias="0.507" />
 

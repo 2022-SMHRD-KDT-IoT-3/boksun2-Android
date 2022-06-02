@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class adminBoxResister extends AppCompatActivity {
 
     Button btn_add;
-    TextView tv_ampm, tv_time;
+    TextView tv_time;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,14 +36,14 @@ public class adminBoxResister extends AppCompatActivity {
 
         int mHour = intent.getIntExtra("hh",0);
         int mMinute = intent.getIntExtra("mm", 0);
-        String mAMPM = intent.getStringExtra("a");
 
 
-        tv_ampm = findViewById(R.id.tv_ampm);
+
+
         tv_time = findViewById(R.id.tv_time);
 
         tv_time.setText(mHour + " : " + mMinute);
-        tv_ampm.setText(mAMPM);
+
 
 
 

@@ -7,13 +7,15 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 public class handiMedResister extends AppCompatActivity {
 
-    private Button  btn_etc;
+    private Button  btn_etc, btn_med_alarm;
     private ImageButton btn_med_sound;
 
+    private EditText edt_alarm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,5 +36,29 @@ public class handiMedResister extends AppCompatActivity {
 
             }
         });
+
+        btn_med_alarm = findViewById(R.id.btn_med_alarm);
+        btn_med_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent =  new Intent(getApplicationContext(), clickAddAlarm.class);
+                startActivity(intent);
+            }
+        });
+
+        Intent intent = getIntent();
+
+        int mHour = intent.getIntExtra("hh2",0);
+        int mMinute = intent.getIntExtra("mm2", 0);
+
+
+
+
+        edt_alarm = findViewById(R.id.edt_alarm);
+
+        edt_alarm.setText(mHour + " : " + mMinute);
+
+
     }
 }

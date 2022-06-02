@@ -131,10 +131,21 @@ public class clickAddAlarm extends AppCompatActivity {
                 Intent intent = new Intent(clickAddAlarm.this, adminBoxResister.class);
                 intent.putExtra("hh",hour);
                 intent.putExtra("mm",minute);
-//                intent.putExtra("a",am_pm);
+//              intent.putExtra("a",am_pm);
 
                 startActivity(intent);
                 finish();
+
+
+
+                // handiMedResister.class
+                Intent intent2 = new Intent(getApplicationContext(),handiMedResister.class );
+                intent2.putExtra("hh2",hour);
+                intent2.putExtra("mm2",minute);
+
+                startActivity(intent2);
+                finish();
+
 
 
             }
