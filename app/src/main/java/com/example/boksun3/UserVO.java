@@ -16,12 +16,24 @@ public class UserVO {
     private String user_phone;
     private String worker_id;
 
-    private Drawable img;   // 긴급이미지, 보통 이미지 들어갈 이미지
     private String date;    // 최근 접속 날짜
     private String time;    // 최근 접속 시간
+    private String condition; //환자 상태(상태에따라 이미지값 매칭)
+    public String getCondition() {
+        return condition;
+    }
 
-    public UserVO() {
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
 
+    //부분생성자 SearchLfieAdapter
+    public UserVO(String user_name, String user_addr, String date, String time, String condition) {
+        this.user_name = user_name;
+        this.user_addr = user_addr;
+        this.date = date;
+        this.time = time;
+        this.condition = condition;
     }
 
     // 시리얼 번호
@@ -31,23 +43,7 @@ public class UserVO {
         this.user_joindate = user_joindate;
     }
 
-    // 부분 생성자 - 다민
-    public UserVO(Drawable img, String user_name, String user_addr, String date, String time) {
-        this.img = img;
-        this.user_name = user_name;
-        this.user_addr = user_addr;
-        this.date = date;
-        this.time = time;
-    }
 
-
-    public Drawable getImg() {
-        return img;
-    }
-
-    public void setImg(Drawable img) {
-        this.img = img;
-    }
 
     public String getDate() {
         return date;
