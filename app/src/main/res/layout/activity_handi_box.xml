@@ -26,15 +26,15 @@
             app:srcCompat="@drawable/sound" />
 
         <TextView
-            android:id="@+id/tv_handi_name"
+            android:id="@+id/tv_handi_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10sp"
+            android:layout_marginLeft="3sp"
             android:layout_weight="1"
             android:fontFamily="@font/nanumbarunpenb"
-            android:text="000"
+            android:text="OOO"
             android:textAlignment="textEnd"
-            android:textColor="#2B2B2B"
+            android:textColor="#F44336"
             android:textSize="50sp" />
 
         <TextView
