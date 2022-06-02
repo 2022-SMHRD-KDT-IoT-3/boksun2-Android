@@ -34,7 +34,7 @@
         app:srcCompat="@drawable/boksonlogo" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edt_userId"
         android:layout_width="308dp"
         android:layout_height="93dp"
         android:layout_marginTop="38dp"
@@ -51,7 +51,7 @@
         app:layout_constraintVertical_bias="0.593" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/edt_userPw"
         android:layout_width="308dp"
         android:layout_height="93dp"
         android:layout_marginTop="152dp"
@@ -76,10 +76,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2">
+        app:layout_constraintTop_toBottomOf="@+id/edt_userPw">
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/btn_next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
@@ -93,7 +93,7 @@
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/img_s2"
+        android:id="@+id/img_speaker"
         android:layout_width="88dp"
         android:layout_height="77dp"
         android:layout_marginStart="16dp"
@@ -103,5 +103,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/sound" />
+
+    <TextView
+        android:id="@+id/tv_guide"
+        android:layout_width="279dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="30dp"
+        android:text="제품 번호가 입력되었습니다.\n비밀번호를 입력하면 보관함으로 이동합니다."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

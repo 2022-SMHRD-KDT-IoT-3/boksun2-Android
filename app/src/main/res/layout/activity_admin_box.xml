@@ -22,13 +22,13 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tv_handi_name"
+                android:id="@+id/tv_user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10sp"
                 android:layout_weight="1"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="000"
+                android:text="000님의"
                 android:textAlignment="textEnd"
                 android:textSize="35sp" />
 
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="님의 보관함"
+                android:text="보관함"
 
                 android:textSize="35sp" />
         </LinearLayout>
@@ -52,7 +52,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/h_b_1"
+                android:id="@+id/box1"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="20sp"
@@ -65,7 +65,7 @@
                 android:textSize="55sp" />
 
             <Button
-                android:id="@+id/h_b_2"
+                android:id="@+id/box2"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="10sp"
@@ -79,7 +79,7 @@
                 android:textSize="55sp" />
 
             <Button
-                android:id="@+id/h_b_3"
+                android:id="@+id/box3"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginRight="20sp"
@@ -98,7 +98,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/h_b_4"
+                android:id="@+id/box4"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="20sp"
@@ -111,7 +111,7 @@
                 android:textSize="55sp" />
 
             <Button
-                android:id="@+id/h_b_5"
+                android:id="@+id/box5"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="10sp"
@@ -125,7 +125,7 @@
                 android:textSize="55sp" />
 
             <Button
-                android:id="@+id/h_b_6"
+                android:id="@+id/box6"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginRight="20sp"
@@ -145,7 +145,7 @@
             android:layout_marginBottom="15sp">
 
             <Button
-                android:id="@+id/h_b_7"
+                android:id="@+id/box7"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="20sp"

@@ -48,13 +48,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 public class FragmentAdminUserList extends Fragment {
     private ListView listView;  // 검색을 보여줄 리스트변수
     private EditText editSearch; // 검색어를 입력할 Input 창
 
     private SearchAdapter adapter;      // 리스트뷰에 연결할 아답터
 
-    final ArrayList<String> items = new ArrayList<>();  // 회원목록 list
+    private ArrayList<String> items = new ArrayList<>();  // 회원목록 list
 
     private ArrayList<String> arraylist;
     // 리스트의 모든 데이터를 arraylist에 복사한다.// items 복사본을 만든다.
@@ -64,14 +66,14 @@ public class FragmentAdminUserList extends Fragment {
     private Button btn_box_choice;
     private RadioButton rb_user_list;
 
-
     // 서버 통신
-    RequestQueue requestQueue;
-    StringRequest stringRequest;
+    private RequestQueue requestQueue;
+    private StringRequest stringRequest;
 
     // 복지사 로그인 정보
     WorkerVO winfo = LoginCheck.wInfo;
 
+    // 장애인 아이디 저장
     private ArrayList<String> user_ids = new ArrayList<String>();
 
 
@@ -79,6 +81,8 @@ public class FragmentAdminUserList extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View fragement = inflater.inflate(R.layout.fg_admin_userlist, container, false);
+        // View view = inflater.inflate(R.layout.fg_admin_userlist, container,false);
+
 
         editSearch = fragement.findViewById(R.id.edt_userserach2);
         listView = fragement.findViewById(R.id.lv_userlist2);
@@ -92,7 +96,7 @@ public class FragmentAdminUserList extends Fragment {
 
 
 
-/*      //등록된 회원리스트
+/*        //등록된 회원리스트
         items = new ArrayList<String>(); //데이터를 넣은 리스트 변수
         items.add("송다민 " + "("+"광주 광산구 수완 양우내안애 아파트102-702"+")");
         items.add("2.김민근");
@@ -112,6 +116,7 @@ public class FragmentAdminUserList extends Fragment {
         // 등록된 장애인 리스트
         // 페이지 이동이 되었을 때, 바로 목록이 보여져야 함
         sendRequestUserList();
+
 
         editSearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -134,64 +139,42 @@ public class FragmentAdminUserList extends Fragment {
             }
         });
 
+
+        // 목록에서 장애인 선택 시, 보관함 선택 페이지로 이동
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 //                String value = (String)adapterView.getItemAtPosition(i);
-                String value = "회원 선택~~~~~~!";
+//                String value = "회원 선택~~~~~~!";
 //                Toast.makeText(getActivity(),value,Toast.LENGTH_SHORT).show();
 
-                Toast.makeText(getContext(),items.get(i).toString() + user_ids.get(i),Toast.LENGTH_SHORT).show();
+                // 장애인 선택
+                Toast.makeText(getContext(), items.get(i), Toast.LENGTH_SHORT).show();
+                String idChoice = user_ids.get(i);
+                Log.v("idChoice", idChoice); // 아이디 확인
 
-//                // 보관함 선택으로 이동
-//                Intent intent = new Intent(getContext(), adminBox.class);
-//
-//
-//                String name = items.get(0);
-//
-//
-//                intent.putExtra("name",name);
-//                startActivity(intent);
-
+                // 선택한 아이디로 조회해서 장애인 정보 저장
+                sendRequestUserChoice(idChoice);
             }
         });
 
-        // 라디오버튼
 
-
-
-
-//                Log.v("testtest", listView.getContext().toString());
-
-       btn_box_choice.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Toast.makeText(getContext(),"성공~!~!~!~!~",Toast.LENGTH_SHORT).show();
-
-                               // 보관함 선택으로 이동
-                Intent intent = new Intent(getContext(), adminBox.class);
-
-
-                String name = items.get(0);
-
-
-                intent.putExtra("name",name);
+        // 보관함 선택으로 이동
+        btn_box_choice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), adminBox.class);
                 startActivity(intent);
-
-           }
-       });
-
-
-
+            }
+        });
 
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-               listView.setBackgroundColor(Color.RED);
-               adapter2.notifyDataSetChanged();
+                listView.setBackgroundColor(Color.RED);
+                adapter2.notifyDataSetChanged();
                 Toast.makeText(getContext(),"색깔변경",Toast.LENGTH_SHORT).show();
-
 
                 return false;
             }
@@ -199,6 +182,7 @@ public class FragmentAdminUserList extends Fragment {
 
         return fragement;
     }
+
 
 
     // 검색을 수행하는 메소드
@@ -228,6 +212,7 @@ public class FragmentAdminUserList extends Fragment {
 
 
     public void sendRequestUserList() {
+
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
 
@@ -240,22 +225,17 @@ public class FragmentAdminUserList extends Fragment {
             @Override
             public void onResponse(String response) {
                 Log.v("userList", response);
-
                 try {
                     JSONArray jsonArray = new JSONArray(response);
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
 
-                        Log.v("testtest", (String)jsonObject.get("user_id"));
+                        // Log.v("test01", (String)jsonObject.get("user_id"));
                         // jsonObject에는 회원들의 정보가 담겨 있다.
                         items.add(jsonObject.get("user_name")+" ("+jsonObject.get("user_addr")+")");
+
+                        // 장애인 아이디 저장
                         user_ids.add((String)jsonObject.get("user_id"));
-
-
-
-                        Log.v("id_search", items.get(0));
-
-
 
                     }
 
@@ -309,9 +289,85 @@ public class FragmentAdminUserList extends Fragment {
         };
         stringRequest.setTag("userList"); // 구분
         requestQueue.add(stringRequest);  // 전송
+
     }
 
 
+    public void sendRequestUserChoice(String userChoice) {
 
+        // RequestQueue 객체 생성
+        requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
+
+        // 서버에 요청할 주소
+        String url = "http://210.223.239.145:8081/controller/userChoice.do";
+
+        // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
+        stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            // 응답데이터를 받아오는 곳
+            @Override
+            public void onResponse(String response) {
+                Log.v("userChoice", response);
+
+                if (response.length() > 0) {
+                    Toast.makeText(getContext(), "정보 선택 성공", Toast.LENGTH_SHORT).show();
+
+                    try {
+                        JSONObject jsonObject = new JSONObject(response);
+                        String user_id = jsonObject.getString("user_id");
+                        String user_pw = jsonObject.getString("user_pw");
+                        String user_name = jsonObject.getString("user_name");
+                        String user_birthdate = jsonObject.getString("user_birthdate");
+                        String user_gender = jsonObject.getString("user_gender");
+                        String user_joindate = jsonObject.getString("user_joindate");
+                        String user_addr = jsonObject.getString("user_addr");
+                        String user_phone = jsonObject.getString("user_phone");
+                        String worker_id = jsonObject.getString("worker_id");
+
+                        LoginCheck.uInfo = new UserVO(user_id, user_pw, user_name, user_birthdate, user_gender, user_joindate, user_addr, user_phone, worker_id);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    Toast.makeText(getContext(), "정보 선택 실패", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            // 서버와의 연동 에러시 출력
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }){
+            @Override // response를 UTF8로 변경해주는 소스 코드(응답데이터 한글로 인코딩)
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                try {
+                    String utf8String = new String(response.data, "UTF-8");
+                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
+                } catch (UnsupportedEncodingException e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                } catch (Exception e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                }
+            }
+
+            // 보낼 데이터를 저장하는 곳
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+
+                // 선택된 아이디 값 넘겨줌
+                String user_id = userChoice;
+                params.put("user_id", user_id);
+
+                return params;
+            }
+        };
+        stringRequest.setTag("userChoice"); // 구분
+        requestQueue.add(stringRequest);  // 전송
+
+    }
 
 }
