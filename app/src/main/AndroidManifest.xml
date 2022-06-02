@@ -47,7 +47,7 @@
         <activity
             android:name=".adminBoxResister"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".adminBox"
             android:exported="true"
@@ -58,6 +58,10 @@
         <activity
             android:name=".adminJoin"
             android:exported="true"
+            android:label="@string/Join">
+        </activity>
+
+
             android:label="@string/Join" />
         <activity
             android:name=".adminLifeManage"

@@ -178,6 +178,11 @@ public class clickAddAlarm extends AppCompatActivity {
         }
 
 
+  }
 
+    public void alarmCancel(View v ){
+        finish();
     }
+
+
 }
