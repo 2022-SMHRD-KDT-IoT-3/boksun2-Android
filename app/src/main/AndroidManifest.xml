@@ -14,40 +14,45 @@
         android:theme="@style/Theme.Boksun3"
         android:usesCleartextTraffic="true">
 
-
         <activity
-            android:name=".clickAddAlarm"
-            android:exported="false"
-            android:theme="@style/PopupTheme">
-            android:name=".adminLifeManage2"
+            android:name=".adminHandiJoin"
             android:exported="true"
-            android:label="@string/title_activity_admin_life_manage2"
-            android:theme="@style/Theme.Boksun3.NoActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
-
         <activity
-            android:name=".adminLogin"
+            android:name=".hanidJoinNFC"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
-
         </activity>
-
-
-
         <activity
-            android:name=".adminCall"
+            android:name=".handiBox"
+            android:exported="false" />
+        <activity
+            android:name=".handiMedEtc"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".handiMedResister"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".clickAddAlarm"
             android:exported="false"
             android:theme="@style/PopupTheme" />
+        <activity
+            android:name=".adminLogin"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".adminCall"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".adminAddAlarm"
             android:exported="true"
@@ -55,51 +60,30 @@
         <activity
             android:name=".adminBoxResister"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".adminBox"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".handiJoin"
-            android:exported="true" >
-
-
-        </activity>
-
-
+            android:exported="true" />
         <activity
             android:name=".adminJoin"
             android:exported="true"
-            android:label="@string/Join">
-        </activity>
-
-
             android:label="@string/Join" />
         <activity
             android:name=".adminLifeManage"
             android:exported="false" />
+        <activity
             android:name=".adminMainActivity"
+            android:exported="true"
             android:theme="@style/Theme.Boksun3.NoActionBar"
-            android:windowSoftInputMode="adjustPan"
-            android:exported="true">
-
-        </activity>
-
-
-
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".adminIndex"
-            android:theme="@style/Theme.Boksun3.NoActionBar"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
-
+            android:exported="true"
+            android:theme="@style/Theme.Boksun3.NoActionBar" />
         <activity
             android:name=".addressSearch"
             android:exported="false" />
@@ -110,17 +94,16 @@
         <activity
             android:name=".handiLogin"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+        <receiver
+            android:name=".DeviceBootReceiver"
+            android:enabled="false"
+            android:exported="false" />
+        <receiver android:name=".AlarmReceiver" />
     </application>
 
 </manifest>
