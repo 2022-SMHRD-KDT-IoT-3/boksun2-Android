@@ -21,27 +21,28 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="404dp"
-        android:layout_height="353dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="6dp"
+        android:layout_width="357dp"
+        android:layout_height="282dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.48">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_handiIn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dip"
             android:layout_weight="1"
 
             android:background="@drawable/btn_secondary"
-            android:text="시각"
+            android:hint="일반 회원"
+            android:text="일반 회원"
             android:textColor="#FFFFFF"
             android:textSize="68sp"
             android:textStyle="bold"
@@ -49,13 +50,14 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btn_adminIn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="5dip"
             android:layout_weight="1"
             android:background="@drawable/btn_secondary"
-            android:text="비시각"
+            android:hint="복지사"
+            android:text="복지사"
             android:textColor="#FFFFFF"
             android:textSize="68dp"
             android:textStyle="bold" />
@@ -76,7 +78,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_guide"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="192dp"

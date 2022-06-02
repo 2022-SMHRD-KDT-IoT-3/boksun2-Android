@@ -7,7 +7,6 @@ import android.widget.ImageView;
 public class UserVO {
 
     private String user_id;
-    private String user_pw;
     private String user_name;
     private String user_birthdate;
     private String user_gender;
@@ -15,39 +14,28 @@ public class UserVO {
     private String user_addr;
     private String user_phone;
     private String worker_id;
+    private String user_empn;
 
-    private Drawable img;   // 긴급이미지, 보통 이미지 들어갈 이미지
     private String date;    // 최근 접속 날짜
     private String time;    // 최근 접속 시간
-
-    public UserVO() {
-
+    private String condition; //환자 상태(상태에따라 이미지값 매칭)
+    public String getCondition() {
+        return condition;
     }
 
-    // 시리얼 번호
-    public UserVO(String user_id, String user_pw, String user_joindate) {
-        this.user_id = user_id;
-        this.user_pw = user_pw;
-        this.user_joindate = user_joindate;
+    public void setCondition(String condition) {
+        this.condition = condition;
     }
 
-    // 부분 생성자 - 다민
-    public UserVO(Drawable img, String user_name, String user_addr, String date, String time) {
-        this.img = img;
+    //부분생성자 SearchLfieAdapter
+    public UserVO(String user_name, String user_addr, String date, String time, String condition) {
         this.user_name = user_name;
         this.user_addr = user_addr;
         this.date = date;
         this.time = time;
+        this.condition = condition;
     }
 
-
-    public Drawable getImg() {
-        return img;
-    }
-
-    public void setImg(Drawable img) {
-        this.img = img;
-    }
 
     public String getDate() {
         return date;
@@ -66,10 +54,24 @@ public class UserVO {
     }
 
 
-    // 전체 생성자
-    public UserVO(String user_id, String user_pw, String user_name, String user_birthdate, String user_gender, String user_joindate, String user_addr, String user_phone, String worker_id) {
+    public UserVO(){
+
+    }
+
+
+    // 부분 생성자 : 장애인
+    public UserVO(String user_id, String user_name, String user_joindate, String user_empn) {
         this.user_id = user_id;
-        this.user_pw = user_pw;
+        this.user_name = user_name;
+        this.user_joindate = user_joindate;
+        this.user_empn = user_empn;
+    }
+
+
+    // 전체 생성자
+    public UserVO(String user_id, String user_name, String user_birthdate, String user_gender, String user_joindate,
+                  String user_addr, String user_phone, String worker_id, String user_empn) {
+        this.user_id = user_id;
         this.user_name = user_name;
         this.user_birthdate = user_birthdate;
         this.user_gender = user_gender;
@@ -77,13 +79,13 @@ public class UserVO {
         this.user_addr = user_addr;
         this.user_phone = user_phone;
         this.worker_id = worker_id;
+        this.user_empn = user_empn;
     }
 
     @Override
     public String toString() {
         return "UserVO{" +
                 "user_id='" + user_id + '\'' +
-                ", user_pw='" + user_pw + '\'' +
                 ", user_name='" + user_name + '\'' +
                 ", user_birthdate='" + user_birthdate + '\'' +
                 ", user_gender='" + user_gender + '\'' +
@@ -91,6 +93,7 @@ public class UserVO {
                 ", user_addr='" + user_addr + '\'' +
                 ", user_phone='" + user_phone + '\'' +
                 ", worker_id='" + worker_id + '\'' +
+                ", user_empn='" + user_empn + '\'' +
                 '}';
     }
 
@@ -100,14 +103,6 @@ public class UserVO {
 
     public void setUser_id(String user_id) {
         this.user_id = user_id;
-    }
-
-    public String getUser_pw() {
-        return user_pw;
-    }
-
-    public void setUser_pw(String user_pw) {
-        this.user_pw = user_pw;
     }
 
     public String getUser_name() {
@@ -164,5 +159,13 @@ public class UserVO {
 
     public void setWorker_id(String worker_id) {
         this.worker_id = worker_id;
+    }
+
+    public String getUser_empn() {
+        return user_empn;
+    }
+
+    public void setUser_empn(String user_empn) {
+        this.user_empn = user_empn;
     }
 }
