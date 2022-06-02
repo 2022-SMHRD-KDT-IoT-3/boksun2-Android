@@ -101,7 +101,7 @@
             android:layout_height="90dp"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
-            android:background="@drawable/more_gr_btn"
+            android:background="@drawable/btn_press"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="회원가입"
             android:textColor="#FFFFFF"

@@ -50,7 +50,7 @@ public class addressSearch extends AppCompatActivity {
 
         daum_webview.setWebChromeClient(new WebChromeClient());
 
-        daum_webview.loadUrl("http://172.30.1.22:8090/Project_bok/search2.html");
+        daum_webview.loadUrl("http://211.227.224.230:8090/Project_bok/search2.html");
 
     }
 

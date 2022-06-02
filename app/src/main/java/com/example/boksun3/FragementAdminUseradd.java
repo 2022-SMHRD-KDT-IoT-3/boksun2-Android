@@ -28,14 +28,14 @@ public class FragementAdminUseradd extends Fragment {
         btn_address.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), addressSearch.class);
+                Intent intent = new Intent(getContext(), addressSearch.class);
 
                 startActivity(intent);
             }
         });
 
         // 주소 intent로 가져오기
-        Intent intent = new Intent(); // 맞나 ?
+        Intent intent = new Intent(getContext(), addressSearch.class);
         String address = intent.getStringExtra("address");
         edt_handi_ad.setText(address);
 
