@@ -55,7 +55,7 @@ public class adminIndex extends AppCompatActivity {
         btn_useradd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), adminHandiJoin.class);
+                Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
                 menu = "useradd";
                 intent.putExtra("menu", menu);
                 startActivity(intent);
