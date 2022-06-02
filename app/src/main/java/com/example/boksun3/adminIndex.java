@@ -13,7 +13,7 @@ public class adminIndex extends AppCompatActivity {
     private Button btn_life, btn_userlist, btn_useradd, btn_set;
     private TextView tv_name;
     private String menu;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,7 @@ public class adminIndex extends AppCompatActivity {
         btn_useradd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), adminHandiJoin.class);
                 menu = "useradd";
                 intent.putExtra("menu", menu);
                 startActivity(intent);

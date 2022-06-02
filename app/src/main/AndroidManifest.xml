@@ -13,23 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Boksun3"
         android:usesCleartextTraffic="true">
-
         <activity
             android:name=".adminHandiJoin"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+
         </activity>
         <activity
             android:name=".hanidJoinNFC"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
         <activity
             android:name=".handiBox"
             android:exported="false" />
@@ -40,7 +35,9 @@
         <activity
             android:name=".handiMedResister"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
         <activity
             android:name=".clickAddAlarm"
             android:exported="false"
@@ -48,7 +45,15 @@
         <activity
             android:name=".adminLogin"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
         <activity
             android:name=".adminCall"
             android:exported="true"
