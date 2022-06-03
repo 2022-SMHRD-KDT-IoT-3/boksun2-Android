@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_margin="5dp"
-            android:background="@drawable/border"
+            android:background="@drawable/border_white"
             android:elevation="3dp"
             android:hint=" 이름을 입력해주세요."
             android:imeOptions="actionSearch"

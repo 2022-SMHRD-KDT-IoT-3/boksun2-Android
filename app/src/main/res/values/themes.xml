@@ -14,6 +14,27 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!--장애인용 테마 -->
+    <style name="Theme.handi" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/sDark</item>
+        <item name="colorSecondaryVariant">@color/purple_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!--@@@@@@@@@@@@@@@@@@@@ 수정 @@@@@@@@@@@@@@@@@@@@@@@@@-->
+        <!--android:windowBackground:배경색-->
+        <item name="android:windowBackground">@color/black</item>
+
+        <!--textColor: button글씨/ editTextColor:에딧텍스트글씨색-->
+        <item name="android:editTextColor">#ffffff</item>
+
+        <!--android:textColor(전체텍스트컬러)-->
+        <item name="android:textColor">#ffffff</item>
+
+        <!--colorPrimaryVariant:상단바-->
+        <item name="colorPrimaryVariant">@color/black</item>
+    </style>
+
     <style name="PopupTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -28,13 +49,10 @@
 
     <style name="Theme.NavigationDrawer" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
 
-
     <style name="Divider">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1dp</item>
         <item name="android:background">?android:attr/listDivider</item>
-
-
     </style>
 
     <style name="Theme.Boksun3.NoActionBar">
@@ -43,8 +61,9 @@
     </style>
 
     <style name="Theme.Boksun3.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="Theme.Boksun3.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
 
 
 </resources>
