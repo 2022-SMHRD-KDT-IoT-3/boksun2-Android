@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/border.xml" value="0.192" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/border_handi.xml" value="0.1835" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/border_white.xml" value="0.127" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/btn_ground_gray.xml" value="0.2085" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/btn_lightgray.xml" value="0.1425" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/btn_press.xml" value="0.1" />
@@ -15,6 +17,7 @@
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/divider.xml" value="0.1085" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/gr_btn.xml" value="0.183" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/gradient.xml" value="0.1275" />
+        <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/handi_border_black.xml" value="0.205" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/ic_baseline_supervisor_account_24.xml" value="0.162" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/ic_baseline_supervisor_account_pressed24.xml" value="0.159" />
         <entry key="..\:/Users/smhrd/AndroidStudioProjects/boksun2-Android/app/src/main/res/drawable/ic_list_pdark.xml" value="0.159" />

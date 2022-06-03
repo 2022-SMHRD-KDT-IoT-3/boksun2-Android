@@ -56,7 +56,7 @@ public class handiLogin extends AppCompatActivity {
         img_speaker.setColorFilter(Color.parseColor("#8B8989"));
         tv_guide = findViewById(R.id.tv_guide);
         edt_userId = findViewById(R.id.edt_userId);
-        edt_userPw = findViewById(R.id.edt_userPw);
+       // edt_userPw = findViewById(R.id.edt_userPw);
         btn_next = findViewById(R.id.btn_next);
 
 
@@ -192,7 +192,7 @@ public class handiLogin extends AppCompatActivity {
                         String user_pw = jsonObject.getString("user_pw");
                         String user_joindate = jsonObject.getString("user_joindate");
 
-                        LoginCheck.uInfo = new UserVO(user_id, user_pw, user_joindate);
+                     //   LoginCheck.uInfo = new UserVO(user_id, user_pw, user_joindate);
 
                         Intent intent = new Intent(getApplicationContext(), handiBox.class);
                         startActivity(intent);
@@ -232,10 +232,8 @@ public class handiLogin extends AppCompatActivity {
                 Map<String, String> params = new HashMap<>();
 
                 String user_id = edt_userId.getText().toString();
-                String user_pw = edt_userPw.getText().toString();
 
                 params.put("user_id", user_id);
-                params.put("user_pw", user_pw);
 
                 return params;
             }
@@ -294,10 +292,10 @@ public class handiLogin extends AppCompatActivity {
                 Map<String, String> params = new HashMap<>();
 
                 String user_id = edt_userId.getText().toString();
-                String user_pw = edt_userPw.getText().toString();
+            //    String user_pw = edt_userPw.getText().toString();
 
                 params.put("user_id", user_id);
-                params.put("user_pw", user_pw);
+                //params.put("user_pw", user_pw);
 
                 return params;
             }
