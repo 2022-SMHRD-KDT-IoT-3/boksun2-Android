@@ -88,9 +88,10 @@ public class hanidJoinNFC extends AppCompatActivity {
                         String user_joindate = jsonObject.optString("user_joindate");
                         String user_empn = jsonObject.optString("user_empn");
                         String user_access = jsonObject.optString("user_access");
+                        int i=0;
 
                         // 로그인 체크 유지
-                        LoginCheck.uInfo = new UserVO(user_id, user_name, user_joindate, user_empn, user_access);
+                        LoginCheck.uInfo = new UserVO(user_id, user_name, user_joindate, user_empn, user_access, i);
                         Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
                         
                         // 보관함 선택 페이지로 이동

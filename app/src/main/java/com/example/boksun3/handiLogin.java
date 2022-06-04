@@ -3,14 +3,12 @@ package com.example.boksun3;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TextView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,7 +29,6 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 import android.nfc.NdefMessage;
@@ -40,15 +37,14 @@ import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.Ndef;
 import android.os.Parcelable;
-import android.util.Log;
 
 
 public class handiLogin extends AppCompatActivity {
 
-    ImageButton img_speaker;
-    TextView tv_guide;
-    EditText edt_userId, edt_userPw;
-    Button btn_next;
+    ImageView img_speaker;
+    EditText edt_userId;
+    CheckBox checkBox_login;
+    Button btn_handiLogin;
 
     // 시리얼 번호 저장
     public static String nfc_serial_num;
@@ -218,9 +214,10 @@ public class handiLogin extends AppCompatActivity {
                         String user_joindate = jsonObject.optString("user_joindate");
                         String user_empn = jsonObject.optString("user_empn");
                         String user_access = jsonObject.optString("user_access");
+                        int i = 0;
 
                         // 로그인 체크 유지
-                        LoginCheck.uInfo = new UserVO(user_id, user_name, user_joindate, user_empn, user_access);
+                        LoginCheck.uInfo = new UserVO(user_id, user_name, user_joindate, user_empn, user_access, i);
 
                         Intent intent = new Intent(getApplicationContext(), handiBox.class);
                         startActivity(intent);

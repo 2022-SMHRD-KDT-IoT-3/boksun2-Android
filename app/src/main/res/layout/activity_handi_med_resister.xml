@@ -73,6 +73,7 @@
             android:gravity="center"
             android:hint="약 이름"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             android:textSize="22sp" />
 
         <Button
@@ -98,6 +99,7 @@
             android:gravity="center"
             android:hint="알람 시간"
             android:inputType="textPersonName"
+            android:textColor="@color/black"
             android:textSize="22sp" />
 
         <Button

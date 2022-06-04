@@ -28,19 +28,18 @@ public class UserVO {
 
 
     //부분생성자 SearchLfieAdapter
-    public UserVO(String user_name, String user_addr, String date, String time, String condition, String user_access) {
+    public UserVO(String user_name, String user_addr, String date, String time, String condition) {
         this.user_name = user_name;
         this.user_addr = user_addr;
         this.date = date;
         this.time = time;
         this.condition = condition;
-        this.user_access = user_access;
     }
 
 
 
     // 부분 생성자 : 장애인
-    public UserVO(String user_id, String user_name, String user_joindate, String user_empn, String user_access) {
+    public UserVO(String user_id, String user_name, String user_joindate, String user_empn, String user_access, int i) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.user_joindate = user_joindate;
@@ -50,8 +49,6 @@ public class UserVO {
 
 
     // 전체 생성자
-
-
     public UserVO(String user_id, String user_name, String user_birthdate, String user_gender, String user_joindate, String user_addr,
                   String user_phone, String worker_id, String user_empn, String user_access, String date, String time, String condition) {
         this.user_id = user_id;
