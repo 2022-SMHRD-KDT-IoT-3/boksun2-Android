@@ -47,6 +47,9 @@ public class handiJoin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setTheme(android.R.style.Theme_Black_NoTitleBar);
+
+
         // 타이틀바 문구 변경 코드
         try {
             getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);

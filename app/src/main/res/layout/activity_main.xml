@@ -1,30 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FFFFFF"
+    android:layout_marginBottom="15sp"
+    android:background="#000000"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="290dp"
-        android:layout_height="240dp"
-        android:layout_marginTop="4dp"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        app:srcCompat="@drawable/boksonlogo" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:contentDescription="복순이 로고 이미지"
+            android:scaleType="fitStart"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/boksonlogo" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="복순이"
+            android:textColor="#FFFFFF"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="357dp"
-        android:layout_height="282dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50sp"
+        android:layout_marginBottom="35dp"
+        android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,48 +58,51 @@
         app:layout_constraintVertical_bias="0.48">
 
         <Button
-            android:id="@+id/btn_handiIn"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dip"
-            android:layout_weight="1"
+            android:id="@+id/button10"
+            android:layout_width="333dp"
+            android:layout_height="130dp"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/handi_border_black"
+            android:drawableLeft="@drawable/ic_help"
+            android:fontFamily="@font/nanumbarunpenr"
+            android:gravity="center|start"
+            android:paddingLeft="20sp"
+            android:text=" 도움말"
+            android:textColor="#FFFFFF"
+            android:textSize="68sp"
+            android:textStyle="bold" />
 
-            android:background="@drawable/btn_secondary"
+        <Button
+            android:id="@+id/btn_handiIn"
+            android:layout_width="333dp"
+            android:layout_height="150dp"
+
+            android:layout_marginTop="20sp"
+            android:background="@drawable/handi_border_y2"
+            android:fontFamily="@font/nanumbarunpenr"
             android:hint="일반 회원"
             android:text="일반 회원"
-            android:textColor="#FFFFFF"
+            android:textColor="#F1FF00"
             android:textSize="68sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btn_adminIn"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dip"
-            android:layout_weight="1"
-            android:background="@drawable/btn_secondary"
-            android:hint="복지사"
-            android:text="복지사"
-            android:textColor="#FFFFFF"
-            android:textSize="68dp"
-            android:textStyle="bold" />
-
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:text="복순이"
-        android:textSize="38sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/btn_adminIn"
+        android:layout_width="138dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dip"
+        android:background="@drawable/handi_border_yellow"
+        android:fontFamily="@font/nanumbarunpenr"
+        android:hint="복지사"
+        android:text="복지사"
+        android:textColor="#322605"
+        android:textSize="28dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn_guide"
@@ -83,9 +110,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="192dp"
         android:background="@drawable/question"
+        android:contentDescription="도움말"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

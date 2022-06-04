@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Boksun3" parent="Theme.AppCompat.Light">
+    <style name="Theme.Boksun3" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -63,6 +63,22 @@
     <style name="Theme.Boksun3.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.Boksun3.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+
+
+
+
+
+    <style name="HandiTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFC107</item>
+        <item name="colorPrimaryVariant">#FFC107</item>
+        <item name="colorOnPrimary">#FFC107</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#FFC107</item>
+        <item name="colorSecondaryVariant">#FFC107</item>
+        <item name="colorOnSecondary">#FFC107</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
 
 

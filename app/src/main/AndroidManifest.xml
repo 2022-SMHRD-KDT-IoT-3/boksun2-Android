@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 연결 확인 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 음성인식에 필요함 -->
-    <uses-permission android:name="android.permission.NFC" /><!-- NFC 권한 필요 -->
 
     <application
         android:allowBackup="true"
@@ -18,18 +17,18 @@
 
         <activity
             android:name=".handiMedResister"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.handi"/>
         <activity
             android:name=".handiMedEtc"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.handi"/>
         <activity
             android:name=".handiBox"
-            android:exported="false" />
-        <activity
-            android:name=".nfcApp"
-            android:exported="true" >
+            android:exported="false"
+            android:theme="@style/Theme.handi"
+            />
 
-        </activity>
         <activity
             android:name=".clickAddAlarm"
             android:exported="false"
@@ -40,13 +39,17 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
 
-
         </activity>
 
         <activity
             android:name=".hanidJoinNFC"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+            android:theme="@style/Theme.handi">
+
+
+
 
         </activity>
 
@@ -78,8 +81,8 @@
         </activity>
         <activity
             android:name=".handiJoin"
-            android:exported="true"
-            android:theme="@style/Theme.handi"/>
+        android:exported="true"
+        android:theme="@style/Theme.handi"/>
         <activity
             android:name=".adminJoin"
             android:exported="true"
@@ -105,7 +108,6 @@
             android:name=".datePicker"
             android:exported="false"
             android:theme="@style/PopupTheme" />
-
         <activity
             android:name=".handiLogin"
             android:exported="true"

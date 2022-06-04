@@ -3,12 +3,14 @@ package com.example.boksun3;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +31,7 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
-
+import java.util.Locale;
 import java.util.Map;
 
 import android.nfc.NdefMessage;
@@ -44,9 +46,9 @@ import android.util.Log;
 public class handiLogin extends AppCompatActivity {
 
     ImageButton img_speaker;
-    EditText edt_userId;
-    CheckBox checkBox_login;
-    Button btn_handiLogin;
+    TextView tv_guide;
+    EditText edt_userId, edt_userPw;
+    Button btn_next;
 
     // 시리얼 번호 저장
     public static String nfc_serial_num;
@@ -269,6 +271,6 @@ public class handiLogin extends AppCompatActivity {
     }
 
 
-    
+
 
 }

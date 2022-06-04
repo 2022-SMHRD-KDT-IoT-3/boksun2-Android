@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
     android:orientation="vertical"
     tools:context=".adminCall">
 
@@ -13,20 +12,20 @@
         android:id="@+id/textView30"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="비상연락"
-        android:textColor="#3F51B5"
-        android:fontFamily="@font/nanumbarunpenb"
-        android:textSize="22sp"
         android:layout_marginTop="10dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="비상연락"
+        android:textColor="#E31515"
 
-        android:gravity="center"/>
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/textView33"
         android:layout_width="match_parent"
         android:layout_height="79dp"
         android:layout_marginTop="10dp"
-        android:fontFamily="@font/nanumbarunpenb"
+        android:fontFamily="sans-serif"
         android:gravity="center"
         android:text="김민정"
         android:textColor="#000000"
@@ -53,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:fontFamily="@font/nanumbarunpenb"
+            android:fontFamily="sans-serif"
             android:text="상세 주소 :  "
             android:textColor="#707070"
             android:textSize="22sp" />
@@ -63,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/nanumbarunpenb"
+            android:fontFamily="sans-serif"
             android:text="광주 동구 대인동 5"
             android:textColor="#707070"
             android:textSize="22sp" />
@@ -87,7 +86,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:fontFamily="@font/nanumbarunpenb"
+            android:fontFamily="sans-serif"
             android:text="질병 사항 :   "
             android:textColor="#707070"
             android:textSize="22sp" />
@@ -97,7 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/nanumbarunpenb"
+            android:fontFamily="sans-serif"
             android:text="고혈압"
             android:textColor="#707070"
             android:textSize="22sp" />
@@ -121,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:fontFamily="@font/nanumbarunpenb"
+            android:fontFamily="sans-serif"
             android:text="최근 활동 시간 : "
             android:textColor="#707070"
             android:textSize="22sp" />
@@ -131,7 +130,7 @@
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/nanumbarunpenb"
+            android:fontFamily="sans-serif"
             android:text=" 2022-05-27                오후 4:45"
             android:textColor="#707070"
             android:textSize="22sp" />
@@ -150,7 +149,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="130dp"
             android:layout_marginTop="60dp"
-            android:fontFamily="@font/nanumbarunpenb"
+            android:fontFamily="sans-serif"
             android:text="긴급상황시, 버튼을 눌러주세요."
             android:textColor="#303345" />
 
