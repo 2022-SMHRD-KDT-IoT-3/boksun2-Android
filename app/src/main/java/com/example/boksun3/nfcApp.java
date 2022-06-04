@@ -33,7 +33,7 @@ public class nfcApp extends AppCompatActivity {
         txtSize = findViewById(R.id.txtSize);
         txtWrite = findViewById(R.id.txtWrite);
         txtRead = findViewById(R.id.txtRead);
-        nfcAdapter =  NfcAdapter.getDefaultAdapter(this) ;
+        nfcAdapter =  NfcAdapter.getDefaultAdapter(this); //nfc인스턴스 어뎁터 얻기
 
         if (nfcAdapter == null) {
             //NFC 미지원단말
@@ -41,7 +41,9 @@ public class nfcApp extends AppCompatActivity {
             return;
         }
 
-        Intent intent = getIntent();
+        Intent intent = getIntent(); //편의성 너무 자주쓰면 안좋다.
+        intent.setAction(intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
         readFromTag(intent);
     }
 
@@ -51,10 +53,10 @@ public class nfcApp extends AppCompatActivity {
         Ndef ndef = Ndef.get(tag);
         try{
             ndef.connect();
-
             txtType.setText(ndef.getType().toString());
             txtSize.setText(String.valueOf(ndef.getMaxSize()));
             txtWrite.setText(ndef.isWritable() ? "True" : "False");
+
             Parcelable[] messages = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES);
 
             if (messages != null) {
@@ -68,9 +70,7 @@ public class nfcApp extends AppCompatActivity {
                 String text = new String(payload);
                 txtRead.setText(text);
 
-
                 ndef.close();
-
             }
         }
         catch (Exception e) {

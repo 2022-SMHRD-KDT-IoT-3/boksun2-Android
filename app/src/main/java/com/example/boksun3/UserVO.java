@@ -15,43 +15,11 @@ public class UserVO {
     private String user_phone;
     private String worker_id;
     private String user_empn;
+    private String user_access;
 
     private String date;    // 최근 접속 날짜
     private String time;    // 최근 접속 시간
     private String condition; //환자 상태(상태에따라 이미지값 매칭)
-    public String getCondition() {
-        return condition;
-    }
-
-    public void setCondition(String condition) {
-        this.condition = condition;
-    }
-
-    //부분생성자 SearchLfieAdapter
-    public UserVO(String user_name, String user_addr, String date, String time, String condition) {
-        this.user_name = user_name;
-        this.user_addr = user_addr;
-        this.date = date;
-        this.time = time;
-        this.condition = condition;
-    }
-
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
-    }
 
 
     public UserVO(){
@@ -59,18 +27,33 @@ public class UserVO {
     }
 
 
+    //부분생성자 SearchLfieAdapter
+    public UserVO(String user_name, String user_addr, String date, String time, String condition, String user_access) {
+        this.user_name = user_name;
+        this.user_addr = user_addr;
+        this.date = date;
+        this.time = time;
+        this.condition = condition;
+        this.user_access = user_access;
+    }
+
+
+
     // 부분 생성자 : 장애인
-    public UserVO(String user_id, String user_name, String user_joindate, String user_empn) {
+    public UserVO(String user_id, String user_name, String user_joindate, String user_empn, String user_access) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.user_joindate = user_joindate;
         this.user_empn = user_empn;
+        this.user_access = user_access;
     }
 
 
     // 전체 생성자
-    public UserVO(String user_id, String user_name, String user_birthdate, String user_gender, String user_joindate,
-                  String user_addr, String user_phone, String worker_id, String user_empn) {
+
+
+    public UserVO(String user_id, String user_name, String user_birthdate, String user_gender, String user_joindate, String user_addr,
+                  String user_phone, String worker_id, String user_empn, String user_access, String date, String time, String condition) {
         this.user_id = user_id;
         this.user_name = user_name;
         this.user_birthdate = user_birthdate;
@@ -80,6 +63,10 @@ public class UserVO {
         this.user_phone = user_phone;
         this.worker_id = worker_id;
         this.user_empn = user_empn;
+        this.user_access = user_access;
+        this.date = date;
+        this.time = time;
+        this.condition = condition;
     }
 
     @Override
@@ -94,8 +81,14 @@ public class UserVO {
                 ", user_phone='" + user_phone + '\'' +
                 ", worker_id='" + worker_id + '\'' +
                 ", user_empn='" + user_empn + '\'' +
+                ", user_access='" + user_access + '\'' +
+                ", date='" + date + '\'' +
+                ", time='" + time + '\'' +
+                ", condition='" + condition + '\'' +
                 '}';
     }
+
+
 
     public String getUser_id() {
         return user_id;
@@ -168,4 +161,38 @@ public class UserVO {
     public void setUser_empn(String user_empn) {
         this.user_empn = user_empn;
     }
+
+    public String getUser_access() {
+        return user_access;
+    }
+
+    public void setUser_access(String user_access) {
+        this.user_access = user_access;
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+
 }

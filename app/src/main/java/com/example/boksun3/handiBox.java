@@ -4,13 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class handiBox extends AppCompatActivity {
 
-    TextView tv_handi_id;
+    TextView tv_handi_name;
     Button h_b_1, h_b_2, h_b_3, h_b_4, h_b_5, h_b_6, h_b_7;
     private int[] btn_ids = {R.id.h_b_1, R.id.h_b_2, R.id.h_b_3, R.id.h_b_4, R.id.h_b_5, R.id.h_b_6, R.id.h_b_7};
     private Button[] btns = new Button[7];
@@ -23,10 +24,11 @@ public class handiBox extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_handi_box);
 
-        // 아이디
+        // 이름
         UserVO uvo = LoginCheck.uInfo;
-        tv_handi_id = findViewById(R.id.tv_handi_id);
-        tv_handi_id.setText(uvo.getUser_id());
+        tv_handi_name = findViewById(R.id.tv_handi_name);
+        tv_handi_name.setText(uvo.getUser_name());
+        Log.v("name", uvo.getUser_name());
 
         // 버튼 1~7
 /*        for (int i = 0; i < btns.length; i++){

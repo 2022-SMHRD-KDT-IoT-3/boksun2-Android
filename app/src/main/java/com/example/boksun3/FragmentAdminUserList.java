@@ -313,17 +313,18 @@ public class FragmentAdminUserList extends Fragment {
 
                     try {
                         JSONObject jsonObject = new JSONObject(response);
-                        String user_id = jsonObject.getString("user_id");
-                        String user_pw = jsonObject.getString("user_pw");
-                        String user_name = jsonObject.getString("user_name");
-                        String user_birthdate = jsonObject.getString("user_birthdate");
-                        String user_gender = jsonObject.getString("user_gender");
-                        String user_joindate = jsonObject.getString("user_joindate");
-                        String user_addr = jsonObject.getString("user_addr");
-                        String user_phone = jsonObject.getString("user_phone");
-                        String worker_id = jsonObject.getString("worker_id");
+                        String user_id = jsonObject.optString("user_id");
+                        String user_name = jsonObject.optString("user_name");
+                        String user_birthdate = jsonObject.optString("user_birthdate");
+                        String user_gender = jsonObject.optString("user_gender");
+                        String user_joindate = jsonObject.optString("user_joindate");
+                        String user_addr = jsonObject.optString("user_addr");
+                        String user_phone = jsonObject.optString("user_phone");
+                        String worker_id = jsonObject.optString("worker_id");
+                        String user_empn = jsonObject.optString("user_empn");
+                        String user_access = jsonObject.optString("user_access");
 
-                        LoginCheck.uInfo = new UserVO(user_id, user_pw, user_name, user_birthdate, user_gender, user_joindate, user_addr, user_phone, worker_id);
+                        //LoginCheck.uInfo = new UserVO(user_id, user_name, user_birthdate, user_gender, user_joindate, user_addr, user_phone, worker_id, user_empn, user_access);
 
                     } catch (JSONException e) {
                         e.printStackTrace();
