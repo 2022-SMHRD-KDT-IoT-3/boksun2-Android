@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginBottom="10sp"
+    android:background="#000000"
     tools:context=".handiMedResister">
 
     <LinearLayout
@@ -22,15 +23,12 @@
             android:layout_weight="1"
             android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/btn_med_sound"
-                android:layout_width="70dp"
-                android:layout_height="71dp"
-                android:layout_marginBottom="20dp"
-                android:background="@android:color/transparent"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/sound" />
 
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_volume" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -40,7 +38,7 @@
                 android:layout_marginBottom="50sp"
                 android:gravity="center"
                 android:text="약 정보 등록"
-                android:textColor="#2F2F2F"
+                android:textColor="#FFFFFF"
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
@@ -57,7 +55,7 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_marginBottom="20sp"
-            android:background="@drawable/more_gr_gray"
+            android:background="@drawable/handi_border_black"
             android:drawableTop="@drawable/ic_baseline_local_hospital_24"
             android:text="약 이름"
             android:textColor="#FFFFFF"
@@ -82,7 +80,7 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_marginBottom="20sp"
-            android:background="@drawable/more_gr_gray"
+            android:background="@drawable/handi_border_black"
             android:drawableTop="@drawable/ic_baseline_alarm_add_24"
             android:text="알람설정"
             android:textColor="#FFFFFF"
@@ -107,7 +105,7 @@
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_marginBottom="30sp"
-            android:background="@drawable/more_gr_gray"
+            android:background="@drawable/handi_border_black"
             android:drawableTop="@drawable/ic_baseline_format_list_bulleted_24"
             android:text="기타사항"
             android:textColor="#FFFFFF"
@@ -120,10 +118,10 @@
             android:layout_height="100dp"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
-            android:background="@drawable/more_gr_btn"
+            android:background="@drawable/handi_border_yellow"
             android:text="등록"
-            android:textColor="#FFFFFF"
-            android:textSize="40sp"
+            android:textColor="#000000"
+            android:textSize="45sp"
             android:textStyle="bold" />
     </LinearLayout>
 

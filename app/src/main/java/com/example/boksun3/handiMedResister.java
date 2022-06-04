@@ -42,8 +42,8 @@ public class handiMedResister extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_handi_med_resister);
 
-        btn_med_sound = findViewById(R.id.btn_med_sound);
-        btn_med_sound.setColorFilter(Color.parseColor("#000000"));
+//        btn_med_sound = findViewById(R.id.btn_med_sound);
+//        btn_med_sound.setColorFilter(Color.parseColor("#000000"));
         btn_med_name = findViewById(R.id.btn_med_name);
         btn_med_alarm = findViewById(R.id.btn_med_alarm);
         btn_etc = findViewById(R.id.btn_etc);

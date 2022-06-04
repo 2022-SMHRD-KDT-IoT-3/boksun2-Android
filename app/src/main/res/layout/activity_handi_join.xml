@@ -4,8 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginLeft="15sp"
-    android:layout_marginRight="5sp"
     android:orientation="vertical"
     tools:context=".handiJoin">
 
@@ -16,26 +14,27 @@
         android:orientation="vertical">
 
 
-        <ImageButton
-            android:id="@+id/img_sound"
-            android:layout_width="92dp"
-            android:layout_height="86dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/sound"
-            android:layout_marginBottom="20dp"/>
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="13sp"
+            app:srcCompat="@drawable/ic_volume" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginBottom="40dp">
+            android:layout_marginBottom="40dp"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/handi_id"
                 android:layout_width="250dp"
                 android:layout_height="80dp"
-                android:background="@drawable/border_white"
+                android:layout_marginLeft="15sp"
+                android:background="@drawable/handi_border_black"
                 android:ems="10"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:hint="  아이디"
@@ -61,11 +60,12 @@
 
         <EditText
             android:id="@+id/handi_pw"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="15sp"
             android:layout_marginBottom="40dp"
             android:layout_weight="1"
-            android:background="@drawable/border_white"
+            android:background="@drawable/handi_border_black"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:hint="  비밀번호"
@@ -75,39 +75,46 @@
 
         <EditText
             android:id="@+id/handi_pw2"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="15sp"
             android:layout_marginBottom="40dp"
-            android:background="@drawable/border_white"
+            android:background="@drawable/handi_border_black"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:hint="  비밀번호 확인"
             android:inputType="textPersonName"
+            android:textColorHint="#FFFFFF"
             android:textSize="30sp" />
 
         <EditText
             android:id="@+id/handi_name"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="15sp"
             android:layout_marginBottom="40dp"
-            android:background="@drawable/border_white"
+            android:background="@drawable/handi_border_black"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:hint="  이름"
             android:inputType="textPersonName"
+            android:textColorHint="#FFFFFF"
             android:textSize="30sp" />
 
 
         <EditText
             android:id="@+id/handi_date"
-            android:layout_width="match_parent"
+            android:layout_width="360dp"
             android:layout_height="80dp"
+            android:layout_marginLeft="15sp"
             android:layout_marginBottom="40dp"
             android:background="@drawable/handi_border_yellow"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:hint="  생년월일"
             android:inputType="date"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
             android:textSize="30sp"
             tools:ignore="MissingConstraints" />
 
@@ -115,9 +122,10 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="20dp"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="성별"
-            android:layout_marginBottom="20dp"
             android:textSize="25sp" />
 
         <LinearLayout
@@ -130,6 +138,7 @@
                 android:id="@+id/rbtn_m"
                 android:layout_width="116dp"
                 android:layout_height="65sp"
+                android:layout_marginLeft="15sp"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="남자"
                 android:textSize="30sp" />
@@ -159,7 +168,7 @@
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="취소"
                 android:textColor="#000000"
-                android:textSize="30sp"
+                android:textSize="40sp"
                 android:textStyle="bold" />
 
             <Button
@@ -172,7 +181,7 @@
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="등록"
                 android:textColor="@color/black"
-                android:textSize="30sp"
+                android:textSize="40sp"
                 android:textStyle="bold" />
         </LinearLayout>
 

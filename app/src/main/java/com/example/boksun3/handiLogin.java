@@ -232,8 +232,10 @@ public class handiLogin extends AppCompatActivity {
                 Map<String, String> params = new HashMap<>();
 
                 String user_id = edt_userId.getText().toString();
+                String user_pw = edt_userPw.getText().toString();
 
                 params.put("user_id", user_id);
+                params.put("user_pw", user_pw);
 
                 return params;
             }

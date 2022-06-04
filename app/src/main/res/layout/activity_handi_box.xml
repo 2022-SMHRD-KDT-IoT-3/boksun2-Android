@@ -4,8 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".handiBox"
-    android:orientation="vertical">
+    android:background="#000000"
+    android:contentDescription="테스트"
+    android:orientation="vertical"
+    tools:context=".handiBox">
 
 
     <LinearLayout
@@ -15,15 +17,12 @@
         android:layout_marginBottom="15sp"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/btn_med_sound"
-            android:layout_width="59dp"
-            android:layout_height="62dp"
-            android:layout_marginLeft="10sp"
-            android:layout_marginBottom="20dp"
-            android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/sound" />
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_volume" />
 
         <TextView
             android:id="@+id/tv_handi_id"
@@ -45,11 +44,11 @@
             android:fontFamily="@font/nanumbarunpenb"
             android:text="님의 보관함"
 
-            android:textColor="#2B2B2B"
+            android:textColor="#FFFFFF"
             android:textSize="50sp" />
     </LinearLayout>
 
-    <View style="@style/Divider"/>
+    <View style="@style/Divider" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -64,10 +63,10 @@
             android:layout_marginLeft="20sp"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
-            android:background="@drawable/btn_lightgray"
+            android:background="@drawable/handi_border_yellow"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="1"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="55sp" />
 
         <Button
@@ -78,10 +77,10 @@
             android:layout_marginRight="10sp"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
-            android:background="@drawable/btn_lightgray"
+            android:background="@drawable/handi_border_yellow"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="2"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="55sp" />
 
         <Button
@@ -91,10 +90,10 @@
             android:layout_marginRight="20sp"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
-            android:background="@drawable/btn_lightgray"
+            android:background="@drawable/handi_border_yellow"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="3"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="55sp" />
     </LinearLayout>
 
@@ -110,10 +109,10 @@
             android:layout_marginLeft="20sp"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
-            android:background="@drawable/btn_lightgray"
+            android:background="@drawable/handi_border_yellow"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="4"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="55sp" />
 
         <Button
@@ -124,10 +123,10 @@
             android:layout_marginRight="10sp"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
-            android:background="@drawable/btn_lightgray"
+            android:background="@drawable/handi_border_yellow"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="5"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="55sp" />
 
         <Button
@@ -137,10 +136,10 @@
             android:layout_marginRight="20sp"
             android:layout_marginBottom="10sp"
             android:layout_weight="1"
-            android:background="@drawable/btn_lightgray"
+            android:background="@drawable/handi_border_yellow"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="6"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="55sp" />
     </LinearLayout>
 
@@ -153,17 +152,17 @@
         <Button
             android:id="@+id/h_b_7"
             android:layout_width="wrap_content"
-            android:layout_height="150sp"
+            android:layout_height="130dp"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
             android:layout_weight="1"
-            android:background="@drawable/btn_lightgray"
+            android:background="@drawable/handi_border_yellow"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="7"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="55sp" />
     </LinearLayout>
 
-    <View style="@style/Divider"/>
+    <View style="@style/Divider" />
 
 </LinearLayout>

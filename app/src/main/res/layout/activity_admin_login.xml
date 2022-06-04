@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".handiLogin">
 
     <TextView
@@ -64,7 +65,9 @@
                 android:height="150dp"
                 android:ems="10"
                 android:hint="아이디를 입력해 주세요."
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="#393939"
+                android:textColorHint="#212121" />
         </LinearLayout>
 
         <LinearLayout
@@ -89,7 +92,9 @@
                 android:height="150dp"
                 android:ems="10"
                 android:hint="비밀번호를 입력해 주세요."
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColor="#393939"
+                android:textColorHint="#212121" />
         </LinearLayout>
 
 
@@ -115,8 +120,8 @@
         android:id="@+id/tv_join"
         android:layout_width="286dp"
         android:layout_height="57dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/more_gr_gray"
         android:text="회원가입"
         android:textColor="#FFFFFF"
@@ -128,12 +133,14 @@
         android:id="@+id/switch4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="40dp"
         android:switchMinWidth="50sp"
         android:text="자동 로그인"
         android:textColor="#585858"
         android:textSize="19sp"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="413dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <TextView
         android:id="@+id/textView28"
@@ -141,6 +148,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:text="아이디 찾기"
+        android:textColor="#393939"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_join"
@@ -152,6 +160,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="112dp"
         android:text="비밀번호 찾기"
+        android:textColor="#393939"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.766"

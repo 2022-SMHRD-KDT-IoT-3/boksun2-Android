@@ -20,8 +20,8 @@ public class handiMedEtc extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_handi_med_etc);
 
-        btn_etc_sound = findViewById(R.id.btn_med_sound);
-        btn_etc_sound.setColorFilter(Color.parseColor("#000000"));
+//        btn_etc_sound = findViewById(R.id.btn_med_sound);
+//        btn_etc_sound.setColorFilter(Color.parseColor("#FFFF"));
 
 
         btn_med_ok = findViewById(R.id.btn_med_ok);

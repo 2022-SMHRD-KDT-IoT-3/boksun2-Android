@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 음성인식에 필요함 -->
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,13 +18,17 @@
 
         <activity
             android:name=".handiMedResister"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.handi"/>
         <activity
             android:name=".handiMedEtc"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.handi"/>
         <activity
             android:name=".handiBox"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.handi"
+            />
         <activity
             android:name=".nfcApp"
             android:exported="false" />
@@ -42,8 +47,7 @@
         <activity
             android:name=".hanidJoinNFC"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
+            android:theme="@style/Theme.handi">
 
 
 
@@ -70,6 +74,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+
+
         </activity>
         <activity
             android:name=".adminBox"
@@ -81,8 +87,8 @@
         </activity>
         <activity
             android:name=".handiJoin"
-            android:exported="true"
-            android:theme="@style/Theme.handi"/>
+        android:exported="true"
+        android:theme="@style/Theme.handi"/>
         <activity
             android:name=".adminJoin"
             android:exported="true"
@@ -111,7 +117,7 @@
         <activity
             android:name=".handiLogin"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.handi" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
@@ -122,5 +128,6 @@
             android:exported="false" />
         <receiver android:name=".AlarmReceiver" />
     </application>
+
 
 </manifest>

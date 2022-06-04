@@ -12,11 +12,12 @@
         android:layout_width="290dp"
         android:layout_height="240dp"
         android:layout_marginTop="4dp"
+        android:contentDescription="복순이 로고 이미지"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
 
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/boksonlogo" />
 
     <LinearLayout
@@ -83,6 +84,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="192dp"
         android:background="@drawable/question"
+        android:contentDescription="도움말"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent"
