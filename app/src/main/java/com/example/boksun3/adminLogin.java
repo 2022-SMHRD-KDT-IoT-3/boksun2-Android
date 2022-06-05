@@ -156,7 +156,7 @@ public class adminLogin extends AppCompatActivity {
 
                         LoginCheck.wInfo = new WorkerVO(worker_id, worker_pw, worker_name, worker_phone, worker_license,
                                 worker_organization, worker_tel, worker_area, woker_joindate);
-                        Intent intent = new Intent(getApplicationContext(), adminIndex.class);
+                        Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
                         startActivity(intent);
 
                     } catch (JSONException e) {
@@ -218,10 +218,4 @@ public class adminLogin extends AppCompatActivity {
         stringRequest.setTag("loginWorker");
         requestQueue.add(stringRequest);
     }
-
-
-
-
-
-
 }

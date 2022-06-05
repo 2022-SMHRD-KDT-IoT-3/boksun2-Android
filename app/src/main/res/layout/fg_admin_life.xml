@@ -51,7 +51,7 @@
             android:dividerHeight="1dp"
             android:elevation="10dp"
             android:padding="3dp"
-            tools:listitem="@layout/row_listview"/>
+            tools:listitem="@layout/row_life_item"/>
 
     </LinearLayout>
 

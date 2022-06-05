@@ -67,9 +67,6 @@
             android:exported="true"
             android:label="@string/Join" />
         <activity
-            android:name=".adminLifeManage"
-            android:exported="false" />
-        <activity
             android:name=".adminMainActivity"
             android:exported="true"
             android:theme="@style/Theme.Boksun3.NoActionBar"
