@@ -30,6 +30,9 @@ public class adminMainActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_main_activity);
 
+        // 복지사 로그인 정보
+        WorkerVO wInfo = LoginCheck.wInfo;
+
         navi = findViewById(R.id.navi);
         fm = getSupportFragmentManager();
         life = new FragementAdminLife();
@@ -38,20 +41,20 @@ public class adminMainActivity extends AppCompatActivity  {
         set = new FragementAdminSet();
 
         intent = getIntent();
-        String menu = intent.getStringExtra("menu");
-        Log.v("myData", menu); //어떤 버튼을 클릭해서 들어왔는지
+        //String menu = "userlist";
+        //String menu = intent.getStringExtra("menu");
+        //Log.v("myData", menu); //어떤 버튼을 클릭해서 들어왔는지
         //String userlist = "userlist";
 
-        if(menu.equals("userlist")){
-            fm.beginTransaction().replace(R.id.frame, userList).commit();
-        }else if(menu.equals("life")){
-            fm.beginTransaction().replace(R.id.frame, life ).commit();
-        }else if(menu.equals("useradd")){
-            fm.beginTransaction().replace(R.id.frame, useradd ).commit();
-        }else if(menu.equals("set")){
-            fm.beginTransaction().replace(R.id.frame, set ).commit();
-        }
-
+        fm.beginTransaction().replace(R.id.frame, userList).commit();
+//        if(menu.equals("userlist")){
+//        }else if(menu.equals("life")){
+//            fm.beginTransaction().replace(R.id.frame, life ).commit();
+//        }else if(menu.equals("useradd")){
+//            fm.beginTransaction().replace(R.id.frame, useradd ).commit();
+//        }else if(menu.equals("set")){
+//            fm.beginTransaction().replace(R.id.frame, set ).commit();
+//        }
 
 
         navi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

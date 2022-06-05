@@ -52,7 +52,6 @@ public class SearchLifeAdapter extends BaseAdapter {
             //row_life_item ->list뷰에 들어가는. xml
             view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_life_item, viewGroup, false);
         }
-
         ImageView img = view.findViewById(R.id.img_life);
         TextView name = view.findViewById(R.id.tv_name);
         TextView address = view.findViewById(R.id.tv_lifeaddress);

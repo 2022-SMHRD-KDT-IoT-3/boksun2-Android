@@ -94,8 +94,6 @@ public class FragmentAdminUserList extends Fragment {
         btn_box_choice = fragement.findViewById(R.id.btn_box_choice);
         rb_user_list = fragement.findViewById(R.id.rb_user_list);
 
-
-
 /*        //등록된 회원리스트
         items = new ArrayList<String>(); //데이터를 넣은 리스트 변수
         items.add("송다민 " + "("+"광주 광산구 수완 양우내안애 아파트102-702"+")");
@@ -238,13 +236,11 @@ public class FragmentAdminUserList extends Fragment {
                         user_ids.add((String)jsonObject.get("user_id"));
 
                     }
-
                     arraylist = new ArrayList<String>();
                     arraylist.addAll(items);
 
                     adapter = new SearchAdapter(items, getContext());
                     listView.setAdapter(adapter);
-
 
                 } catch (JSONException e) {
                     // json array 타입이 아닐 경우, 예외 처리

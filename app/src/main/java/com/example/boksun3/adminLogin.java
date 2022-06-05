@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -105,7 +106,7 @@ public class adminLogin extends AppCompatActivity {
 
                         LoginCheck.wInfo = new WorkerVO(worker_id, worker_pw, worker_name, worker_phone, worker_license,
                                 worker_organization, worker_tel, worker_area, woker_joindate);
-                        Intent intent = new Intent(getApplicationContext(), adminIndex.class);
+                        Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
                         startActivity(intent);
 
                     } catch (JSONException e) {
