@@ -13,14 +13,13 @@ public class MedicineVO {
     private String med_alarm;
     private String med_update;
     private String med_memo;
-    private String med_log;
 
     public MedicineVO () {
 
     }
 
     public MedicineVO(int med_seq, String user_id, String med_box, String med_name, String med_hosp, String med_way, String med_times,
-                      String med_date, String med_alarm, String med_update, String med_memo, String med_log) {
+                      String med_date, String med_alarm, String med_update, String med_memo) {
         this.med_seq = med_seq;
         this.user_id = user_id;
         this.med_box = med_box;
@@ -32,7 +31,6 @@ public class MedicineVO {
         this.med_alarm = med_alarm;
         this.med_update = med_update;
         this.med_memo = med_memo;
-        this.med_log = med_log;
     }
 
     @Override
@@ -49,7 +47,6 @@ public class MedicineVO {
                 ", med_alarm='" + med_alarm + '\'' +
                 ", med_update='" + med_update + '\'' +
                 ", med_memo='" + med_memo + '\'' +
-                ", med_log='" + med_log + '\'' +
                 '}';
     }
 
@@ -141,11 +138,4 @@ public class MedicineVO {
         this.med_memo = med_memo;
     }
 
-    public String getMed_log() {
-        return med_log;
-    }
-
-    public void setMed_log(String med_log) {
-        this.med_log = med_log;
-    }
 }

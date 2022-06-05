@@ -4,7 +4,9 @@
     <!-- 인터넷 권한 설정 -->
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 연결 확인 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 음성인식에 필요함 -->
+    <uses-permission android:name="android.permission.NFC" /><!-- NFC 권한 필요 -->
+
 
     <application
         android:allowBackup="true"
@@ -33,7 +35,7 @@
         <activity
             android:name=".adminLogin"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".hanidJoinNFC"
             android:exported="true"
@@ -51,11 +53,11 @@
         <activity
             android:name=".adminBoxResister"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".adminBox"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".handiJoin"
             android:exported="true"
@@ -78,7 +80,7 @@
             android:theme="@style/Theme.Boksun3.NoActionBar" />
         <activity
             android:name=".addressSearch"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".datePicker"
             android:exported="false"
