@@ -61,11 +61,11 @@ public class handiLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_handi_login);
 
-        img_speaker = findViewById(R.id.img_speaker);
+
         img_speaker.setColorFilter(Color.parseColor("#8B8989"));
 
         edt_userId = findViewById(R.id.edt_userId);
-        checkBox_login = findViewById(R.id.checkBox_login);
+
         //btn_handiLogin = findViewById(R.id.btn_handiLogin);
 
         

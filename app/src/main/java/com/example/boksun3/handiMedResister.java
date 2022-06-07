@@ -74,6 +74,28 @@ public class handiMedResister extends AppCompatActivity {
                 sR_insertMedicine();
             }
         });
+
+
+        btn_med_alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(), clickAddAlarm.class);
+                startActivity(intent2);
+
+            }
+        });
+
+        Intent intent2 = getIntent();
+
+        int mHour = intent.getIntExtra("hh",0);
+        int mMinute = intent.getIntExtra("mm", 0);
+
+
+
+        edt_alarm.setText(mHour + " : " + mMinute);
+
+
+
     }
 
 
@@ -143,4 +165,12 @@ public class handiMedResister extends AppCompatActivity {
         stringRequest.setTag("mediBoxInsert");
         requestQueue.add(stringRequest);
     }
+
+
+
+
+
+
+
+
 }
