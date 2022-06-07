@@ -56,7 +56,7 @@ public class adminBox extends AppCompatActivity {
 
         // 장애인 id 받기
         String user_id =getIntent().getStringExtra("user_id");
-        Log.v("box : user_id",""+user_id);
+        Log.v("box : user_id","" + user_id);
 
 
         btn_box1 = findViewById(R.id.btn_box1);
