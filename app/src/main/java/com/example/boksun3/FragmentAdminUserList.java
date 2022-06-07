@@ -48,9 +48,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
-public class FragmentAdminUserList extends Fragment {
+public class FragmentAdminUserList extends Fragment  {
     private ListView listView;  // 검색을 보여줄 리스트변수
     private EditText editSearch; // 검색어를 입력할 Input 창
 
@@ -59,6 +57,7 @@ public class FragmentAdminUserList extends Fragment {
     private ArrayList<String> items = new ArrayList<>();  // 회원목록 list
 
     private ArrayList<String> arraylist;
+    private ArrayList<String> jarrylist = new ArrayList<>();
     // 리스트의 모든 데이터를 arraylist에 복사한다.// items 복사본을 만든다.
 
     // 민정
@@ -75,6 +74,7 @@ public class FragmentAdminUserList extends Fragment {
 
     // 장애인 아이디 저장
     private ArrayList<String> user_ids = new ArrayList<String>();
+    private String idChoice;
 
 
     @Nullable
@@ -83,37 +83,12 @@ public class FragmentAdminUserList extends Fragment {
         View fragement = inflater.inflate(R.layout.fg_admin_userlist, container, false);
         // View view = inflater.inflate(R.layout.fg_admin_userlist, container,false);
 
-
         editSearch = fragement.findViewById(R.id.edt_userserach2);
         listView = fragement.findViewById(R.id.lv_userlist2);
 
-        //민정
-        adapter2 = new ArrayAdapter<String>(this.getContext(),android.R.layout.simple_list_item_single_choice,items);
-        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
-        listView.setAdapter(adapter2);
-        btn_box_choice = fragement.findViewById(R.id.btn_box_choice);
-        rb_user_list = fragement.findViewById(R.id.rb_user_list);
-
-/*        //등록된 회원리스트
-        items = new ArrayList<String>(); //데이터를 넣은 리스트 변수
-        items.add("송다민 " + "("+"광주 광산구 수완 양우내안애 아파트102-702"+")");
-        items.add("2.김민근");
-        items.add("3.김민정");
-        items.add("4.신지수");
-        items.add("5.윤솔아");
-
-        arraylist = new ArrayList<String>();
-        arraylist.addAll(items);
-
-        // 리스트에 연동될 아답터를 생성한다.
-        adapter = new SearchAdapter(items,getContext());
-
-        // 리스트뷰에 아답터를 연결한다.
-        listView.setAdapter(adapter);*/
-
-        // 등록된 장애인 리스트
-        // 페이지 이동이 되었을 때, 바로 목록이 보여져야 함
         sendRequestUserList();
+
+        btn_box_choice = fragement.findViewById(R.id.btn_box_choice);
 
 
         editSearch.addTextChangedListener(new TextWatcher() {
@@ -137,35 +112,28 @@ public class FragmentAdminUserList extends Fragment {
             }
         });
 
-
         // 목록에서 장애인 선택 시, 보관함 선택 페이지로 이동
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                String value = (String)adapterView.getItemAtPosition(i);
-//                String value = "회원 선택~~~~~~!";
-//                Toast.makeText(getActivity(),value,Toast.LENGTH_SHORT).show();
-
                 // 장애인 선택
                 Toast.makeText(getContext(), items.get(i), Toast.LENGTH_SHORT).show();
-                String idChoice = user_ids.get(i);
+                idChoice = user_ids.get(i);
                 Log.v("idChoice", idChoice); // 아이디 확인
 
-                // 선택한 아이디로 조회해서 장애인 정보 저장
-                sendRequestUserChoice(idChoice);
             }
         });
-
 
         // 보관함 선택으로 이동
         btn_box_choice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), adminBox.class);
+                Log.v("idChoice", idChoice);
+                Intent intent = new Intent(getActivity(),adminBox.class);
+                intent.putExtra("user_id",idChoice);
                 startActivity(intent);
             }
         });
-
 
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -205,11 +173,12 @@ public class FragmentAdminUserList extends Fragment {
             }
         }
         // 리스트 데이터가 변경되었으므로 아답터를 갱신하여 검색된 데이터를 화면에 보여준다.
-        adapter.notifyDataSetChanged();
+        adapter2.notifyDataSetChanged();
     }
 
 
     public void sendRequestUserList() {
+        jarrylist.clear();
 
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
@@ -222,25 +191,27 @@ public class FragmentAdminUserList extends Fragment {
             // 응답데이터를 받아오는 곳
             @Override
             public void onResponse(String response) {
-                Log.v("userList", response);
+                //Log.v("userList", response);
                 try {
                     JSONArray jsonArray = new JSONArray(response);
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
-
-                        // Log.v("test01", (String)jsonObject.get("user_id"));
-                        // jsonObject에는 회원들의 정보가 담겨 있다.
-                        items.add(jsonObject.get("user_name")+" ("+jsonObject.get("user_addr")+")");
-
+                        jarrylist.add(jsonObject.get("user_name")+" ("+jsonObject.get("user_addr")+")");
                         // 장애인 아이디 저장
                         user_ids.add((String)jsonObject.get("user_id"));
-
                     }
-                    arraylist = new ArrayList<String>();
-                    arraylist.addAll(items);
+                    items.clear();
+                    for (int i = 0; i < jarrylist.size(); i++) {
+                        items.add(jarrylist.get(i));
+                    }
 
-                    adapter = new SearchAdapter(items, getContext());
-                    listView.setAdapter(adapter);
+                    //라디오버튼
+                    adapter2 = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_single_choice, items);
+                    listView.setAdapter(adapter2);
+
+                    //검색을 위해 복사
+                    arraylist = new ArrayList<>();
+                    arraylist.addAll(items);
 
                 } catch (JSONException e) {
                     // json array 타입이 아닐 경우, 예외 처리
