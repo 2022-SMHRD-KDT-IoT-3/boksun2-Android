@@ -67,6 +67,22 @@ public class adminLogin extends AppCompatActivity {
         img2.setColorFilter(Color.parseColor("#DCDCDC"));
 
 
+        // 자동로그인 기능
+        // 기존 로그인 정보가 있다면 로그인 유지
+        if(SharedPreferencesManager.getLoginInfo(getApplicationContext()) != null) {
+            sendRequestLogin();
+        } else {
+            // 로그인 버튼
+
+        }
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendRequestLogin();
+            }
+        });
+
         // 자동로그인 스위치 활성 여부
         sw_autoLogin.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -75,7 +91,7 @@ public class adminLogin extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "자동로그인 On", Toast.LENGTH_SHORT).show();
 
                     // 자동로그인 정보 저장
-                    SharedPreferencesManager.getPreferences(getApplicationContext());
+                    //SharedPreferencesManager.getPreferences(getApplicationContext());
                     SharedPreferencesManager.setLoginInfo(getApplicationContext(), edt_id.getText().toString(), edt_pw.getText().toString());
                 } else {
                     Toast.makeText(getApplicationContext(), "자동로그인 Off", Toast.LENGTH_SHORT).show();
@@ -83,19 +99,7 @@ public class adminLogin extends AppCompatActivity {
             }
         });
 
-        // 자동로그인 기능
-        // 기존 로그인 정보가 있다면 로그인 유지
-        if(SharedPreferencesManager.getLoginInfo(getApplicationContext()) != null) {
-            sendRequestLogin();
-        } else {
-            // 로그인 버튼
-            btn_login.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    sendRequestLogin();
-                }
-            });
-        }
+
 
         // 회원가입 버튼 : 페이지 이동
         btn_join.setOnClickListener(new View.OnClickListener() {
@@ -216,7 +220,10 @@ public class adminLogin extends AppCompatActivity {
                 return params;
             }
         };
+
         stringRequest.setTag("loginWorker");
         requestQueue.add(stringRequest);
+
+
     }
 }

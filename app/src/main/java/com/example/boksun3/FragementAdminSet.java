@@ -1,5 +1,6 @@
 package com.example.boksun3;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,10 +20,21 @@ public class FragementAdminSet extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View fragement = inflater.inflate(R.layout.fg_admin_set, container,false);
 
-
+        // 자동로그인 기능
         btn_logout = fragement.findViewById(R.id.btn_logout);
 
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 자동로그인 해제
+                SharedPreferencesManager.clearPreferences(getContext());
 
+                // 메인으로 이동
+                Intent intent = new Intent(getContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        
         return fragement;
     }
 }
