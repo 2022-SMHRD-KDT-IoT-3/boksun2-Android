@@ -27,6 +27,8 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,7 +63,6 @@ public class FragementAdminUseradd extends Fragment {
         Intent intent = new Intent(getContext(), addressSearch.class);
         String address = intent.getStringExtra("address");
         edt_handi_addr.setText(address);
-
 
         edt_serial = fragement.findViewById(R.id.edt_serial);
         edt_handi_name = fragement.findViewById(R.id.edt_handi_name);
@@ -134,32 +135,46 @@ public class FragementAdminUseradd extends Fragment {
             }
 
             // 보낼 데이터를 저장하는 곳
-/*            @Override
+            @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
 
-                String user_id = handi_id.getText().toString();
-                String user_pw = handi_pw.getText().toString();
-                String user_name = handi_name.getText().toString();
-                String user_date = handi_date.getText().toString();
-
-                String user_gender;
-                if (male.isChecked()) {
+                String user_id = edt_serial.getText().toString();
+                String user_name = edt_handi_name.getText().toString();
+                String user_birthdate = edt_handi_date.getText().toString();
+                String user_gender = "";
+                if (rbtn_male.isChecked()) {
                     user_gender = "M";
-                } else if (female.isChecked()){
+                } else if (rbtn_female.isChecked()){
                     user_gender = "F";
                 } else {
                     user_gender = "N";
                 }
+                String user_addr = edt_handi_addr.getText().toString();
+                String user_phone = edt_handi_phone.getText().toString();
+                String user_empn = edt_handi_emer.getText().toString();
+                String user_disease = edt_handi_disease.getText().toString();
+
+                // 복지사 아이디
+                String worker_id = LoginCheck.wInfo.getWorker_id();
+                Date today = new Date();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+
+                String user_access = sdf.format(today).toString();
 
                 params.put("user_id", user_id);
-                params.put("user_pw", user_pw);
                 params.put("user_name", user_name);
-                params.put("user_birthdate", user_date);
+                params.put("user_birthdate", user_birthdate);
                 params.put("user_gender", user_gender);
+                params.put("user_addr", user_addr);
+                params.put("user_phone", user_phone);
+                params.put("user_empn", user_empn);
+                params.put("user_disease", user_disease);
+                params.put("user_access", user_access);
+                params.put("worker_id", worker_id);
 
                 return params;
-            }*/
+            }
         };
         stringRequest.setTag("joinUser");
         requestQueue.add(stringRequest);
