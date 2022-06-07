@@ -108,7 +108,7 @@ public class FragementAdminUseradd extends Fragment {
                 if (response.length() > 0) {
                     Toast.makeText(getActivity().getApplicationContext(), "등록 완료", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(getActivity().getApplicationContext(), handiLogin.class);
+                    Intent intent = new Intent(getActivity().getApplicationContext(), adminMainActivity.class);
                     startActivity(intent);
                 } else {
                     Toast.makeText(getActivity().getApplicationContext(), "등록 실패", Toast.LENGTH_SHORT).show();
@@ -159,7 +159,7 @@ public class FragementAdminUseradd extends Fragment {
                 // 복지사 아이디
                 String worker_id = LoginCheck.wInfo.getWorker_id();
 
-                // 날짜
+                // 접속시간 -> 오늘 날짜 포매팅
                 Date today = new Date();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
                 String user_access = sdf.format(today).toString();
