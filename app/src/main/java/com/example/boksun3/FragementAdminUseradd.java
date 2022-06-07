@@ -28,6 +28,8 @@ import com.android.volley.toolbox.Volley;
 
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -157,8 +159,10 @@ public class FragementAdminUseradd extends Fragment {
                 // 복지사 아이디
                 String worker_id = LoginCheck.wInfo.getWorker_id();
 
-
+                // 날짜
+                Date today = new Date();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                String user_access = sdf.format(today).toString();
 
                 params.put("user_id", user_id);
                 params.put("user_name", user_name);
@@ -168,7 +172,7 @@ public class FragementAdminUseradd extends Fragment {
                 params.put("user_phone", user_phone);
                 params.put("user_empn", user_empn);
                 params.put("user_disease", user_disease);
-                params.put("user_access", String.valueOf(sdf.format(sdf)));
+                params.put("user_access", user_access);
                 params.put("worker_id", worker_id);
 
                 return params;
