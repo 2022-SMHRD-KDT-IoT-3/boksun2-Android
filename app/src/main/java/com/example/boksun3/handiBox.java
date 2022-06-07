@@ -122,4 +122,10 @@ public class handiBox extends AppCompatActivity {
 
 
     }
+
+    // 뒤로가기 막기(버그떄문에 막음)
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+    }
 }
