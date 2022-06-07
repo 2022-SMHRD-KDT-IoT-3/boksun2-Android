@@ -193,8 +193,8 @@ public class adminBox extends AppCompatActivity {
 
                         if (med_box.equals(boxArray[i])) {   // "box1~7"
                             if (!med_name.equals("0")) {     // 어떤 값이 들어있다면(약 이름 기준) 예) "고혈압약"
-                                // 보관함 색 변경
-                                btnBox[i].setBackgroundColor(Color.parseColor("red"));
+                                //보관함 버튼 변경
+                                btnBox[i].setBackgroundResource(R.drawable.btn_round);
                             }
                         }
                     }
