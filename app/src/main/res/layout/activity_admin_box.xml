@@ -52,7 +52,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/box1"
+                android:id="@+id/btn_box1"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="20sp"
@@ -65,7 +65,7 @@
                 android:textSize="55sp" />
 
             <Button
-                android:id="@+id/box2"
+                android:id="@+id/btn_box2"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="10sp"
@@ -79,7 +79,7 @@
                 android:textSize="55sp" />
 
             <Button
-                android:id="@+id/box3"
+                android:id="@+id/btn_box3"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginRight="20sp"
@@ -98,7 +98,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/box4"
+                android:id="@+id/btn_box4"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="20sp"
@@ -111,27 +111,27 @@
                 android:textSize="55sp" />
 
             <Button
-                android:id="@+id/box5"
+                android:id="@+id/btn_box5"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="10sp"
                 android:layout_marginBottom="10sp"
                 android:layout_weight="1"
-                android:background="@drawable/btn_round"
+                android:background="@drawable/btn_lightgray"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="5"
                 android:textColor="#FFFFFF"
                 android:textSize="55sp" />
 
             <Button
-                android:id="@+id/box6"
+                android:id="@+id/btn_box6"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginRight="20sp"
                 android:layout_marginBottom="10sp"
                 android:layout_weight="1"
-                android:background="@drawable/btn_round"
+                android:background="@drawable/btn_lightgray"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="6"
                 android:textColor="#FFFFFF"
@@ -145,7 +145,7 @@
             android:layout_marginBottom="15sp">
 
             <Button
-                android:id="@+id/box7"
+                android:id="@+id/btn_box7"
                 android:layout_width="wrap_content"
                 android:layout_height="90sp"
                 android:layout_marginLeft="20sp"
@@ -153,7 +153,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/btn_lightgray"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="7"
+                android:text="상비약"
                 android:textColor="#FFFFFF"
                 android:textSize="55sp" />
         </LinearLayout>

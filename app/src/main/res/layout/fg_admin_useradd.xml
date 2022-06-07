@@ -40,7 +40,7 @@
             android:textSize="15sp" />
 
         <EditText
-            android:id="@+id/edt_seri"
+            android:id="@+id/edt_serial"
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginLeft="15sp"
@@ -122,14 +122,14 @@
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/rbtn_male"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="남" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/rbtn_female"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/nanumbarunpenb"
@@ -155,7 +155,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/edt_handi_ad"
+                android:id="@+id/edt_handi_addr"
                 android:layout_width="250sp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="15sp"
@@ -167,7 +167,7 @@
                 android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/btn_address"
+                android:id="@+id/btn_addr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="12sp"
@@ -220,12 +220,37 @@
             android:layout_width="360dp"
             android:layout_height="50dp"
             android:layout_marginLeft="15sp"
-            android:layout_marginBottom="20sp"
+            android:layout_marginBottom="10sp"
             android:layout_weight="1"
             android:background="@drawable/border_white"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:hint="  비상 연락처를 입력해주세요."
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/textView41"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="5sp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="보유 질환"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_handi_disease"
+            android:layout_width="360dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="20sp"
+            android:layout_weight="1"
+            android:background="@drawable/border_white"
+            android:ems="10"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:hint="  보유 질환을 입력해주세요."
             android:inputType="phone" />
 
         <LinearLayout
@@ -236,7 +261,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/btn_uAdd_cancel"
                 android:layout_width="111dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10sp"
@@ -246,7 +271,7 @@
                 android:textSize="21sp" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/btn_userAdd"
                 android:layout_width="111dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/more_gr_btn"
