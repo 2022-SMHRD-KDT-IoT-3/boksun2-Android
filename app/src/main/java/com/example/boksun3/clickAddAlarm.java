@@ -147,7 +147,6 @@ public class clickAddAlarm extends AppCompatActivity {
                 finish();
 
 
-
             }
         }); // btn_alarm 끝
 
