@@ -193,24 +193,25 @@ public class adminLogin extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
 
-                String worker_id = "";
-                String worker_pw = "";
-
                 // 자동로그인
                 Map<String, String> LoginInfo = new HashMap<>();
                 LoginInfo = SharedPreferencesManager.getLoginInfo(getApplicationContext());
 
                 if(LoginInfo != null) {
                     // 로그인 정보가 저장되어 있다면 그 정보로 로그인
-                    worker_id = LoginInfo.get("loginId");
-                    worker_pw = LoginInfo.get("loginPw");
-                } else {
-                    worker_id = edt_id.getText().toString();
-                    worker_pw = edt_pw.getText().toString();
-                }
+                    String worker_id = LoginInfo.get("loginId");
+                    String worker_pw = LoginInfo.get("loginPw");
 
-                params.put("worker_id", worker_id);
-                params.put("worker_pw", worker_pw);
+                    params.put("worker_id", worker_id);
+                    params.put("worker_pw", worker_pw);
+
+                } else {
+                    String worker_id = edt_id.getText().toString();
+                    String worker_pw = edt_pw.getText().toString();
+
+                    params.put("worker_id", worker_id);
+                    params.put("worker_pw", worker_pw);
+                }
 
                 return params;
             }

@@ -44,7 +44,7 @@ public class handiLogin extends AppCompatActivity {
     ImageView img_speaker;
     EditText edt_userId;
     CheckBox checkBox_login;
-    //Button btn_handiLogin;
+    Button btn_handiLogin;
 
     // 시리얼 번호 저장
     public static String nfc_serial_num;
@@ -76,17 +76,17 @@ public class handiLogin extends AppCompatActivity {
         } else {
             // 제품 시리얼 조회
             // 회원이면 -> 로그인, 비회원이면 -> 회원가입 페이지로 이동
-            sR_serialCheck();
+            // 로그인 버튼(제품 시리얼 조회)
+            btn_handiLogin.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    sR_serialCheck();
+                }
+            });
         }
 
         
-        // 로그인 버튼(제품 시리얼 조회)
-        /*btn_handiLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
-        });
-*/
+
 
         // nfc인스턴스 어뎁터 얻기
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
@@ -284,7 +284,7 @@ public class handiLogin extends AppCompatActivity {
                 }
 
                 params.put("user_id", user_id);
-                
+
                 return params;
             }
         };
