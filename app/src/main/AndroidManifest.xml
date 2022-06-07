@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Boksun3"
         android:usesCleartextTraffic="true">
+
         <activity
             android:name=".Insert_nfc"
             android:exported="false" >
