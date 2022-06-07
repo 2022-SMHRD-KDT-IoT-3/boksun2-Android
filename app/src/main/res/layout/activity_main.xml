@@ -58,7 +58,7 @@
         app:layout_constraintVertical_bias="0.48">
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/tv_guide"
             android:layout_width="333dp"
             android:layout_height="130dp"
             android:layout_marginBottom="20sp"
@@ -103,17 +103,5 @@
         android:textColor="#322605"
         android:textSize="28dp"
         android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btn_guide"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="192dp"
-        android:background="@drawable/question"
-        android:contentDescription="도움말"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </LinearLayout>

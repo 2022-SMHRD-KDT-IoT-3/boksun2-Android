@@ -10,18 +10,18 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn_guide, btn_handiIn, btn_adminIn ;
+    Button tv_guide, btn_handiIn, btn_adminIn ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_guide = findViewById(R.id.btn_guide);
+        tv_guide = findViewById(R.id.tv_guide);
         btn_handiIn = findViewById(R.id.btn_handiIn);
         btn_adminIn = findViewById(R.id.btn_adminIn);
 
         // 음성 도움말 버튼
-        btn_guide.setOnClickListener(new View.OnClickListener() {
+        tv_guide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
