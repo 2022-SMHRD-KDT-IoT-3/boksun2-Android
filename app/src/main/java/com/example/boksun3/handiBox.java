@@ -114,7 +114,7 @@ public class handiBox extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String boxNum = "box7";
-                Intent intent = new Intent(getApplicationContext(), handiMedResister.class);
+                Intent intent = new Intent(getApplicationContext(), Insert_nfc.class);
                 intent.putExtra("boxNum", boxNum);
                 startActivity(intent);
             }
