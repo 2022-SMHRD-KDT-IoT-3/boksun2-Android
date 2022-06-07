@@ -55,7 +55,7 @@ public class adminBox extends AppCompatActivity {
         //tv_userName.setText(uvo.getUser_name() + "님의");
 
         // 장애인 id 받기
-        String user_id =getIntent().getStringExtra("user_id");
+        String user_id = getIntent().getStringExtra("user_id");
         Log.v("box : user_id","" + user_id);
 
 
@@ -68,10 +68,8 @@ public class adminBox extends AppCompatActivity {
         btn_box7= findViewById(R.id.btn_box7);
 
 
-
         // 보관함 조회 -> 사용 상태 체크
         sR_mediBoxSelect(boxArray);
-
 
 
         // box1 버튼을 누르면 보관함 번호 box1 넘기기
@@ -81,6 +79,7 @@ public class adminBox extends AppCompatActivity {
                 // 보관함 번호 넘겨주기 : box1
                 Intent intent = new Intent(getApplicationContext(), adminBoxResister.class);
                 intent.putExtra("med_box", "box1");
+
                 startActivity(intent);
             }
         });
@@ -229,7 +228,7 @@ public class adminBox extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
 
-                String user_id = "hong";
+                String user_id = getIntent().getStringExtra("user_id");
 
                 params.put("user_id", user_id);
 
