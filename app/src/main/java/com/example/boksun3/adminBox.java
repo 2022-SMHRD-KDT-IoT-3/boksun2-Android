@@ -52,12 +52,12 @@ public class adminBox extends AppCompatActivity {
         // 장애인 이름 넣기
         tv_userName = findViewById(R.id.tv_user_name);
         UserVO uvo = LoginCheck.uInfo;
-        //tv_userName.setText(uvo.getUser_name() + "님의");
 
         // 장애인 id 받기
         String user_id =getIntent().getStringExtra("user_id");
         Log.v("box : user_id","" + user_id);
 
+        tv_userName.setText(user_id + "님의");
 
         btn_box1 = findViewById(R.id.btn_box1);
         btn_box2 = findViewById(R.id.btn_box2);
@@ -229,7 +229,7 @@ public class adminBox extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
 
-                String user_id = "hong";
+                String user_id =getIntent().getStringExtra("user_id");
 
                 params.put("user_id", user_id);
 
