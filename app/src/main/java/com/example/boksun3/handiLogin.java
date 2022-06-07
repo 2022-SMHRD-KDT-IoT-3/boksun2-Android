@@ -41,9 +41,7 @@ import android.os.Parcelable;
 
 public class handiLogin extends AppCompatActivity {
 
-    ImageView img_speaker;
     EditText edt_userId;
-    CheckBox checkBox_login;
     Button btn_handiLogin;
 
     // 시리얼 번호 저장
@@ -62,30 +60,25 @@ public class handiLogin extends AppCompatActivity {
         setContentView(R.layout.activity_handi_login);
 
 
-        img_speaker.setColorFilter(Color.parseColor("#8B8989"));
-
         edt_userId = findViewById(R.id.edt_userId);
+        btn_handiLogin = findViewById(R.id.btn_handiLogin);
 
-        //btn_handiLogin = findViewById(R.id.btn_handiLogin);
 
-        
         // 자동로그인 기능
         // 기존 로그인 정보가 있다면 NFC 태깅없이 로그인
         if(SharedPreferencesManager_user.getLoginInfo(getApplicationContext()) != null) {
             sR_serialLogin();
-        } else {
-            // 제품 시리얼 조회
-            // 회원이면 -> 로그인, 비회원이면 -> 회원가입 페이지로 이동
-            // 로그인 버튼(제품 시리얼 조회)
-            btn_handiLogin.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    sR_serialCheck();
-                }
-            });
         }
 
-        
+        // 제품 시리얼 조회
+        // 회원이면 -> 로그인, 비회원이면 -> 회원가입 페이지로 이동
+        // 로그인 버튼(제품 시리얼 조회)
+        btn_handiLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sR_serialCheck();
+            }
+        });
 
 
         // nfc인스턴스 어뎁터 얻기
@@ -126,7 +119,7 @@ public class handiLogin extends AppCompatActivity {
                 // 시리얼 번호 저장
                 nfc_serial_num = text;
 
-                
+
                 // 자동로그인(로그인 정보 저장)
                 SharedPreferencesManager_user.getPreferences(getApplicationContext());
                 SharedPreferencesManager_user.setLoginInfo(getApplicationContext(), edt_userId.getText().toString());
@@ -271,19 +264,21 @@ public class handiLogin extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
 
-                String user_id = "";
-                
                 // 자동로그인 정보 가져오기
                 String loginNFC = SharedPreferencesManager_user.getLoginInfo(getApplicationContext());
 
                 if(loginNFC != null) {
                     // 로그인 정보가 저장되어 있다면 그 정보로 로그인
-                    user_id = loginNFC;
+                    String user_id = loginNFC;
+
+                    params.put("user_id", user_id);
                 } else {
-                    user_id = edt_userId.getText().toString();
+                    String user_id = edt_userId.getText().toString();
+
+                    params.put("user_id", user_id);
                 }
 
-                params.put("user_id", user_id);
+
 
                 return params;
             }
