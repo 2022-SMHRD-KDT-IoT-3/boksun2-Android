@@ -96,7 +96,7 @@ public class Insert_nfc extends AppCompatActivity {
         }
     }
 
-    //태그 뷰
+
     private void buildTagViews(NdefMessage[] msgs){
         if(msgs == null || msgs.length == 0) return;
 
@@ -105,7 +105,7 @@ public class Insert_nfc extends AppCompatActivity {
         String textEncoding = ((payload[0] & 128)==0) ? "UTF-8" : "UTF-16";  //텍스트 인코딩
         int languageCodeLength = payload[0]; //언어 코드 가져온다.
         try{
-            //텍스트 가져온다.
+
             text = new String(payload, languageCodeLength+1,payload.length - languageCodeLength - 1, textEncoding);
             Log.v("text",text);
 
@@ -119,13 +119,10 @@ public class Insert_nfc extends AppCompatActivity {
         NdefRecord[] records = {createRecord(text)};
         NdefMessage message = new NdefMessage(records);
 
-        // 태그에 대한 Ndef 인스턴스를 가져온다.
+
         Ndef ndef = Ndef.get(tag);
-        // I/O 연결.
         ndef.connect();
-        // 메시지 작성.
         ndef.writeNdefMessage(message);
-        // 연결 종료.
         ndef.close();
     }
 
@@ -137,10 +134,8 @@ public class Insert_nfc extends AppCompatActivity {
         int textLength = textBytes.length;
         byte[] payload = new byte[1+langLength+textLength];
 
-        // 상태 바이트 설정(실제 비트는 NDEF 사양 참조)
         payload[0] = (byte)langLength;
 
-        // langBytes 및 textBytes를 페이로드에 복사
         System.arraycopy(langBytes, 0, payload, 1, langLength);
         System.arraycopy(textBytes, 0, payload, 1+langLength, textLength);
 
@@ -171,12 +166,12 @@ public class Insert_nfc extends AppCompatActivity {
         WriteModeOn();
     }
 
-    // 쓰기 on
+
     private void WriteModeOn(){
         writeMode = true;
         nfcAdapter.enableForegroundDispatch(this, pendingIntent, writingTagFilters, null);
     }
-    // 쓰기 off
+
     private void WriteModeOff(){
         writeMode = false;
         nfcAdapter.disableForegroundDispatch(this);
