@@ -11,9 +11,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="13sp"
+        android:layout_marginTop="1sp"
         android:orientation="vertical">
 
+
+        <TextView
+            android:id="@+id/textView26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:gravity="center"
+            android:text="회원 상세 정보"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView5"
@@ -22,7 +35,7 @@
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="5sp"
             android:fontFamily="@font/nanumbarunpenb"
-            android:text="아이디"
+            android:text="시리얼 번호"
             android:textColor="#000000"
             android:textSize="15sp" />
 
@@ -31,8 +44,8 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/tv_id_"
+            <TextView
+                android:id="@+id/tv_info_serial"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="15sp"
@@ -40,69 +53,14 @@
                 android:background="@drawable/border_white"
                 android:ems="10"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:hint=" 예 : boksun2"
-                android:inputType="textPersonName" />
+                android:gravity="center|left"
+                android:hint="boksun2"
+                android:inputType="textPersonName"
+                android:paddingLeft="10sp"
+                android:textSize="18sp" />
 
-            <Button
-                android:id="@+id/btn_idCheck"
-                android:layout_width="111dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10sp"
-                android:background="@drawable/btn_round"
-                android:fontFamily="@font/nanumbarunpenb"
-                android:text="중복확인"
-                android:textColor="#FFFFFF"
-                android:textSize="19sp" />
 
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
-            android:layout_marginBottom="5sp"
-            android:fontFamily="@font/nanumbarunpenb"
-            android:text="비밀번호"
-            android:textColor="#000000"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/edt_pw"
-            android:layout_width="370dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15sp"
-            android:layout_marginBottom="10sp"
-            android:background="@drawable/border_white"
-
-            android:ems="10"
-            android:fontFamily="@font/nanumbarunpenb"
-            android:hint=" 비밀번호를 입력해주세요."
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
-            android:layout_marginBottom="5sp"
-            android:fontFamily="@font/nanumbarunpenb"
-            android:text="비밀번호 확인"
-            android:textColor="#000000"
-            android:textSize="15sp" />
-
-        <EditText
-            android:id="@+id/edt_pw2"
-            android:layout_width="370dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="15sp"
-
-            android:layout_marginBottom="50sp"
-            android:background="@drawable/border_white"
-            android:ems="10"
-            android:fontFamily="@font/nanumbarunpenb"
-            android:hint=" 비밀번호를 한번 더 입력해주세요."
-            android:inputType="textPersonName" />
 
 
         <TextView
@@ -118,15 +76,16 @@
 
         <EditText
             android:id="@+id/tv_info_name"
-            android:layout_width="370dp"
+            android:layout_width="250dp"
             android:layout_height="50dp"
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="10sp"
             android:background="@drawable/border_white"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
-            android:hint=" 이름을 입력해주세요."
-            android:inputType="textPersonName" />
+            android:hint="김복순 "
+            android:inputType="textPersonName"
+            android:paddingLeft="10sp" />
 
         <TextView
             android:id="@+id/textView13"
@@ -148,8 +107,9 @@
             android:background="@drawable/border_white"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
-            android:hint=" 전화번호를 입력해주세요."
-            android:inputType="phone" />
+            android:hint=" 010-0000-0000"
+            android:inputType="phone"
+            android:paddingLeft="10sp" />
 
         <TextView
             android:id="@+id/textView14"
@@ -158,8 +118,7 @@
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="5sp"
             android:fontFamily="@font/nanumbarunpenb"
-            android:text="복지사 면허번호
-"
+            android:text="비상 연락처"
             android:textColor="#000000"
             android:textSize="15sp" />
 
@@ -168,13 +127,14 @@
             android:layout_width="370dp"
             android:layout_height="50sp"
             android:layout_marginLeft="15sp"
-            android:layout_marginBottom="50sp"
+            android:layout_marginBottom="20sp"
             android:background="@drawable/border_white"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:gravity="center|left"
-            android:hint=" 면허번호를 입력해주세요."
+            android:hint="010-1234-5678"
             android:inputType="textPersonName"
+            android:paddingLeft="10sp"
             android:textSize="18sp" />
 
         <LinearLayout
@@ -191,7 +151,7 @@
                 android:layout_marginBottom="5sp"
                 android:layout_weight="1"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="소속 복지관 명"
+                android:text="생년월일"
                 android:textColor="#000000"
                 android:textSize="15sp" />
 
@@ -205,33 +165,10 @@
                 android:background="@drawable/border_white"
                 android:ems="10"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:hint=" 복지관 명을 입력해주세요."
-                android:inputType="textPersonName" />
+                android:hint="1999 년 07월 07일"
+                android:inputType="textPersonName"
+                android:paddingLeft="10sp" />
 
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginBottom="5sp"
-                android:layout_weight="1"
-                android:fontFamily="@font/nanumbarunpenb"
-                android:text="복지관 전화번호"
-                android:textColor="#000000"
-                android:textSize="15sp" />
-
-            <EditText
-                android:id="@+id/edt_comTel"
-                android:layout_width="370dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="15sp"
-                android:layout_marginBottom="10sp"
-                android:layout_weight="1"
-                android:background="@drawable/border_white"
-                android:ems="10"
-                android:fontFamily="@font/nanumbarunpenb"
-                android:hint=" 복지관 전화번호를 입력해주세요."
-                android:inputType="phone" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -241,50 +178,12 @@
                 android:layout_marginBottom="5sp"
                 android:layout_weight="1"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="관할 주소지"
+                android:text="주소"
                 android:textColor="#000000"
                 android:textSize="15sp" />
 
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <Spinner
-                android:id="@+id/spinner1"
-                android:layout_width="173dp"
-                android:layout_height="33dp"
-                android:layout_marginStart="17dp"
-                android:entries="@array/city"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:ignore="MissingConstraints" />
-
-            <Spinner
-                android:id="@+id/spinner2"
-                android:layout_width="190dp"
-                android:layout_height="34dp"
-                android:layout_marginStart="15dp"
-                android:entries="@array/seoul"
-                android:visibility="invisible"
-                app:layout_constraintStart_toEndOf="@+id/spinner1"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Spinner
-                android:id="@+id/spinner3"
-                android:layout_width="190dp"
-                android:layout_height="34dp"
-                android:layout_marginEnd="16dp"
-                android:layout_weight="1"
-                android:entries="@array/gwangju"
-                android:visibility="invisible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
             android:id="@+id/tv_info_address"
@@ -295,7 +194,8 @@
             android:background="@drawable/border_white"
             android:fontFamily="@font/nanumbarunpenb"
             android:gravity="center|left"
-            android:text=" "
+            android:paddingLeft="10sp"
+            android:text="광주 동구 대인동 5"
             android:textSize="18sp" />
 
         <LinearLayout
@@ -306,16 +206,16 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btn_cancel"
-                android:layout_width="111dp"
-                android:layout_height="wrap_content"
-                android:background="@drawable/btn_ground_gray"
-                android:fontFamily="@font/nanumbarunpenb"
-                android:text="취소"
-                android:textColor="#FFFFFF"
-                android:textSize="21sp"
-                android:textStyle="bold" />
+            <!--            <Button-->
+            <!--                android:id="@+id/btn_cancel"-->
+            <!--                android:layout_width="111dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:background="@drawable/btn_ground_gray"-->
+            <!--                android:text="취소"-->
+            <!--                android:textColor="#FFFFFF"-->
+            <!--                android:textSize="21sp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:fontFamily="@font/nanumbarunpenb"/>-->
 
             <Button
                 android:id="@+id/btn_info_ok"
@@ -324,7 +224,7 @@
                 android:layout_marginLeft="15sp"
                 android:background="@drawable/btn_round"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="등록"
+                android:text="확인"
                 android:textColor="#FFFFFF"
                 android:textSize="21sp"
                 android:textStyle="bold" />

@@ -11,8 +11,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -28,17 +28,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/boksonlogo" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10sp"
-            android:fontFamily="@font/nanumbarunpenb"
-            android:text="복순이"
-            android:textColor="#FFFFFF"
-            android:textSize="45sp"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -62,7 +51,7 @@
             android:layout_width="333dp"
             android:layout_height="130dp"
             android:layout_marginBottom="20sp"
-            android:background="@drawable/handi_border_black"
+            android:background="@drawable/handi_more_black"
             android:drawableLeft="@drawable/ic_help"
             android:fontFamily="@font/nanumbarunpenr"
             android:gravity="center|start"
@@ -75,14 +64,14 @@
         <Button
             android:id="@+id/btn_handiIn"
             android:layout_width="333dp"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
 
             android:layout_marginTop="20sp"
-            android:background="@drawable/handi_border_y2"
+            android:background="@drawable/handi_border_yellow"
             android:fontFamily="@font/nanumbarunpenr"
             android:hint="일반 회원"
             android:text="일반 회원"
-            android:textColor="#F1FF00"
+            android:textColor="#000000"
             android:textSize="68sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"

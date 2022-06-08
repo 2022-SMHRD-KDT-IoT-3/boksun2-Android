@@ -3,15 +3,12 @@ package com.example.boksun3;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.DownloadManager;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.JsonWriter;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -28,10 +25,8 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import android.support.v4.app.*;
 import android.widget.Toast;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -64,16 +59,16 @@ public class adminJoin extends AppCompatActivity {
 
         getSupportActionBar().setTitle("회원가입");
 
-        edt_id = findViewById(R.id.edt_id);
+        edt_id = findViewById(R.id.tv_id_);
         edt_pw = findViewById(R.id.edt_pw);
-        edt_name = findViewById(R.id.edt_name);
-        edt_phone = findViewById(R.id.edt_phone);
-        edt_license = findViewById(R.id.edt_license);
-        edt_com = findViewById(R.id.edt_com);
+        edt_name = findViewById(R.id.tv_info_name);
+        edt_phone = findViewById(R.id.tv_info_phone);
+        edt_license = findViewById(R.id.tv_info_emer);
+        edt_com = findViewById(R.id.tv_info_date);
         edt_comTel = findViewById(R.id.edt_comTel);
 
         btn_idCheck = findViewById(R.id.btn_idCheck);
-        btn_submit = findViewById(R.id.btn_submit);
+        btn_submit = findViewById(R.id.btn_info_ok);
 
         btn_idCheck.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,13 +115,21 @@ public class adminJoin extends AppCompatActivity {
 //        String address = intent.getStringExtra("address");
 //        edt_address.setText(address);
 
+        Intent intent = new Intent(getApplicationContext(), adminInfo.class);
+        intent.putExtra("user_id", (Parcelable) edt_id);
+
+
+        startActivity(intent);
+        finish();
+
+
 
         // 복지관명 intent로 가져오기
         Spinner s1 = findViewById(R.id.spinner1); // 도 선택 spinner
         Spinner s2 = findViewById(R.id.spinner2); // 대전 '구' spinner
         Spinner s3 = findViewById(R.id.spinner3); // 광주 '구' spinner
 
-        tv_address = findViewById(R.id.tv_address);
+        tv_address = findViewById(R.id.tv_info_address);
 
         s1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

@@ -42,8 +42,7 @@ public class SharedPreferencesManager {
         String loginId = prefs.getString("loginId", "");
         String loginPw = prefs.getString("loginPw", "");
 
-        LoginInfo.put("loginId", loginId);
-        LoginInfo.put("loginPw", loginPw);
+
 
         return LoginInfo;
     }

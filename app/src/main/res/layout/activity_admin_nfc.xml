@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adminBoxResister"
-    android:orientation="vertical">
+    android:background="#F2F1EB"
+    android:orientation="vertical"
+    tools:context=".adminBoxResister">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#EEEDE6"
         android:orientation="vertical">
 
 
@@ -27,7 +29,7 @@
                 android:layout_marginRight="10sp"
                 android:layout_weight="1"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="7번"
+                android:text="상비약"
                 android:textAlignment="textEnd"
                 android:textSize="35sp" />
 
@@ -54,9 +56,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:fontFamily="@font/nanumbarunpenb"
-
             android:layout_marginBottom="5sp"
+
+            android:fontFamily="@font/nanumbarunpenb"
             android:text="약 이름"
             android:textColor="#000000"
             android:textSize="15sp" />
@@ -81,8 +83,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="5sp"
-            android:text="투약 방법"
             android:fontFamily="@font/nanumbarunpenb"
+            android:text="투약 방법"
             android:textColor="#000000"
             android:textSize="15sp" />
 
@@ -103,8 +105,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:fontFamily="@font/nanumbarunpenb"
             android:layout_marginBottom="5sp"
+            android:fontFamily="@font/nanumbarunpenb"
             android:text="투약 횟수"
             android:textColor="#000000"
             android:textSize="15sp" />
@@ -122,15 +124,13 @@
             android:inputType="textPersonName" />
 
 
-
-
         <TextView
             android:id="@+id/textView24"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:fontFamily="@font/nanumbarunpenb"
             android:layout_marginBottom="5sp"
+            android:fontFamily="@font/nanumbarunpenb"
             android:text="메모"
             android:textColor="#000000"
             android:textSize="15sp" />
@@ -148,7 +148,6 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -156,7 +155,7 @@
             android:layout_marginBottom="15sp"
             android:orientation="horizontal">
 
-             </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -165,15 +164,13 @@
             android:orientation="horizontal">
 
 
-
-
             <Button
-                android:id="@+id/button16"
+                android:id="@+id/btn_cancel7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
                 android:layout_marginRight="7sp"
                 android:layout_weight="1"
-                android:layout_marginLeft="15sp"
                 android:background="@drawable/more_gr_gray"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="초기화"
@@ -182,7 +179,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/btn_med_sub"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="15sp"

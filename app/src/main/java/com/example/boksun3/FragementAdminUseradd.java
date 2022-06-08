@@ -2,6 +2,7 @@ package com.example.boksun3;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -76,6 +77,22 @@ public class FragementAdminUseradd extends Fragment {
         rbtn_female = fragement.findViewById(R.id.rbtn_female);
         btn_uAdd_cancel = fragement.findViewById(R.id.btn_uAdd_cancel);
         btn_userAdd = fragement.findViewById(R.id.btn_userAdd);
+
+
+        // 회원상세정보 보내기 ---------------------------------------------------
+         Intent intent2 = new Intent(getActivity(), adminHandiInfo.class);
+         intent2.putExtra("serial", (Parcelable) edt_serial);
+         intent2.putExtra("name", (Parcelable) edt_handi_name);
+         intent2.putExtra("date", (Parcelable) edt_handi_date);
+         intent2.putExtra("address", (Parcelable) edt_handi_addr);
+         intent2.putExtra("phone", (Parcelable) edt_handi_phone);
+         intent2.putExtra("emer", (Parcelable) edt_handi_emer);
+
+         startActivity(intent2);
+
+         // --------------------------------------------------------------------
+
+
 
 
         // 장애인 등록

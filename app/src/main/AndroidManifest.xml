@@ -5,13 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET" /> <!-- 인터넷 연결 확인 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 음성인식에 필요함 -->
-    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.NFC" /><!-- NFC 권한 필요 -->
+
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_bs"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_bs_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Boksun3"
         android:usesCleartextTraffic="true">
@@ -43,30 +44,39 @@
         <activity
             android:name=".adminLogin"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            />
         <activity
             android:name=".hanidJoinNFC"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
             android:theme="@style/Theme.handi">
         </activity>
         <activity
             android:name=".adminCall"
-            android:exported="true"
             android:noHistory="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:exported="true"
+           />
         <activity
             android:name=".adminAddAlarm"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+           />
         <activity
             android:name=".adminBoxResister"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+           />
         <activity
             android:name=".adminBox"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/FullScreen"
+          >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
         <activity
             android:name=".handiJoin"
             android:exported="true"
@@ -78,12 +88,12 @@
         <activity
             android:name=".adminMainActivity"
             android:exported="true"
-            android:theme="@style/Theme.Boksun3.NoActionBar"
+
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".adminIndex"
             android:exported="true"
-            android:theme="@style/Theme.Boksun3.NoActionBar" />
+            />
         <activity
             android:name=".addressSearch"
             android:exported="true" />
@@ -95,9 +105,10 @@
             android:name=".handiLogin"
             android:exported="true"
             android:launchMode="singleInstance"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+          >
             android:theme="@style/Theme.handi" />
             <intent-filter>
+
                 <!-- nfc인텐트추가 -->
                 <action android:name="android.nfc.action.FLAG_ACTIVITY_SINGLE_TOP" />
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
@@ -111,11 +122,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <receiver

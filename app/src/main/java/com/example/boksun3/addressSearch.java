@@ -66,7 +66,7 @@ public class addressSearch extends AppCompatActivity {
                     daum_result.setText(String.format("(%s) %s %s", arg1,arg2,arg3));
 
                     address = daum_result.getText().toString();
-                    Intent intent = new Intent(addressSearch.this, adminHandiJoin.class);
+                    Intent intent = new Intent(addressSearch.this, FragementAdminUseradd.class);
                     intent.putExtra("address",address);
                     startActivity(intent);
 

@@ -1,8 +1,6 @@
 package com.example.boksun3;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,7 +36,6 @@ import java.util.Map;
 public class adminLogin extends AppCompatActivity {
 
     EditText edt_id, edt_pw;
-    ImageView img1, img2;
     Switch sw_autoLogin;
     Button btn_login, btn_join;
     TextView tv_findId, tv_findPw;
@@ -52,10 +49,9 @@ public class adminLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
 
-        edt_id = findViewById(R.id.edt_id);
+        edt_id = findViewById(R.id.tv_id_);
         edt_pw = findViewById(R.id.edt_pw);
-        img1 = findViewById(R.id.img1);
-        img2 = findViewById(R.id.img2);
+
         sw_autoLogin = findViewById(R.id.sw_autoLogin);
         btn_login = findViewById(R.id.btn_login);
         btn_join = findViewById(R.id.btn_join);
@@ -63,8 +59,8 @@ public class adminLogin extends AppCompatActivity {
         tv_findPw = findViewById(R.id.tv_findPw);
 
         // 이미지 컬러 변경
-        img1.setColorFilter(Color.parseColor("#DCDCDC"));
-        img2.setColorFilter(Color.parseColor("#DCDCDC"));
+//        img1.setColorFilter(Color.parseColor("#DCDCDC"));
+//        img2.setColorFilter(Color.parseColor("#DCDCDC"));
 
 
         // 자동로그인 기능
