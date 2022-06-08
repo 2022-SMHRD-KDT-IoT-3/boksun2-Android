@@ -119,7 +119,6 @@ public class Insert_nfc extends AppCompatActivity {
         NdefRecord[] records = {createRecord(text)};
         NdefMessage message = new NdefMessage(records);
 
-
         Ndef ndef = Ndef.get(tag);
         ndef.connect();
         ndef.writeNdefMessage(message);
