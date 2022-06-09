@@ -59,7 +59,7 @@ public class adminJoin extends AppCompatActivity {
 
         getSupportActionBar().setTitle("회원가입");
 
-        edt_id = findViewById(R.id.tv_id_);
+        edt_id = findViewById(R.id.edt_id);
         edt_pw = findViewById(R.id.edt_pw);
         edt_name = findViewById(R.id.tv_info_name);
         edt_phone = findViewById(R.id.tv_info_phone);

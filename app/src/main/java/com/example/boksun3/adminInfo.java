@@ -21,7 +21,7 @@ public class adminInfo extends AppCompatActivity {
         setContentView(R.layout.activity_admin_info);
 
 
-        tv_id = findViewById(R.id.tv_id_);
+        tv_id = findViewById(R.id.edt_id);
         btn_sub = findViewById(R.id.btn_info_ok);
         btn_sub.setOnClickListener(new View.OnClickListener() {
             @Override

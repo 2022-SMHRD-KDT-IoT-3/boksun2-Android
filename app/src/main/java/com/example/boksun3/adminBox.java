@@ -57,7 +57,7 @@ public class adminBox extends AppCompatActivity {
         String user_id = getIntent().getStringExtra("user_id");
         Log.v("box : user_id","" + user_id);
 
-        tv_userName.setText(user_id + "님의");
+        tv_userName.setText(user_id);
 
         btn_box1 = findViewById(R.id.btn_box1);
         btn_box2 = findViewById(R.id.btn_box2);

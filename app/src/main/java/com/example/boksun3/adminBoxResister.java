@@ -60,7 +60,6 @@ public class adminBoxResister extends AppCompatActivity {
 
                 Intent intent = new Intent(getApplicationContext(), clickAddAlarm.class);
                 startActivity(intent);
-
             }
         });
 

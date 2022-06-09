@@ -49,7 +49,7 @@ public class clickAddAlarm extends AppCompatActivity {
         Date nextDate = nextTime.getTime();
         String time_text = new SimpleDateFormat("a hh : mm", Locale.getDefault()).format(nextDate);
 
-        Toast.makeText(getApplicationContext(), "다음 알람은" + time_text+ "로 설정되었습니다.",Toast.LENGTH_SHORT).show();
+       //Toast.makeText(getApplicationContext(), "다음 알람은" + time_text+ "로 설정되었습니다.",Toast.LENGTH_SHORT).show();
 
         // 이전 설정값으로 TimePicker 초기화
         Date currentTime = nextTime.getTime();
@@ -145,7 +145,6 @@ public class clickAddAlarm extends AppCompatActivity {
 
                 startActivity(intent2);
                 finish();
-
 
             }
         }); // btn_alarm 끝

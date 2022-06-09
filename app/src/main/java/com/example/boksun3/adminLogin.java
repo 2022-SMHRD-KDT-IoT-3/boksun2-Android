@@ -1,14 +1,12 @@
 package com.example.boksun3;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,7 +47,7 @@ public class adminLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_login);
 
-        edt_id = findViewById(R.id.tv_id_);
+        edt_id = findViewById(R.id.edt_id);
         edt_pw = findViewById(R.id.edt_pw);
 
         sw_autoLogin = findViewById(R.id.sw_autoLogin);
