@@ -16,4 +16,7 @@ public class LoginCheck {
 
     // 약 보관함 정보(배열)
     public static ArrayList mInfo;
+
+    // 약 보관함 정보
+    public static MedicineVO mNum;
 }

@@ -42,7 +42,6 @@ public class adminHandiInfo extends AppCompatActivity {
 //        String phone = intent2.getStringExtra("phone");
 //        String emer = intent2.getStringExtra("emer");
 
-
 //        tv_info_serial.setText(serial);
 //        tv_info_name.setText(name);
 //        tv_info_date.setText(date);

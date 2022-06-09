@@ -18,6 +18,11 @@ public class MedicineVO {
 
     }
 
+    public MedicineVO(String user_id, String med_box) {
+        this.user_id = user_id;
+        this.med_box = med_box;
+    }
+
     public MedicineVO(int med_seq, String user_id, String med_box, String med_name, String med_hosp, String med_way, String med_times,
                       String med_date, String med_alarm, String med_update, String med_memo) {
         this.med_seq = med_seq;

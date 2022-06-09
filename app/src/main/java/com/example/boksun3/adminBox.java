@@ -49,15 +49,19 @@ public class adminBox extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_box);
 
+
         // 장애인 이름 넣기
         tv_userName = findViewById(R.id.tv_user_name);
         UserVO uvo = LoginCheck.uInfo;
 
         // 장애인 id 받기
-        String user_id = getIntent().getStringExtra("user_id");
-        Log.v("box : user_id","" + user_id);
+        String user_id =getIntent().getStringExtra("user_id");
+        LoginCheck.mNum = new MedicineVO(user_id,"0");
 
-        tv_userName.setText(user_id);
+
+        Log.v("box : user_id",LoginCheck.mNum.getUser_id());
+
+        tv_userName.setText(LoginCheck.mNum.getUser_id());
 
         btn_box1 = findViewById(R.id.btn_box1);
         btn_box2 = findViewById(R.id.btn_box2);
@@ -68,9 +72,9 @@ public class adminBox extends AppCompatActivity {
         btn_box7= findViewById(R.id.btn_box7);
 
 
+
         // 보관함 조회 -> 사용 상태 체크
         sR_mediBoxSelect(boxArray);
-
 
         // box1 버튼을 누르면 보관함 번호 box1 넘기기
         btn_box1.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +83,7 @@ public class adminBox extends AppCompatActivity {
                 // 보관함 번호 넘겨주기 : box1
                 Intent intent = new Intent(getApplicationContext(), adminBoxResister.class);
                 intent.putExtra("med_box", "box1");
-
+                intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
             }
         });
@@ -91,6 +95,7 @@ public class adminBox extends AppCompatActivity {
                 // 보관함 번호 넘겨주기 : box2
                 Intent intent = new Intent(getApplicationContext(), adminBoxResister.class);
                 intent.putExtra("med_box", "box2");
+                intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
             }
         });
@@ -102,6 +107,7 @@ public class adminBox extends AppCompatActivity {
                 // 보관함 번호 넘겨주기 : box3
                 Intent intent = new Intent(getApplicationContext(), adminBoxResister.class);
                 intent.putExtra("med_box", "box3");
+                intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
             }
         });
@@ -113,6 +119,7 @@ public class adminBox extends AppCompatActivity {
                 // 보관함 번호 넘겨주기 : box4
                 Intent intent = new Intent(getApplicationContext(), adminBoxResister.class);
                 intent.putExtra("med_box", "box4");
+                intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
             }
         });
@@ -124,6 +131,8 @@ public class adminBox extends AppCompatActivity {
                 // 보관함 번호 넘겨주기 : box5
                 Intent intent = new Intent(getApplicationContext(), adminBoxResister.class);
                 intent.putExtra("med_box", "box5");
+                intent.putExtra("user_id", user_id+"");
+
                 startActivity(intent);
             }
         });
@@ -135,6 +144,7 @@ public class adminBox extends AppCompatActivity {
                 // 보관함 번호 넘겨주기 : box6
                 Intent intent = new Intent(getApplicationContext(), adminBoxResister.class);
                 intent.putExtra("med_box", "box6");
+                intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
             }
         });
@@ -144,8 +154,9 @@ public class adminBox extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 보관함 번호 넘겨주기 : box7
-                Intent intent = new Intent(getApplicationContext(), adminBoxResister.class);
+                Intent intent = new Intent(getApplicationContext(), adminNFC.class);
                 intent.putExtra("med_box", "box7");
+                intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
             }
         });
@@ -192,8 +203,11 @@ public class adminBox extends AppCompatActivity {
 
                         if (med_box.equals(boxArray[i])) {   // "box1~7"
                             if (!med_name.equals("0")) {     // 어떤 값이 들어있다면(약 이름 기준) 예) "고혈압약"
+                                // 보관함 색 변경
+                                // btnBox[i].setBackgroundColor(Color.parseColor("red"));
                                 //보관함 버튼 변경
                                 btnBox[i].setBackgroundResource(R.drawable.btn_round);
+
                             }
                         }
                     }
@@ -228,7 +242,7 @@ public class adminBox extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
 
-                String user_id = getIntent().getStringExtra("user_id");
+                String user_id =getIntent().getStringExtra("user_id");
 
                 params.put("user_id", user_id);
 
