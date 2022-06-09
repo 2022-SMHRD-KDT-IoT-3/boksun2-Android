@@ -22,18 +22,18 @@
             android:layout_width="23dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:contentDescription="약 보관함"
             app:srcCompat="@drawable/ic_volume" />
 
         <TextView
             android:id="@+id/tv_handi_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="3sp"
             android:layout_weight="1"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="OOO"
             android:textAlignment="textEnd"
-            android:textColor="#59ADE6"
+            android:textColor="#FFEB3B"
             android:textSize="50sp" />
 
         <TextView
@@ -168,7 +168,7 @@
         android:layout_marginBottom="30sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_handiLogout"
         android:layout_width="176dp"
         android:layout_height="57dp"
         android:layout_gravity="right"

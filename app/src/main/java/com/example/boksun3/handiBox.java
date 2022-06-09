@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class handiBox extends AppCompatActivity {
 
@@ -15,6 +16,7 @@ public class handiBox extends AppCompatActivity {
     Button h_b_1, h_b_2, h_b_3, h_b_4, h_b_5, h_b_6, h_b_7;
     private int[] btn_ids = {R.id.h_b_1, R.id.h_b_2, R.id.h_b_3, R.id.h_b_4, R.id.h_b_5, R.id.h_b_6, R.id.h_b_7};
     private Button[] btns = new Button[7];
+    private Button btn_handiLogout;
 
     /*private Button[] getBtns = {h_b_1, h_b_2, h_b_3, h_b_4, h_b_5, h_b_6, h_b_7};
     private String [] boxNums = {"box1", "box2", "box3", "box4", "box5", "box6", "box7"};*/
@@ -41,6 +43,10 @@ public class handiBox extends AppCompatActivity {
         h_b_5 = findViewById(R.id.h_b_5);
         h_b_6 = findViewById(R.id.h_b_6);
         h_b_7 = findViewById(R.id.h_b_7);
+
+        // 로그아웃
+        btn_handiLogout = findViewById(R.id.btn_handiLogout);
+
 
         // 버튼 이벤트
 /*        String [] boxNums = {"box1", "box2", "box3", "box4", "box5", "box6", "box7"};
@@ -117,6 +123,19 @@ public class handiBox extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Insert_nfc.class);
                 intent.putExtra("boxNum", boxNum);
                 startActivity(intent);
+            }
+        });
+
+
+        // 로그아웃 버튼
+        btn_handiLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SharedPreferencesManager_user.clearPreferences(getApplicationContext());
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
+                Toast.makeText(getApplicationContext(), "로그아웃", Toast.LENGTH_SHORT).show();
             }
         });
 
