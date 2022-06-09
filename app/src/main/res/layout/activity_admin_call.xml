@@ -27,7 +27,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif"
         android:gravity="center"
-        android:text="김민정"
+        android:text="김복순"
         android:textColor="#000000"
         android:textSize="40sp"
         android:textStyle="bold" />
@@ -145,7 +145,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
+                android:gravity="center_horizontal|left"
                 android:text="05:31"
                 android:textSize="22sp"
                 android:textStyle="bold" />

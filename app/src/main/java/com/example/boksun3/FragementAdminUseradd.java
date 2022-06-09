@@ -80,15 +80,15 @@ public class FragementAdminUseradd extends Fragment {
 
 
         // 회원상세정보 보내기 ---------------------------------------------------
-         Intent intent2 = new Intent(getActivity(), adminHandiInfo.class);
-         intent2.putExtra("serial", (Parcelable) edt_serial);
-         intent2.putExtra("name", (Parcelable) edt_handi_name);
-         intent2.putExtra("date", (Parcelable) edt_handi_date);
-         intent2.putExtra("address", (Parcelable) edt_handi_addr);
-         intent2.putExtra("phone", (Parcelable) edt_handi_phone);
-         intent2.putExtra("emer", (Parcelable) edt_handi_emer);
+//         Intent intent2 = new Intent(getActivity(), adminHandiInfo.class);
+//         intent2.putExtra("serial", (Parcelable) edt_serial);
+//         intent2.putExtra("name", (Parcelable) edt_handi_name);
+//         intent2.putExtra("date", (Parcelable) edt_handi_date);
+//         intent2.putExtra("address", (Parcelable) edt_handi_addr);
+//         intent2.putExtra("phone", (Parcelable) edt_handi_phone);
+//         intent2.putExtra("emer", (Parcelable) edt_handi_emer);
 
-         startActivity(intent2);
+//         startActivity(intent2);
 
          // --------------------------------------------------------------------
 

@@ -89,15 +89,7 @@ public class FragmentAdminUserList extends Fragment  {
         editSearch = fragement.findViewById(R.id.edt_userserach2);
         listView = fragement.findViewById(R.id.lv_userlist2);
 
-        // 회원상세 버튼 클릭시
-        btn_user_detail = fragement.findViewById(R.id.btn_user_detail);
-        btn_user_detail.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), adminHandiInfo.class);
-                startActivity(intent);
-            }
-        });
+
 
         sendRequestUserList();
 
@@ -143,6 +135,17 @@ public class FragmentAdminUserList extends Fragment  {
             public void onClick(View view) {
                 Log.v("idChoice", idChoice);
                 Intent intent = new Intent(getActivity(),adminBox.class);
+                intent.putExtra("user_id",idChoice);
+                startActivity(intent);
+            }
+        });
+
+        // 회원상세 버튼 클릭시
+        btn_user_detail = fragement.findViewById(R.id.btn_user_detail);
+        btn_user_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), adminHandiInfo.class);
                 intent.putExtra("user_id",idChoice);
                 startActivity(intent);
             }

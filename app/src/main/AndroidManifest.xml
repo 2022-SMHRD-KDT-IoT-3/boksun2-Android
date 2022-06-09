@@ -18,7 +18,8 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".Insert_nfc"
-            android:exported="false" >
+            android:exported="false"
+            android:theme="@style/Theme.handi">
             <intent-filter>
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
@@ -40,18 +41,11 @@
         <activity
             android:name=".clickAddAlarm"
             android:exported="false"
-            android:theme="@style/PopupTheme"
-            android:launchMode="singleInstance"/>
+            android:theme="@style/PopupTheme" />
         <activity
             android:name=".adminLogin"
             android:exported="true"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            />
         <activity
             android:name=".hanidJoinNFC"
             android:exported="true"
@@ -62,7 +56,15 @@
             android:name=".adminCall"
             android:noHistory="true"
             android:exported="true"
-           />
+           >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
         <activity
             android:name=".adminAddAlarm"
             android:exported="true"
@@ -74,7 +76,8 @@
         <activity
             android:name=".adminBox"
             android:exported="true"
-            android:theme="@style/FullScreen">
+            android:theme="@style/FullScreen"
+          >
 
 
 
@@ -92,6 +95,9 @@
             android:exported="true"
 
             android:windowSoftInputMode="adjustPan" />
+
+
+
         <activity
             android:name=".adminIndex"
             android:exported="true"
@@ -124,6 +130,17 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".adminHandiInfo"
+            android:exported="true">
+
 
         </activity>
 
