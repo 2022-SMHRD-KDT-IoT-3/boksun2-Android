@@ -46,7 +46,7 @@
             android:fontFamily="sans-serif"
             android:gravity="center|left"
             android:hint="  시리얼 번호 입력창"
-            android:textColorHint="#FFFFFF"
+            android:textColorHint="#AEAEAE"
             android:textSize="30sp" />
 
         <TextView
@@ -71,7 +71,7 @@
             android:fontFamily="sans-serif"
             android:hint="  이름을 입력해주세요."
             android:inputType="textPersonName"
-            android:textColorHint="#FFFFFF"
+            android:textColorHint="#AEAEAE"
             android:textSize="30sp" />
 
         <TextView
@@ -96,7 +96,7 @@
             android:fontFamily="sans-serif"
             android:hint="  비상 연락처를 입력해주세요."
             android:inputType="phone"
-            android:textColorHint="#FFFFFF"
+            android:textColorHint="#AEAEAE"
             android:textSize="30sp" />
 
         <Button

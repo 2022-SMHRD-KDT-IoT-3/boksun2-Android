@@ -44,7 +44,7 @@
         android:fontFamily="sans-serif"
         android:hint="   제품코드를 입력해 주세요."
         android:inputType="textPersonName"
-        android:textColorHint="#FFFFFF"
+        android:textColorHint="#939393"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,8 +65,9 @@
 
         <Button
             android:id="@+id/btn_handiLogin"
-            android:layout_width="match_parent"
+            android:layout_width="347dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
             android:background="@drawable/handi_border_yellow"

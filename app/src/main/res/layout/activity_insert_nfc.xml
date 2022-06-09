@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     tools:context=".Insert_nfc">
 
     <LinearLayout
@@ -72,6 +73,7 @@
             android:inputType="textPersonName"
             android:textColorHint="#FFFFFF"
             android:textSize="30sp" />
+
         <Button
             android:id="@+id/btn_InsertNFC"
             android:layout_width="match_parent"
