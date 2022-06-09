@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -27,29 +28,27 @@ public class adminHandiInfo extends AppCompatActivity {
         tv_info_emer = findViewById(R.id.tv_info_emer);
         tv_info_address = findViewById(R.id.tv_info_address);
 
-
-
-
         btn_info_ok = findViewById(R.id.btn_info_ok);
 
 
         // 회원 상세정보 가져오기
-        Intent intent2 = getIntent();
+        Intent intent = getIntent();
 
-        String serial = intent2.getStringExtra("serial");
-        String name = intent2.getStringExtra("name");
-        String date = intent2.getStringExtra("date");
-        String address = intent2.getStringExtra("address");
-        String phone = intent2.getStringExtra("phone");
-        String emer = intent2.getStringExtra("emer");
+        String user_id = intent.getStringExtra("user_id");
+        Log.v("handiinfo user_id",user_id);
+//        String name = intent2.getStringExtra("name");
+//        String date = intent2.getStringExtra("date");
+//        String address = intent2.getStringExtra("address");
+//        String phone = intent2.getStringExtra("phone");
+//        String emer = intent2.getStringExtra("emer");
 
 
-        tv_info_serial.setText(serial);
-        tv_info_name.setText(name);
-        tv_info_date.setText(date);
-        tv_info_phone.setText(phone);
-        tv_info_emer.setText(emer);
-        tv_info_address.setText(address);
+//        tv_info_serial.setText(serial);
+//        tv_info_name.setText(name);
+//        tv_info_date.setText(date);
+//        tv_info_phone.setText(phone);
+//        tv_info_emer.setText(emer);
+//        tv_info_address.setText(address);
 
 
         btn_info_ok.setOnClickListener(new View.OnClickListener() {
