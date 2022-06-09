@@ -29,7 +29,7 @@
                 android:layout_marginRight="10sp"
                 android:layout_weight="1"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="000"
+                android:text="김복순"
                 android:textAlignment="textEnd"
                 android:textColor="@color/secondary"
                 android:textSize="35sp" />
@@ -60,7 +60,7 @@
                 android:layout_marginLeft="20sp"
                 android:layout_marginBottom="10sp"
                 android:layout_weight="1"
-                android:background="@drawable/btn_lightgray"
+                android:background="@drawable/btn_secondary"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="1"
                 android:textColor="#FFFFFF"
