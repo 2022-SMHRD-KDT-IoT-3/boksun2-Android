@@ -1,33 +1,36 @@
 package com.example.boksun3;
 
-import android.app.Service;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
-import android.content.Intent;
-import android.os.IBinder;
+import android.os.Build;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
 
-import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
 import java.util.Map;
 
 public class BokFirebaseMessagingService extends com.google.firebase.messaging.FirebaseMessagingService {
     private static final String TAG = "FMS";
-
+    NotificationManager manager;
+    private static String CHANNEL_ID = "channel1";
+    private static String CHANNEL_NAME = "channel1";
     public BokFirebaseMessagingService() {
 
     }
 
     @Override
-    public void onNewToken(@NonNull String token) { // 새로운 토큰을 확인했을 때 호출되는 메서드
+    public void onNewToken(@NonNull String token) {
         super.onNewToken(token);
         Log.e(TAG, "onNewToken 호출됨 : "+token);
     }
 
     @Override
-    public void onMessageReceived(@NonNull RemoteMessage message) { // 새로운 메시지를 받았을때 호출되는 메서드
+    public void onMessageReceived(@NonNull RemoteMessage message) {
         Log.d(TAG,"onMessageReceived() 호출됨.");
 
         String from = message.getFrom();
@@ -39,12 +42,23 @@ public class BokFirebaseMessagingService extends com.google.firebase.messaging.F
     }
 
     private void sendToActivity(Context context, String from, String body) {
-        Intent intent = new Intent(context, MainActivity.class);
-        intent.putExtra("from", from);
-        intent.putExtra("body", body);
+        manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        NotificationCompat.Builder builder = null;
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+            manager.createNotificationChannel(new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT));
 
-        context.startActivity(intent);
+            builder = new NotificationCompat.Builder(this, CHANNEL_ID);
+        }
+        else{
+            builder = new NotificationCompat.Builder(this);
+        }
+
+        builder.setContentTitle("긴급 알림");
+        builder.setContentText(body);
+        builder.setSmallIcon(R.drawable.icon);
+        Notification noti = builder.build();
+
+        manager.notify(1,noti);
     }
 }

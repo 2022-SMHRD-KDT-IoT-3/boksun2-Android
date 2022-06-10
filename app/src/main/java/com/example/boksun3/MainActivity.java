@@ -20,11 +20,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
-    NotificationManager manager;
-
-    private static String CHANNEL_ID = "channel1";
-    private static String CHANNEL_NAME = "channel1";
-
     Button  btn_handiIn, btn_adminIn ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +41,6 @@ public class MainActivity extends AppCompatActivity {
                     Log.w("Main", "토큰 가져오는 데 실패함", task.getException());
                     return;
                 }
-                String newToken = task.getResult();
-                println("등록id : " + newToken);
-                Log.v("newToken", newToken);
             }
         });
 
@@ -74,50 +66,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    }
-    @Override
-    protected void onNewIntent(Intent intent) {
-        println("onNewIntent 호출됨");
-
-        if(intent != null){
-            processIntent(intent);
-        }
-        super.onNewIntent(intent);
-    }
-
-    private void processIntent(Intent intent){
-        String from = intent.getStringExtra("from");
-        if(from == null){
-            println("from is null");
-            return;
-        }
-
-        String body = intent.getStringExtra("body");
-        showNoti1(body);
-        println("DATA : " + from + ", " + body);
-    }
-    public void println(String data){
-        Log.v("text2", data);
-    }
-
-    public void showNoti1(String body){
-        manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-
-        NotificationCompat.Builder builder = null;
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            manager.createNotificationChannel(new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT));
-
-            builder = new NotificationCompat.Builder(this, CHANNEL_ID);
-        }
-        else{
-            builder = new NotificationCompat.Builder(this);
-        }
-
-        builder.setContentTitle("긴급 알림");
-        builder.setContentText(body);
-        builder.setSmallIcon(R.drawable.icon);
-        Notification noti = builder.build();
-
-        manager.notify(1,noti);
     }
 }
