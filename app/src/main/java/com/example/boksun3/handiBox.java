@@ -131,8 +131,9 @@ public class handiBox extends AppCompatActivity {
         btn_handiLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                LoginCheck.uInfo = null;
                 SharedPreferencesManager_user.clearPreferences(getApplicationContext());
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), handiLogin.class);
                 startActivity(intent);
 
                 Toast.makeText(getApplicationContext(), "로그아웃", Toast.LENGTH_SHORT).show();
