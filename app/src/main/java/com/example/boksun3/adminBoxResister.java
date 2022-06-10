@@ -47,7 +47,7 @@ public class adminBoxResister extends AppCompatActivity {
     String user_id;
     String med_box;
 
-    //
+
     private ArrayList<String> medarraylist = new ArrayList<>();
 
     //보관함 배열
@@ -83,7 +83,7 @@ public class adminBoxResister extends AppCompatActivity {
         et_med_memo = findViewById(R.id.et_med_memo);
         tv_time = findViewById(R.id.tv_time);
 
-        btn_add = findViewById(R.id.btn_add);
+//        btn_add = findViewById(R.id.btn_add);
         btn_reset = findViewById(R.id.btn_reset);
         btn_commit =findViewById(R.id.btn_commit);
 
@@ -91,21 +91,29 @@ public class adminBoxResister extends AppCompatActivity {
         // 보관함 정보 조회
         mediBoxInfoSelect(medArray);
 
+
+
         // 알람 시간
-        btn_add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), clickAddAlarm.class);
-                intent.putExtra("admin","admin");
-                startActivity(intent);
-            }
-        });
+//        btn_add.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getApplicationContext(), clickAddAlarm.class);
+//                intent.putExtra("admin","admin");
+//                startActivity(intent);
+//            }
+//        });
 
         // 취소 버튼
         btn_reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                et_med_name.setText(null);
+                et_med_hosp.setText(null);
+                et_med_way.setText(null);
+                et_med_times.setText(null);
+                et_med_date.setText(null);
+                et_med_memo.setText(null);
+                tv_time.setText(null);
             }
         });
 
@@ -127,6 +135,15 @@ public class adminBoxResister extends AppCompatActivity {
         }
 
     }
+
+    //뒤로 돌아갔을때 재실행 되도록
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(getApplicationContext(), adminBox.class);
+        intent.putExtra("user_id", user_id+"");
+        startActivity(intent);
+    };
+
 
 
     // 보관함 사용 상태 체크
@@ -178,7 +195,12 @@ public class adminBoxResister extends AppCompatActivity {
                             edt[i].setText(medarraylist.get(i)+"");
                         }
                     }
-                    tv_time.setText(med_alarm);
+                    Log.v("tv_time",""+med_alarm);
+                    if(med_alarm == null){
+                        tv_time.setText("00:00");
+                    }else{
+                        tv_time.setText(med_alarm);
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -241,10 +263,10 @@ public class adminBoxResister extends AppCompatActivity {
 
                 if (response.length() > 0) {
                     Toast.makeText(getApplicationContext(), "보관함 수정 성공", Toast.LENGTH_SHORT).show();
-
-                    // 페이지 이동
-                    Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), adminBox.class);
+                    intent.putExtra("user_id", user_id+"");
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(getApplicationContext(), "보관함 수정 실패", Toast.LENGTH_SHORT).show();
 

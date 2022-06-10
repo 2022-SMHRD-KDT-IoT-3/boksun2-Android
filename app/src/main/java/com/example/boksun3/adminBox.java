@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.security.AppUriAuthenticationPolicy;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -76,6 +77,8 @@ public class adminBox extends AppCompatActivity {
         // 보관함 조회 -> 사용 상태 체크
         sR_mediBoxSelect(boxArray);
 
+
+
         // box1 버튼을 누르면 보관함 번호 box1 넘기기
         btn_box1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,6 +88,7 @@ public class adminBox extends AppCompatActivity {
                 intent.putExtra("med_box", "box1");
                 intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -97,6 +101,7 @@ public class adminBox extends AppCompatActivity {
                 intent.putExtra("med_box", "box2");
                 intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -109,6 +114,7 @@ public class adminBox extends AppCompatActivity {
                 intent.putExtra("med_box", "box3");
                 intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -121,6 +127,7 @@ public class adminBox extends AppCompatActivity {
                 intent.putExtra("med_box", "box4");
                 intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -134,6 +141,7 @@ public class adminBox extends AppCompatActivity {
                 intent.putExtra("user_id", user_id+"");
 
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -146,6 +154,9 @@ public class adminBox extends AppCompatActivity {
                 intent.putExtra("med_box", "box6");
                 intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
+                sR_mediBoxSelect(boxArray);
+                finish();
+
             }
         });
 
@@ -158,6 +169,8 @@ public class adminBox extends AppCompatActivity {
                 intent.putExtra("med_box", "box7");
                 intent.putExtra("user_id", user_id+"");
                 startActivity(intent);
+                finish();
+
             }
         });
 
@@ -253,4 +266,10 @@ public class adminBox extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
     }
+
+    @Override
+    public void onBackPressed(){
+        Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
+        startActivity(intent);
+    };
 }

@@ -207,15 +207,14 @@
             android:layout_marginBottom="15sp"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
                 android:id="@+id/tv_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="7sp"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:gravity="right"
-                android:text="7:30"
-                android:textColor="#FFBF00"
+                android:hint="24:00"
                 android:textSize="32sp"
                 android:textStyle="bold" />
 
@@ -230,23 +229,26 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="30sp"
             android:orientation="horizontal">
 
 
-            <Button
-                android:id="@+id/btn_add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15sp"
-                android:layout_marginRight="7sp"
-                android:layout_weight="1"
-                android:background="@drawable/more_gr_btn"
-                android:fontFamily="@font/nanumbarunpenb"
-                android:text="알람설정"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+            <!--            <Button-->
+            <!--                android:id="@+id/btn_add"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginLeft="15sp"-->
+            <!--                android:layout_marginRight="7sp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/more_gr_btn"-->
+            <!--                android:fontFamily="@font/nanumbarunpenb"-->
+            <!--                android:text="알람설정"-->
+            <!--                android:textColor="#FFFFFF"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:textStyle="bold" />-->
 
             <Button
                 android:id="@+id/btn_reset"
