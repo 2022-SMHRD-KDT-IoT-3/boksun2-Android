@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 음성인식에 필요함 -->
     <uses-permission android:name="android.permission.NFC" /><!-- NFC 권한 필요 -->
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_bs"
@@ -19,20 +18,20 @@
         <activity
             android:name=".splashActivity"
             android:exported="true"
-            android:theme="@style/SplashTheme">
-            <!--
+            android:theme="@style/SplashTheme"
+            >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-            -->
 
-           <intent-filter>
-               <category android:name="android.intent.category.LAUNCHER" />
-           </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
 
         <service
             android:name=".BokFirebaseMessagingService"
-            android:exported="true"
             android:enabled="true"
+            android:exported="true"
             android:stopWithTask="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -46,6 +45,7 @@
             <intent-filter>
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -67,83 +67,94 @@
             android:theme="@style/PopupTheme" />
         <activity
             android:name=".adminLogin"
-            android:exported="true"/>
+            android:exported="true"
+            android:theme="@style/Theme.admin"
+            />
         <activity
             android:name=".hanidJoinNFC"
             android:exported="true"
 
-            android:theme="@style/Theme.handi">
-        </activity>
+            android:theme="@style/Theme.handi"></activity>
         <activity
             android:name=".adminCall"
-            android:noHistory="true"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true">
+
+
         </activity>
+
         <activity
             android:name=".adminAddAlarm"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".adminBoxResister"
-            android:exported="true"/>
+            android:theme="@style/Theme.admin"
+            android:exported="true" />
         <activity
             android:name=".adminBox"
+            android:theme="@style/Theme.admin"
             android:exported="true"
-            android:theme="@style/FullScreen">
+            ></activity>
+        <activity
+            android:name=".adminNFC"
+            android:theme="@style/Theme.admin"
+            android:exported="true">
         </activity>
-<!--        <activity
-            android:name=".handiJoin"
-            android:exported="true"
-            android:theme="@style/Theme.handi" />-->
+
         <activity
             android:name=".adminJoin"
+            android:theme="@style/Theme.admin"
             android:exported="true"
             android:label="@string/Join" />
         <activity
             android:name=".adminMainActivity"
+            android:theme="@style/Theme.admin"
             android:exported="true"
-
             android:windowSoftInputMode="adjustPan" />
-
-
 
         <activity
             android:name=".adminIndex"
-            android:exported="true"
-            />
+            android:exported="true" />
         <activity
             android:name=".addressSearch"
             android:exported="true" />
-<!--        <activity
-            android:name=".datePicker"
-            android:exported="false"
-            android:theme="@style/PopupTheme" />-->
+
         <activity
             android:name=".handiLogin"
             android:exported="true"
+            android:theme="@style/Theme.handi"
             android:launchMode="singleInstance">
-            android:theme="@style/Theme.handi" />
+
             <intent-filter>
+
                 <!-- nfc인텐트추가 -->
                 <action android:name="android.nfc.action.FLAG_ACTIVITY_SINGLE_TOP" />
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.handi">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".adminHandiInfo"
             android:exported="true">
+
+
         </activity>
+
         <receiver
             android:name=".DeviceBootReceiver"
             android:enabled="false"

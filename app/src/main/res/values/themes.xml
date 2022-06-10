@@ -3,7 +3,7 @@
     <style name="Theme.Boksun3" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+<!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/sDark</item>
@@ -36,8 +36,24 @@
         <item name="colorPrimaryVariant">@color/black</item>
 
         <!--<item name="android:windowFullscreen">true</item>-->
-
     </style>
+
+<!--  admin용 테마 admin에 적용할것들은 여기서 수정해주세요 부모에서 수정하면 다 바껴요..   -->
+    <style name="Theme.admin" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/sDark</item>
+        <item name="colorSecondaryVariant">@color/secondary</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
 
     <style name="PopupTheme" parent="Theme.AppCompat.Light.Dialog">
         <item name="colorPrimary">@color/purple_500</item>
@@ -89,15 +105,15 @@
     </style>
 
 
-
-<!--    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">-->
-<!--        <item name="android:windowFullscreen">true</item>-->
-<!--    </style>-->
+    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
 
 
     <!-- 스플래시 테마  -->
 <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowBackground">@drawable/pbok</item>
+    <item name="android:windowFullscreen">true</item>
 </style>
 
 </resources>
