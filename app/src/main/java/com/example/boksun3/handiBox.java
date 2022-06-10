@@ -139,11 +139,9 @@ public class handiBox extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "로그아웃", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 
-    // 뒤로가기 막기(버그떄문에 막음)
+    // 로그아웃 버튼 사용 하려고 뒤로가기 막음
     @Override
     public void onBackPressed() {
         //super.onBackPressed();
