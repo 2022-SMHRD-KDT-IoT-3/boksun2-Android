@@ -20,12 +20,6 @@
             android:name=".splashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
 
         <service
@@ -66,43 +60,28 @@
             android:theme="@style/PopupTheme" />
         <activity
             android:name=".adminLogin"
-            android:exported="true"
-            />
+            android:exported="true"/>
         <activity
             android:name=".hanidJoinNFC"
             android:exported="true"
-
             android:theme="@style/Theme.handi">
         </activity>
         <activity
             android:name=".adminCall"
             android:noHistory="true"
-            android:exported="true"
-           >
-
-
+            android:exported="true">
         </activity>
         <activity
             android:name=".adminAddAlarm"
-            android:exported="true"
-           />
+            android:exported="true"/>
         <activity
             android:name=".adminBoxResister"
-            android:exported="true"
-           />
+            android:exported="true"/>
         <activity
             android:name=".adminBox"
             android:exported="true"
-            android:theme="@style/FullScreen"
-          >
-
-
-
+            android:theme="@style/FullScreen">
         </activity>
-        <activity
-            android:name=".handiJoin"
-            android:exported="true"
-            android:theme="@style/Theme.handi" />
         <activity
             android:name=".adminJoin"
             android:exported="true"
@@ -110,11 +89,7 @@
         <activity
             android:name=".adminMainActivity"
             android:exported="true"
-
             android:windowSoftInputMode="adjustPan" />
-
-
-
         <activity
             android:name=".adminIndex"
             android:exported="true"
@@ -123,24 +98,16 @@
             android:name=".addressSearch"
             android:exported="true" />
         <activity
-            android:name=".datePicker"
-            android:exported="false"
-            android:theme="@style/PopupTheme" />
-        <activity
             android:name=".handiLogin"
             android:exported="true"
-            android:launchMode="singleInstance"
-          >
+            android:launchMode="singleInstance">
             android:theme="@style/Theme.handi" />
             <intent-filter>
-
                 <!-- nfc인텐트추가 -->
                 <action android:name="android.nfc.action.FLAG_ACTIVITY_SINGLE_TOP" />
                 <action android:name="android.nfc.action.TAG_DISCOVERED" />
                 <action android:name="android.nfc.action.NDEF_DISCOVERED" />
-
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
@@ -152,15 +119,11 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".adminHandiInfo"
             android:exported="true">
-
-
         </activity>
-
         <receiver
             android:name=".DeviceBootReceiver"
             android:enabled="false"
