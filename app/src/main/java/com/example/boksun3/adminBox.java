@@ -59,7 +59,7 @@ public class adminBox extends AppCompatActivity {
         LoginCheck.mNum = new MedicineVO(user_id,"0");
 
 
-        Log.v("box : user_id",LoginCheck.mNum.getUser_id());
+        //Log.v("box : user_id",LoginCheck.mNum.getUser_id());
 
         tv_userName.setText(LoginCheck.mNum.getUser_id());
 

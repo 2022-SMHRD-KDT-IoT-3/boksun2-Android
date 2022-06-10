@@ -28,7 +28,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -77,9 +79,10 @@ public class adminBoxResister extends AppCompatActivity {
         et_med_hosp = findViewById(R.id.et_med_hosp);
         et_med_way = findViewById(R.id.et_med_way);
         et_med_times = findViewById(R.id.et_med_times);
-        et_med_date = findViewById(R.id.et_med_memo);
+        et_med_date = findViewById(R.id.et_med_date);
         et_med_memo = findViewById(R.id.et_med_memo);
         tv_time = findViewById(R.id.tv_time);
+
         btn_add = findViewById(R.id.btn_add);
         btn_reset = findViewById(R.id.btn_reset);
         btn_commit =findViewById(R.id.btn_commit);
@@ -119,6 +122,8 @@ public class adminBoxResister extends AppCompatActivity {
         }
 
     }
+
+
     // 보관함 사용 상태 체크
     public void mediBoxInfoSelect( String[] medArray) {
         // RequestQueue 객체 생성
@@ -164,7 +169,7 @@ public class adminBoxResister extends AppCompatActivity {
                     EditText edt[] = {et_med_name,et_med_hosp,et_med_way, et_med_times,et_med_date,et_med_memo};
 
                     for(int i=0; i<medarraylist.size(); i++ ){
-                        if(!medarraylist.get(i).equals("0")){
+                        if(!medarraylist.get(i).equals(" ")){
                             edt[i].setText(medarraylist.get(i)+"");
                         }
                     }
@@ -213,6 +218,8 @@ public class adminBoxResister extends AppCompatActivity {
 
     }
 
+
+    // 약 보관함 업데이트
     public void sendRequestBoxResister() {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -228,12 +235,13 @@ public class adminBoxResister extends AppCompatActivity {
                 Log.v("boxResister", response);
 
                 if (response.length() > 0) {
-                    Toast.makeText(getApplicationContext(), "보관함 등록 성공", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "보관함 수정 성공", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(getApplicationContext(), adminBox.class);
+                    // 페이지 이동
+                    Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
                     startActivity(intent);
                 } else {
-                    Toast.makeText(getApplicationContext(), "보관함 등록 실패", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "보관함 수정 실패", Toast.LENGTH_SHORT).show();
 
                 }
 
@@ -272,6 +280,10 @@ public class adminBoxResister extends AppCompatActivity {
                 String box_alarm = tv_time.getText().toString();
                 String box_memo = et_med_memo.getText().toString();
 
+                // 접속시간 -> 오늘 날짜 포매팅
+                Date today = new Date();
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+                String box_update = sdf.format(today).toString();
 
                 params.put("med_name", box_name);
                 params.put("med_hosp", box_hosp);
@@ -282,6 +294,7 @@ public class adminBoxResister extends AppCompatActivity {
                 params.put("med_memo", box_memo);
                 params.put("user_id", user_id);
                 params.put("med_box", med_box);
+                params.put("med_update", box_update);
 
                 return params;
             }

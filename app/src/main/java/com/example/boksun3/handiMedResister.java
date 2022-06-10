@@ -153,11 +153,21 @@ public class handiMedResister extends AppCompatActivity {
 
                 String med_name = edt_med_name.getText().toString();
                 String med_alarm = edt_alarm.getText().toString();
+                String med_hosp = "";
+                String med_way = "";
+                String med_times = "";
+                String med_date = "";
+                String med_memo = "";
 
                 params.put("user_id", user_id);
                 params.put("med_box", med_box);
                 params.put("med_name", med_name);
                 params.put("med_alarm", med_alarm);
+                params.put("med_hosp", med_hosp);
+                params.put("med_way", med_way);
+                params.put("med_times", med_times);
+                params.put("med_date", med_date);
+                params.put("med_memo", med_memo);
 
                 return params;
             }
