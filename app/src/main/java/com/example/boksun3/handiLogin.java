@@ -62,7 +62,7 @@ public class handiLogin extends AppCompatActivity {
 
         edt_userId = findViewById(R.id.edt_userId);
         btn_handiLogin = findViewById(R.id.btn_handiLogin);
-
+        btn_handiLogin.bringToFront();
         
         // 자동로그인 기능
         // 기존 로그인 정보가 있다면 NFC 태깅없이 로그인
@@ -267,7 +267,7 @@ public class handiLogin extends AppCompatActivity {
                 // 자동로그인 정보 가져오기
                 String loginNFC = SharedPreferencesManager_user.getLoginInfo(getApplicationContext());
 
-                if(loginNFC != null) {
+                if(!loginNFC.equals("")) {
                     // 로그인 정보가 저장되어 있다면 그 정보로 로그인
                     String user_id = loginNFC;
 

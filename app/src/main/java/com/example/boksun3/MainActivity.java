@@ -27,10 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
-
         btn_handiIn = findViewById(R.id.btn_handiIn);
         btn_adminIn = findViewById(R.id.btn_adminIn);
 
@@ -62,9 +58,5 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
     }
 }
