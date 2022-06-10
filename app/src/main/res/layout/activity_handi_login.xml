@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:fontFamily="sans-serif"
-        android:text="로그인"
+        android:text="복순이"
         android:textColor="#FFFFFF"
-        android:textSize="60sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -36,14 +36,14 @@
 
     <EditText
         android:id="@+id/edt_userId"
-        android:layout_width="308dp"
+        android:layout_width="300dp"
         android:layout_height="93dp"
         android:layout_marginTop="38dp"
         android:layout_marginBottom="293dp"
         android:background="@drawable/handi_border_black"
         android:ems="10"
         android:fontFamily="sans-serif"
-        android:hint="   제품코드를 입력해 주세요."
+        android:hint="   제품코드 입력"
         android:inputType="textPersonName"
         android:paddingLeft="5sp"
         android:textColor="#FFFFFF"
@@ -58,8 +58,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout3"
-        android:layout_width="0dp"
-        android:layout_height="122dp"
+        android:layout_width="405dp"
+        android:layout_height="184dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -68,7 +68,7 @@
 
         <Button
             android:id="@+id/btn_handiLogin"
-            android:layout_width="347dp"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10sp"

@@ -114,7 +114,7 @@ public class handiLogin extends AppCompatActivity {
                 byte[] payload = record.getPayload();
                 String text = new String(payload);
                 text = text.substring(3); // 불필요한값 제외
-                edt_userId.setText(text);
+                edt_userId.setText("   " + text);
 
                 // 시리얼 번호 저장
                 nfc_serial_num = text;
@@ -235,7 +235,7 @@ public class handiLogin extends AppCompatActivity {
                     }
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {

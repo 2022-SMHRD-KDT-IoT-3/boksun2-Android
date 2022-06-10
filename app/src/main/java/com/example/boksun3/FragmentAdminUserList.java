@@ -138,7 +138,7 @@ public class FragmentAdminUserList extends Fragment  {
         btn_box_choice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.v("idChoice", idChoice);
+                //Log.v("idChoice", idChoice);
                 Intent intent = new Intent(getActivity(),adminBox.class);
                 intent.putExtra("user_id",idChoice);
                 startActivity(intent);

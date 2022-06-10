@@ -267,6 +267,7 @@ public class adminBoxResister extends AppCompatActivity {
                     intent.putExtra("user_id", user_id+"");
                     startActivity(intent);
                     finish();
+
                 } else {
                     Toast.makeText(getApplicationContext(), "보관함 수정 실패", Toast.LENGTH_SHORT).show();
 

@@ -20,6 +20,13 @@
             android:name=".splashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
+            <!--
+                <action android:name="android.intent.action.MAIN" />
+            -->
+
+           <intent-filter>
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
         </activity>
 
         <service
@@ -64,6 +71,7 @@
         <activity
             android:name=".hanidJoinNFC"
             android:exported="true"
+
             android:theme="@style/Theme.handi">
         </activity>
         <activity
@@ -82,6 +90,10 @@
             android:exported="true"
             android:theme="@style/FullScreen">
         </activity>
+<!--        <activity
+            android:name=".handiJoin"
+            android:exported="true"
+            android:theme="@style/Theme.handi" />-->
         <activity
             android:name=".adminJoin"
             android:exported="true"
@@ -89,7 +101,11 @@
         <activity
             android:name=".adminMainActivity"
             android:exported="true"
+
             android:windowSoftInputMode="adjustPan" />
+
+
+
         <activity
             android:name=".adminIndex"
             android:exported="true"
@@ -97,6 +113,10 @@
         <activity
             android:name=".addressSearch"
             android:exported="true" />
+<!--        <activity
+            android:name=".datePicker"
+            android:exported="false"
+            android:theme="@style/PopupTheme" />-->
         <activity
             android:name=".handiLogin"
             android:exported="true"

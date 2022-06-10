@@ -20,14 +20,6 @@
             android:layout_marginLeft="10sp"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10sp"
-                android:minWidth="50sp"
-                app:srcCompat="@drawable/ic_volume" />
-
             <TextView
                 android:id="@+id/textView31"
                 android:layout_width="250dp"
