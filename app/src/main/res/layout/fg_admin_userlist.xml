@@ -53,7 +53,7 @@
         <ListView
             android:id="@+id/lv_userlist2"
             android:layout_width="344dp"
-            android:layout_height="252dp"
+            android:layout_height="246dp"
             android:layout_margin="5dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/bg_list"
@@ -65,7 +65,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="169dp"
             android:orientation="vertical">
 
             <Button
@@ -85,6 +85,7 @@
                 android:id="@+id/btn_box_choice"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
+                android:layout_marginBottom="30sp"
                 android:layout_weight="1"
                 android:background="@drawable/more_gr_btn"
                 android:fontFamily="sans-serif"

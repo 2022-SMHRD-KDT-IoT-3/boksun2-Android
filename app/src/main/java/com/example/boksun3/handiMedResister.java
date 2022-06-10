@@ -115,6 +115,9 @@ public class handiMedResister extends AppCompatActivity {
                 if (response.length() > 0) {
                     Toast.makeText(getApplicationContext(), "약 등록 성공", Toast.LENGTH_SHORT).show();
 
+                    Intent intent = new Intent(getApplicationContext(), handiBox.class);
+                    startActivity(intent);
+
                 } else {
                     Toast.makeText(getApplicationContext(), "약 등록 실패", Toast.LENGTH_SHORT).show();
                 }

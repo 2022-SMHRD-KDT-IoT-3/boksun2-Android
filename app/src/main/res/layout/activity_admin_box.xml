@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/nanumbarunpenb"
-                android:text="님의 보관함"
+                android:text="님의 약 보관함"
 
                 android:textSize="35sp" />
         </LinearLayout>

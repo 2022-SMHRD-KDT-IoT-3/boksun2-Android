@@ -87,8 +87,11 @@ public class adminBoxResister extends AppCompatActivity {
         btn_reset = findViewById(R.id.btn_reset);
         btn_commit =findViewById(R.id.btn_commit);
 
+        
+        // 보관함 정보 조회
         mediBoxInfoSelect(medArray);
 
+        // 알람 시간
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,6 +101,7 @@ public class adminBoxResister extends AppCompatActivity {
             }
         });
 
+        // 취소 버튼
         btn_reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,6 +109,7 @@ public class adminBoxResister extends AppCompatActivity {
             }
         });
 
+        // 등록 버튼
         btn_commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
