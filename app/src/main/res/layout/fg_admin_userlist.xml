@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#F2F1EB"
     android:elevation="20dp">
 
     <LinearLayout
@@ -66,6 +67,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="169dp"
+
+            android:layout_marginBottom="100sp"
             android:orientation="vertical">
 
             <Button

@@ -118,7 +118,7 @@
             android:id="@+id/btn_resister"
             android:layout_width="350dp"
             android:layout_height="100dp"
-            android:layout_marginBottom="10sp"
+            android:layout_marginBottom="50sp"
             android:layout_weight="1"
             android:background="@drawable/handi_border_yellow"
             android:text="등록"

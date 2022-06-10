@@ -35,6 +35,17 @@ public class UserVO {
 
     }
 
+    // 부분 생성자 : 장애인 상세보기
+
+
+    public UserVO(String user_id, String user_name, String user_birthdate, String user_addr, String user_phone, String user_empn) {
+        this.user_id = user_id;
+        this.user_name = user_name;
+        this.user_birthdate = user_birthdate;
+        this.user_addr = user_addr;
+        this.user_phone = user_phone;
+        this.user_empn = user_empn;
+    }
 
     // 부분 생성자 : 복지사 장애인 등록
     public UserVO(String user_id, String user_name, String user_birthdate, String user_gender, String user_joindate,

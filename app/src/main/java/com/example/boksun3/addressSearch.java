@@ -18,8 +18,8 @@ import org.w3c.dom.Text;
 
 public class addressSearch extends AppCompatActivity {
 
-    private WebView daum_webview;
-    private TextView daum_result;
+     WebView daum_webview;
+     TextView daum_result;
     private Handler handler;
     private String address;
 

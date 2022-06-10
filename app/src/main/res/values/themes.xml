@@ -95,4 +95,9 @@
     </style>
 
 
+    <!-- 스플래시 테마  -->
+<style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/pbok</item>
+</style>
+
 </resources>

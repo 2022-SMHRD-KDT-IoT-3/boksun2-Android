@@ -28,8 +28,12 @@ public class MainActivity extends AppCompatActivity {
     Button  btn_handiIn, btn_adminIn ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.Theme_Boksun3);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
 
         btn_handiIn = findViewById(R.id.btn_handiIn);
@@ -66,6 +70,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+
+
     }
     @Override
     protected void onNewIntent(Intent intent) {

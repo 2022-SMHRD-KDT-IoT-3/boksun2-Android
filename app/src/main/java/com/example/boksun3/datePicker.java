@@ -3,6 +3,7 @@ package com.example.boksun3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.style.UpdateAppearance;
@@ -20,7 +21,7 @@ public class datePicker extends AppCompatActivity {
      Button btn_ok;
      int mYear ,mMonth , mDay;
 
-     TextView tv_Date;
+//     TextView tv_Date;
 
 
     @Override
@@ -29,11 +30,8 @@ public class datePicker extends AppCompatActivity {
         setContentView(R.layout.activity_date_picker);
 
 
-        tv_Date = findViewById(R.id.handi_date);
+//        tv_Date = findViewById(R.id.handi_date);
         btn_ok = findViewById(R.id.btn_ok);
-
-
-
 
 
         Calendar calendar = new GregorianCalendar();
@@ -44,20 +42,37 @@ public class datePicker extends AppCompatActivity {
         DatePicker datePicker = findViewById(R.id.vDatePicker);
         datePicker.init(mYear,mMonth,mDay,mOnDateChangedListener);
 
+        btn_ok.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // Intent intent = new Intent(adminMainActivity,FragementAdminUseradd.class);
+                Intent intent = new Intent(datePicker.this,FragementAdminUseradd.class);
+                intent.putExtra("mYear",mYear);
+                intent.putExtra("mMonth",mMonth);
+                intent.putExtra("mDay",mDay);
+
+                setResult(Activity.RESULT_OK,intent);
+//                startActivity(intent);
+                finish();
+            }
+        });
 
     }
 
-    public void mOnClick(View v){
-        Intent intent2 = new Intent(datePicker.this,handiJoin.class);
-        intent2.putExtra("mYear",mYear);
-        intent2.putExtra("mMonth",mMonth);
-        intent2.putExtra("mDay",mDay);
-
-
-
-        startActivity(intent2);
-        finish();
-    }
+    // 확인 버튼 클릭시
+//    public void mOnClick(View v){
+//        Intent intent = new Intent(datePicker.this,FragementAdminUseradd.class);
+//        intent.putExtra("mYear",mYear);
+//        intent.putExtra("mMonth",mMonth);
+//        intent.putExtra("mDay",mDay);
+//
+//
+//        startActivity(intent);
+//        finish();
+//
+//
+//
+//    }
 
     DatePicker.OnDateChangedListener mOnDateChangedListener = new DatePicker.OnDateChangedListener() {
         @Override

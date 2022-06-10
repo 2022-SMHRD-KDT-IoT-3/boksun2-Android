@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class adminAddAlarm extends AppCompatActivity {
 
-    Button btn_add;
+    Button btn_add2;
     TextView tv_ampm, tv_time;
     ImageView alarm_set;
 
@@ -25,8 +25,8 @@ public class adminAddAlarm extends AppCompatActivity {
         alarm_set = findViewById(R.id.alarm_set);
 
 
-        btn_add = findViewById(R.id.btn_add2);
-        btn_add.setOnClickListener(new View.OnClickListener() {
+        btn_add2 = findViewById(R.id.btn_add2);
+        btn_add2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
