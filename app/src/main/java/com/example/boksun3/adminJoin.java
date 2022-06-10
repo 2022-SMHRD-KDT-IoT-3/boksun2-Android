@@ -56,6 +56,7 @@ public class adminJoin extends AppCompatActivity {
 
         setContentView(R.layout.activity_admin_join);
 
+
         edt_id = findViewById(R.id.edt_id);
         edt_pw = findViewById(R.id.edt_pw);
         edt_name = findViewById(R.id.tv_info_name);
@@ -80,6 +81,7 @@ public class adminJoin extends AppCompatActivity {
                 sendRequestJoinWorker();
             }
         });
+
 
 
         // 복지관명 intent로 가져오기
