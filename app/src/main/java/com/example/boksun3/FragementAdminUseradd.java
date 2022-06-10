@@ -80,21 +80,6 @@ public class FragementAdminUseradd extends Fragment {
         btn_userAdd = fragement.findViewById(R.id.btn_userAdd);
 
 
-        // 회원상세정보 보내기 ---------------------------------------------------
-//         Intent intent2 = new Intent(getActivity(), adminHandiInfo.class);
-//         intent2.putExtra("serial", (Parcelable) edt_serial);
-//         intent2.putExtra("name", (Parcelable) edt_handi_name);
-//         intent2.putExtra("date", (Parcelable) edt_handi_date);
-//         intent2.putExtra("address", (Parcelable) edt_handi_addr);
-//         intent2.putExtra("phone", (Parcelable) edt_handi_phone);
-//         intent2.putExtra("emer", (Parcelable) edt_handi_emer);
-
-//         startActivity(intent2);
-
-         // --------------------------------------------------------------------
-
-
-
 
         edt_handi_date = fragement.findViewById(R.id.edt_handi_date);
 
