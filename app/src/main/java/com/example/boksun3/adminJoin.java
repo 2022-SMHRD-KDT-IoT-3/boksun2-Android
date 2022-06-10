@@ -56,9 +56,6 @@ public class adminJoin extends AppCompatActivity {
 
         setContentView(R.layout.activity_admin_join);
 
-
-        getSupportActionBar().setTitle("회원가입");
-
         edt_id = findViewById(R.id.edt_id);
         edt_pw = findViewById(R.id.edt_pw);
         edt_name = findViewById(R.id.tv_info_name);
@@ -83,45 +80,6 @@ public class adminJoin extends AppCompatActivity {
                 sendRequestJoinWorker();
             }
         });
-
-
-//        edt_date = findViewById(R.id.edt_date);
-//
-//        edt_date.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//                Intent intent = new Intent(getApplicationContext(), datePicker.class);
-//
-//                startActivity(intent);
-//
-//            }
-//        });
-//
-//        btn_address = findViewById(R.id.btn_address);
-//        btn_address.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getApplicationContext(), addressSearch.class);
-//
-//                startActivity(intent);
-//            }
-//        });
-//
-//
-//        // 주소 intent로 가져오기
-//        edt_address = findViewById(R.id.edt_address);
-//        Intent intent = getIntent();
-//        String address = intent.getStringExtra("address");
-//        edt_address.setText(address);
-
-        Intent intent = new Intent(getApplicationContext(), adminInfo.class);
-        intent.putExtra("user_id", (Parcelable) edt_id);
-
-
-        startActivity(intent);
-        finish();
-
 
 
         // 복지관명 intent로 가져오기
