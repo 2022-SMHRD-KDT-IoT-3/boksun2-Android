@@ -94,6 +94,10 @@ public class FragmentAdminUserList extends Fragment  {
         sendRequestUserList();
 
         btn_box_choice = fragement.findViewById(R.id.btn_box_choice);
+        btn_user_detail = fragement.findViewById(R.id.btn_user_detail);
+        btn_box_choice.setEnabled(false);
+        btn_user_detail.setEnabled(false);
+
 
 
         editSearch.addTextChangedListener(new TextWatcher() {
@@ -125,7 +129,8 @@ public class FragmentAdminUserList extends Fragment  {
                 Toast.makeText(getContext(), items.get(i), Toast.LENGTH_SHORT).show();
                 idChoice = user_ids.get(i);
                 Log.v("idChoice", idChoice); // 아이디 확인
-
+                btn_box_choice.setEnabled(true);
+                btn_user_detail.setEnabled(true);
             }
         });
 
@@ -141,7 +146,6 @@ public class FragmentAdminUserList extends Fragment  {
         });
 
         // 회원상세 버튼 클릭시
-        btn_user_detail = fragement.findViewById(R.id.btn_user_detail);
         btn_user_detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,7 +161,6 @@ public class FragmentAdminUserList extends Fragment  {
                 listView.setBackgroundColor(Color.RED);
                 adapter2.notifyDataSetChanged();
                 Toast.makeText(getContext(),"색깔변경",Toast.LENGTH_SHORT).show();
-
                 return false;
             }
         });
