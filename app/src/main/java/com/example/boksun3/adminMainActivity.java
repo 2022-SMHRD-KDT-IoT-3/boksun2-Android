@@ -25,6 +25,9 @@ public class adminMainActivity extends AppCompatActivity  {
 
     private Intent intent;
 
+    private long first_time;
+    private long second_time;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,20 +44,9 @@ public class adminMainActivity extends AppCompatActivity  {
         set = new FragementAdminSet();
 
         intent = getIntent();
-        //String menu = "userlist";
-        //String menu = intent.getStringExtra("menu");
-        //Log.v("myData", menu); //어떤 버튼을 클릭해서 들어왔는지
-        //String userlist = "userlist";
+
 
         fm.beginTransaction().replace(R.id.frame, userList).commit();
-//        if(menu.equals("userlist")){
-//        }else if(menu.equals("life")){
-//            fm.beginTransaction().replace(R.id.frame, life ).commit();
-//        }else if(menu.equals("useradd")){
-//            fm.beginTransaction().replace(R.id.frame, useradd ).commit();
-//        }else if(menu.equals("set")){
-//            fm.beginTransaction().replace(R.id.frame, set ).commit();
-//        }
 
 
         navi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -85,6 +77,22 @@ public class adminMainActivity extends AppCompatActivity  {
         });
 
     }
+
+
+    @Override
+    public void onBackPressed(){
+        fm.beginTransaction().replace(R.id.frame, userList).commit();
+
+        second_time = System.currentTimeMillis();
+        if(second_time - first_time < 2000){
+            super.onBackPressed();
+            finishAffinity();
+        }
+        first_time = System.currentTimeMillis();
+
+    };
+
+
 }
 
 

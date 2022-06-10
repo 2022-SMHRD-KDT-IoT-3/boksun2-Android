@@ -155,15 +155,6 @@ public class FragmentAdminUserList extends Fragment  {
             }
         });
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                listView.setBackgroundColor(Color.RED);
-                adapter2.notifyDataSetChanged();
-                Toast.makeText(getContext(),"색깔변경",Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
 
         return fragement;
     }

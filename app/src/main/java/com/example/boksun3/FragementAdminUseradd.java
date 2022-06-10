@@ -87,29 +87,10 @@ public class FragementAdminUseradd extends Fragment {
         edt_handi_date.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-//                Intent intent = new Intent(getContext(), datePicker.class);
-                startActivity(intent);
+              startActivity(intent);
 
             }
         });
-
-//        startActivityForResult(new Intent(getContext(), datePicker.class),555);
-
-
-
-
-        // 생년월일 intent로 가져오기
-//        Intent intent2 = new Intent(getActivity(),datePicker.class);
-//
-//        int mYear = intent2.getIntExtra("mYear", 1999);
-//        int mMonth = intent2.getIntExtra("mMonth", 01);
-//        int mDay = intent2.getIntExtra("mDay", 01);
-//
-//        edt_handi_date.setText(mYear + "-" + mMonth + "-" + mDay);
-//
-
-
 
         // 장애인 등록
         btn_userAdd.setOnClickListener(new View.OnClickListener() {
