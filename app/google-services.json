@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "669660235574",
+    "project_id": "bokpro-50c03",
+    "storage_bucket": "bokpro-50c03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669660235574:android:5172a48c9721b27b3b1597",
+        "android_client_info": {
+          "package_name": "com.example.boksun3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669660235574-flc8o7sjda5tdj41phf2nidqvgia6lrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBq6GbTNCNAuetrX8SxKNPttrsANH-Lw04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669660235574-flc8o7sjda5tdj41phf2nidqvgia6lrl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
