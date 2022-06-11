@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adminBoxResister"
-    android:orientation="vertical">
+    android:background="#F2F1EB"
+    android:orientation="vertical"
+    tools:context=".adminBoxResister">
 
 
     <LinearLayout
@@ -54,9 +55,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:fontFamily="@font/nanumbarunpenb"
-
             android:layout_marginBottom="5sp"
+
+            android:fontFamily="@font/nanumbarunpenb"
             android:text="약 이름"
             android:textColor="#000000"
             android:textSize="15sp" />
@@ -72,15 +73,16 @@
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:hint=" 예 : 고혈압"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:paddingLeft="10sp" />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:fontFamily="@font/nanumbarunpenb"
             android:layout_marginBottom="5sp"
+            android:fontFamily="@font/nanumbarunpenb"
             android:text="처방 의료기관"
             android:textColor="#000000"
             android:textSize="15sp" />
@@ -95,7 +97,8 @@
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:hint=" 예 : 광주병원"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:paddingLeft="10sp" />
 
         <TextView
             android:id="@+id/textView21"
@@ -103,8 +106,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="5sp"
-            android:text="투약 방법"
             android:fontFamily="@font/nanumbarunpenb"
+            android:text="투약 방법"
             android:textColor="#000000"
             android:textSize="15sp" />
 
@@ -118,6 +121,7 @@
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:inputType="textPersonName"
+            android:paddingLeft="10sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -125,8 +129,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:fontFamily="@font/nanumbarunpenb"
             android:layout_marginBottom="5sp"
+            android:fontFamily="@font/nanumbarunpenb"
             android:text="투약 횟수"
             android:textColor="#000000"
             android:textSize="15sp" />
@@ -141,7 +145,8 @@
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:hint=" 2회"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:paddingLeft="10sp" />
 
         <TextView
             android:id="@+id/textView23"
@@ -149,8 +154,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="5sp"
-            android:text="처방 일자"
             android:fontFamily="@font/nanumbarunpenb"
+            android:text="처방 일자"
             android:textColor="#000000"
             android:textSize="15sp" />
 
@@ -164,6 +169,7 @@
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
             android:inputType="textPersonName"
+            android:paddingLeft="10sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -171,8 +177,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:fontFamily="@font/nanumbarunpenb"
             android:layout_marginBottom="5sp"
+            android:fontFamily="@font/nanumbarunpenb"
             android:text="메모"
             android:textColor="#000000"
             android:textSize="15sp" />
@@ -186,7 +192,9 @@
             android:background="@drawable/border_white"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
-            android:inputType="textPersonName"
+            android:inputType="textMultiLine"
+            android:scrollHorizontally="false"
+            android:paddingLeft="10sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView

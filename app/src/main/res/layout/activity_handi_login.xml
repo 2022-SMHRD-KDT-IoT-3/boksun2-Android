@@ -45,7 +45,7 @@
         android:fontFamily="sans-serif"
         android:hint="   제품코드 입력"
         android:inputType="textPersonName"
-        android:paddingLeft="5sp"
+        android:paddingLeft="7sp"
         android:textColor="#FFFFFF"
         android:textColorHint="#939393"
         android:textSize="24sp"
