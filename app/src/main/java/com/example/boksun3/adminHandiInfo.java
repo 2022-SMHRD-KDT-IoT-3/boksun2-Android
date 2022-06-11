@@ -102,10 +102,9 @@ public class adminHandiInfo extends AppCompatActivity {
 
                         tv_info_serial.setText(uvo.getUser_id());
                         tv_info_name.setText(uvo.getUser_name());
-                        tv_info_date.setText(uvo.getUser_birthdate());
-
                         tv_info_phone.setText(uvo.getUser_phone());
                         tv_info_emer.setText(uvo.getUser_empn());
+                        tv_info_date.setText(uvo.getUser_birthdate().substring(0,10));
                         tv_info_address.setText(uvo.getUser_addr());
 
 

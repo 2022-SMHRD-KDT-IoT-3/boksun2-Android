@@ -84,7 +84,7 @@ public class adminMainActivity extends AppCompatActivity  {
         fm.beginTransaction().replace(R.id.frame, userList).commit();
 
         second_time = System.currentTimeMillis();
-        if(second_time - first_time < 2000){
+        if(second_time - first_time < 1000){
             super.onBackPressed();
             finishAffinity();
         }
