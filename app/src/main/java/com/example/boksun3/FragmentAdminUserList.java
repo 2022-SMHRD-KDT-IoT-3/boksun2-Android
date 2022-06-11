@@ -95,8 +95,8 @@ public class FragmentAdminUserList extends Fragment  {
 
         btn_box_choice = fragement.findViewById(R.id.btn_box_choice);
         btn_user_detail = fragement.findViewById(R.id.btn_user_detail);
-        btn_box_choice.setEnabled(false);
-        btn_user_detail.setEnabled(false);
+//        btn_box_choice.setEnabled(false);
+//        btn_user_detail.setEnabled(false);
 
 
 
@@ -129,8 +129,8 @@ public class FragmentAdminUserList extends Fragment  {
                 Toast.makeText(getContext(), items.get(i), Toast.LENGTH_SHORT).show();
                 idChoice = user_ids.get(i);
                 Log.v("idChoice", idChoice); // 아이디 확인
-                btn_box_choice.setEnabled(true);
-                btn_user_detail.setEnabled(true);
+//                btn_box_choice.setEnabled(true);
+//                btn_user_detail.setEnabled(true);
             }
         });
 
@@ -138,10 +138,17 @@ public class FragmentAdminUserList extends Fragment  {
         btn_box_choice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Log.v("idChoice", idChoice);
-                Intent intent = new Intent(getActivity(),adminBox.class);
-                intent.putExtra("user_id",idChoice);
-                startActivity(intent);
+                try {
+                    if(!idChoice.isEmpty()){
+                        //Log.v("idChoice", idChoice);
+                        Intent intent = new Intent(getActivity(),adminBox.class);
+                        intent.putExtra("user_id",idChoice);
+                        startActivity(intent);
+                    }
+                }
+                catch (Exception e){
+                    Toast.makeText(getContext(), "회원을 선택해주세요.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
@@ -149,9 +156,17 @@ public class FragmentAdminUserList extends Fragment  {
         btn_user_detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), adminHandiInfo.class);
-                intent.putExtra("user_id",idChoice);
-                startActivity(intent);
+                try {
+                    if(!idChoice.isEmpty()){
+                        //Log.v("idChoice", idChoice);
+                        Intent intent = new Intent(getActivity(), adminHandiInfo.class);
+                        intent.putExtra("user_id",idChoice);
+                        startActivity(intent);
+                    }
+                }
+                catch (Exception e){
+                    Toast.makeText(getContext(), "회원을 선택해주세요.", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 
