@@ -2,7 +2,6 @@ package com.example.boksun3;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,8 +27,6 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.io.UnsupportedEncodingException;
-import java.net.URISyntaxException;
-import java.text.SimpleDateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -39,7 +36,7 @@ public class FragementAdminUseradd extends Fragment {
 
     private EditText edt_serial, edt_handi_name, edt_handi_date, edt_handi_addr, edt_handi_phone, edt_handi_emer, edt_handi_disease;
     private RadioButton rbtn_male, rbtn_female;
-    private Button btn_addr, btn_uAdd_cancel, btn_userAdd;
+    private Button btn_addr, btn_uAdd_init, btn_userAdd;
 
     // volley 서버 통신
     private RequestQueue requestQueue;
@@ -76,7 +73,7 @@ public class FragementAdminUseradd extends Fragment {
         edt_handi_disease = fragement.findViewById(R.id.edt_handi_disease);
         rbtn_male = fragement.findViewById(R.id.rbtn_male);
         rbtn_female = fragement.findViewById(R.id.rbtn_female);
-        btn_uAdd_cancel = fragement.findViewById(R.id.btn_uAdd_cancel);
+        btn_uAdd_init = fragement.findViewById(R.id.btn_uAdd_init);
         btn_userAdd = fragement.findViewById(R.id.btn_userAdd);
 
 
@@ -97,6 +94,21 @@ public class FragementAdminUseradd extends Fragment {
             @Override
             public void onClick(View view) {
                 sR_handiJoin();
+            }
+        });
+
+        btn_uAdd_init.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                edt_serial.setText("");
+                edt_handi_name.setText("");
+                edt_handi_date.setText("");
+                edt_handi_addr.setText("");
+                edt_handi_phone.setText("");
+                edt_handi_emer.setText("");
+                edt_handi_disease.setText("");
+                rbtn_male.setChecked(false);
+                rbtn_female.setChecked(false);
             }
         });
 
