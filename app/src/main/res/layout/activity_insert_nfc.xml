@@ -37,17 +37,30 @@
             android:textSize="30sp" />
 
         <TextView
+            android:id="@+id/textView29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif"
+            android:text="※ 사용법\n    1. NFC 스티커를 인식시키면 저장 정보를 표시합니다."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/tv_curInfo"
-            android:layout_width="300dp"
-            android:layout_height="75dp"
+            android:layout_width="385dp"
+            android:layout_height="85dp"
             android:layout_marginLeft="13sp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/handi_border_black"
             android:fontFamily="sans-serif"
             android:gravity="center|left"
-            android:hint="  NFC 약 입력창"
+            android:hint="  저장된 약 정보"
+            android:inputType="textMultiLine"
+            android:paddingLeft="5sp"
             android:textColorHint="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
 
         <TextView
             android:id="@+id/textView41"
@@ -60,19 +73,32 @@
             android:textColor="#FFFFFF"
             android:textSize="30sp" />
 
+        <TextView
+            android:id="@+id/textView28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13sp"
+            android:layout_marginBottom="10sp"
+            android:fontFamily="sans-serif"
+            android:text="※ 사용법\n    2. 입력할 정보를 아래 창에 입력한 후 NFC 태그를\n        인식시키면 새로운 정보를 저장합니다."
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
         <EditText
             android:id="@+id/edt_newInfo"
-            android:layout_width="380dp"
-            android:layout_height="75dp"
+            android:layout_width="384dp"
+            android:layout_height="85dp"
             android:layout_marginLeft="13sp"
             android:layout_marginBottom="20dp"
             android:background="@drawable/handi_border_black"
             android:ems="10"
             android:fontFamily="sans-serif"
-            android:hint="  새로운 약정보 입력창"
-            android:inputType="textPersonName"
+            android:gravity="center|left"
+            android:hint="  새로운 약 정보 입력창"
+            android:inputType="textMultiLine"
+            android:paddingLeft="5sp"
             android:textColorHint="#FFFFFF"
-            android:textSize="30sp" />
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/btn_InsertNFC"
@@ -80,14 +106,13 @@
             android:layout_height="90dp"
             android:layout_marginLeft="20sp"
             android:layout_marginRight="20sp"
+            android:layout_marginBottom="20sp"
             android:background="@drawable/handi_border_yellow"
             android:fontFamily="sans-serif"
             android:text="NFC태그 등록"
             android:textColor="#000000"
             android:textSize="40sp"
             android:textStyle="bold" />
-
-        <View style="@style/Divider" />
 
 
     </LinearLayout>

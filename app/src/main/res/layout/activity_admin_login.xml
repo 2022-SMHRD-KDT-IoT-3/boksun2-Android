@@ -67,7 +67,7 @@
                 android:drawableLeft="@drawable/ic_l"
                 android:ems="10"
                 android:hint="비밀번호를 입력해 주세요."
-                android:inputType="textPersonName"
+                android:inputType="textPassword"
                 android:paddingLeft="5sp" />
         </LinearLayout>
 

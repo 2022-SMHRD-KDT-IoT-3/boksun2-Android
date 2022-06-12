@@ -18,7 +18,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="30sp"
             android:orientation="horizontal">
 
@@ -47,7 +47,6 @@
                 android:id="@+id/imageView5"
                 android:layout_width="10dp"
                 android:layout_height="match_parent"
-                android:layout_gravity="start"
                 android:layout_marginBottom="40sp"
                 android:layout_weight="1"
                 android:textAlignment="textStart"
@@ -55,7 +54,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
@@ -68,15 +67,32 @@
             android:textSize="19sp" />
 
         <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="13sp"
+
+            android:layout_marginBottom="5sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="※ 사용법\n    1. NFC 스티커를 인식시키면 저장 정보를 표시합니다."
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
             android:id="@+id/tv_adcurInfo"
-            android:layout_width="370dp"
-            android:layout_height="50dp"
+            android:layout_width="382dp"
+            android:layout_height="80dp"
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="30sp"
 
             android:background="@drawable/border_white"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
+            android:gravity="center|left"
+            android:hint="  저장된 약 정보"
+            android:inputType="textMultiLine"
+            android:paddingLeft="5sp"
             android:textSize="25sp" />
 
 
@@ -85,55 +101,52 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15sp"
-            android:layout_marginBottom="5sp"
+            android:layout_marginBottom="15sp"
             android:fontFamily="@font/nanumbarunpenb"
             android:text="새로 입력할 NFC 약 정보(기타사항) :"
             android:textColor="#000000"
             android:textSize="19sp" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginBottom="5sp"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="※ 사용법\n    2. 입력할 정보를 아래 창에 입력한 후 NFC 태그를 인식시키면\n        새로운 정보를 저장합니다."
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
         <EditText
             android:id="@+id/edt_adnewInfo"
-            android:layout_width="370dp"
-            android:layout_height="50dp"
+            android:layout_width="381dp"
+            android:layout_height="80dp"
             android:layout_marginLeft="15sp"
-            android:layout_marginBottom="40sp"
+            android:layout_marginBottom="15sp"
             android:background="@drawable/border_white"
             android:ems="10"
             android:fontFamily="@font/nanumbarunpenb"
-            android:inputType="textPersonName"
+            android:gravity="center|left"
+            android:inputType="textMultiLine"
+            android:paddingLeft="5sp"
             android:textSize="25sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20sp"
+        <Button
+            android:id="@+id/btn_adregnfc"
+            android:layout_width="180dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="120sp"
+            android:layout_marginRight="15sp"
             android:layout_marginBottom="15sp"
-            android:orientation="horizontal">
+            android:background="@drawable/more_gr_btn"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:text="완료"
+            android:textColor="#FFFFFF"
+            android:textSize="29sp"
+            android:textStyle="bold" />
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="30sp"
-            android:orientation="horizontal">
-
-
-            <Button
-                android:id="@+id/btn_adregnfc"
-                android:layout_width="180dp"
-                android:layout_height="68dp"
-                android:layout_marginLeft="120sp"
-                android:layout_marginRight="15sp"
-                android:layout_marginBottom="50sp"
-                android:background="@drawable/more_gr_btn"
-                android:fontFamily="@font/nanumbarunpenb"
-                android:text="완료"
-                android:textColor="#FFFFFF"
-                android:textSize="29sp"
-                android:textStyle="bold" />
-        </LinearLayout>
     </LinearLayout>
 </ScrollView>
