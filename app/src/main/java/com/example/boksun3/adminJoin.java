@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -67,6 +68,9 @@ public class adminJoin extends AppCompatActivity {
 
         btn_idCheck = findViewById(R.id.btn_idCheck);
         btn_submit = findViewById(R.id.btn_info_ok);
+
+        edt_phone.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
+        edt_comTel.addTextChangedListener(new PhoneNumberFormattingTextWatcher());
 
         btn_idCheck.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,7 +143,7 @@ public class adminJoin extends AppCompatActivity {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/idCheckWorker.do"; // 휴대폰에서 요청가능하도록 내 IPv4 입력
+        String url = "http://211.227.224.240:8081/controller/idCheckWorker.do"; // 휴대폰에서 요청가능하도록 내 IPv4 입력
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -203,7 +207,7 @@ public class adminJoin extends AppCompatActivity {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/joinWorkerInsert.do"; // 휴대폰에서 요청가능하도록 내 IPv4 입력
+        String url = "http://211.227.224.240:8081/controller/joinWorkerInsert.do"; // 휴대폰에서 요청가능하도록 내 IPv4 입력
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {

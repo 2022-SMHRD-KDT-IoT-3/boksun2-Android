@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.telephony.PhoneNumberFormattingTextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +25,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.io.UnsupportedEncodingException;
+import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -76,14 +78,14 @@ public class handiMedResister extends AppCompatActivity {
         });
 
 
-        btn_med_alarm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent2 = new Intent(getApplicationContext(), clickAddAlarm.class);
-                startActivity(intent2);
-
-            }
-        });
+//        btn_med_alarm.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent2 = new Intent(getApplicationContext(), clickAddAlarm.class);
+//                startActivity(intent2);
+//
+//            }
+//        });
 
         Intent intent2 = getIntent();
 
@@ -92,7 +94,7 @@ public class handiMedResister extends AppCompatActivity {
 
 
 
-        edt_alarm.setText(mHour + " : " + mMinute);
+//        edt_alarm.setText(mHour + " : " + mMinute);
 
 
 
@@ -103,7 +105,7 @@ public class handiMedResister extends AppCompatActivity {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/mediBoxUpdate.do";
+        String url = "http://211.227.224.240:8081/controller/mediBoxUpdate.do";
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
