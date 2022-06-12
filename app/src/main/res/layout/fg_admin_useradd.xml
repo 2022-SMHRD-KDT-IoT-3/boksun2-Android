@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="560dp"
+    android:layout_height="wrap_content"
     android:elevation="20dp">
 
     <LinearLayout
@@ -123,11 +123,13 @@
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="10sp"
             android:orientation="horizontal">
+
             <RadioGroup
                 android:id="@+id/radioGroup"
-                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/rbtn_male"
                     android:layout_width="100dp"
