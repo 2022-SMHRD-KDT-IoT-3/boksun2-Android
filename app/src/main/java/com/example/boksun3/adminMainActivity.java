@@ -27,6 +27,8 @@ public class adminMainActivity extends AppCompatActivity  {
 
     private long first_time;
     private long second_time;
+    private String loginCh = "logout";
+    private String logout = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,16 @@ public class adminMainActivity extends AppCompatActivity  {
 
 
         fm.beginTransaction().replace(R.id.frame, userList).commit();
+
+        //set 에서 로그아웃 눌렀을떄 종료하고 메인으로 보내기
+        logout = intent.getStringExtra("logout");
+        Log.v("logouttest",logout+"");
+        if (logout != null){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finishAffinity();
+       }
+
 
 
         navi.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -69,6 +81,8 @@ public class adminMainActivity extends AppCompatActivity  {
                     case R.id.settings:
                         fm.beginTransaction().replace(R.id.frame, set).commit();
                         Toast.makeText(getApplicationContext(), "설정", Toast.LENGTH_SHORT).show();
+
+
                         break;
                 }
                 return true;

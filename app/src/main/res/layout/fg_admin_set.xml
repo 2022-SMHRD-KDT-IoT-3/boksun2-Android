@@ -37,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
-                android:text="김복순 님,"
+                android:text="윤복지 님,"
                 android:textSize="20sp" />
 
             <Button

@@ -128,7 +128,7 @@ public class adminLogin extends AppCompatActivity {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/loginWorkerSelect.do"; // 휴대폰에서 요청가능하도록 내 IPv4 입력
+        String url = "http://220.80.88.88:8081/controller/loginWorkerSelect.do"; // 휴대폰에서 요청가능하도록 내 IPv4 입력
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -157,12 +157,13 @@ public class adminLogin extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), adminMainActivity.class);
                         startActivity(intent);
 
+
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
 
                 } else {
-                    Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {

@@ -50,19 +50,14 @@ public class adminBox extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_box);
 
-
         // 장애인 이름 넣기
         tv_userName = findViewById(R.id.tv_user_name);
         UserVO uvo = LoginCheck.uInfo;
+        tv_userName.setText(uvo.getUser_name());
 
         // 장애인 id 받기
         String user_id =getIntent().getStringExtra("user_id");
         LoginCheck.mNum = new MedicineVO(user_id,"0");
-
-
-        //Log.v("box : user_id",LoginCheck.mNum.getUser_id());
-
-        tv_userName.setText(LoginCheck.mNum.getUser_id());
 
         btn_box1 = findViewById(R.id.btn_box1);
         btn_box2 = findViewById(R.id.btn_box2);
@@ -177,12 +172,13 @@ public class adminBox extends AppCompatActivity {
 
 
     }
+
     // 보관함 사용 상태 체크
     public void sR_mediBoxSelect(String[] boxArray) {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/mediBoxSelect.do";
+        String url = "http://220.80.88.88:8081/controller/mediBoxSelect.do";
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {

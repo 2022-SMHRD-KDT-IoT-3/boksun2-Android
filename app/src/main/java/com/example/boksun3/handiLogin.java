@@ -85,7 +85,7 @@ public class handiLogin extends AppCompatActivity {
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         if (nfcAdapter == null) {
             //NFC 미지원단말
-            Toast.makeText(getApplicationContext(), "NFC를 지원하지 않는 단말기입니다.", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "NFC를 지원하지 않는 단말기입니다.", Toast.LENGTH_SHORT).show();
             return;
         }
     }
@@ -114,7 +114,7 @@ public class handiLogin extends AppCompatActivity {
                 byte[] payload = record.getPayload();
                 String text = new String(payload);
                 text = text.substring(3); // 불필요한값 제외
-                edt_userId.setText("   " + text);
+                edt_userId.setText(text);
 
                 // 시리얼 번호 저장
                 nfc_serial_num = text;
@@ -139,7 +139,7 @@ public class handiLogin extends AppCompatActivity {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/idCheckUser.do";
+        String url = "http://220.80.88.88:8081/controller/idCheckUser.do";
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -149,6 +149,7 @@ public class handiLogin extends AppCompatActivity {
                 Log.v("serialCheck", response);
 
                 if (response.length() > 0) {
+
                     Toast.makeText(getApplicationContext(), "회원 조회 성공", Toast.LENGTH_SHORT).show();
                     // 로그인 기능
                     sR_serialLogin();
@@ -203,7 +204,7 @@ public class handiLogin extends AppCompatActivity {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/loginUserSelect.do";
+        String url = "http://220.80.88.88:8081/controller/loginUserSelect.do";
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -213,7 +214,7 @@ public class handiLogin extends AppCompatActivity {
                 Log.v("serialLogin", response);
 
                 if (response.length() > 0) {
-                    Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "로그인 완료", Toast.LENGTH_SHORT).show();
 
                     try {
                         JSONObject jsonObject = new JSONObject(response);
@@ -229,6 +230,7 @@ public class handiLogin extends AppCompatActivity {
 
                         Intent intent = new Intent(getApplicationContext(), handiBox.class);
                         startActivity(intent);
+                        finish();
 
                     } catch (JSONException e) {
                         e.printStackTrace();

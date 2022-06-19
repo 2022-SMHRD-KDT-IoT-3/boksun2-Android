@@ -5,87 +5,168 @@
     android:id="@+id/linearLayout5"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="#F2F1EB"
+    android:orientation="vertical"
+    android:textAlignment="viewEnd">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp">
+        android:layout_height="70dp"
+        android:layout_marginBottom="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <TextView
-            android:id="@+id/textView57"
-            android:layout_width="201dp"
-            android:layout_height="53dp"
-            android:layout_marginStart="104dp"
-            android:layout_weight="1"
-            android:fontFamily="@font/nanumbarunpenb"
-            android:gravity="center"
-            android:text="복지관 정보관리"
-            android:textColor="#282828"
-            android:textColorHint="#212121"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.106" />
 
-        <Button
-            android:id="@+id/btn_regi"
-            android:layout_width="96dp"
-            android:layout_height="36dp"
-            android:text="등록"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView57" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:gravity="right"
+                android:text="복지 정보 알림"
+                android:textSize="35dp" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                app:srcCompat="@drawable/boksonlogo" />
+        </LinearLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="106dp"
+        android:layout_height="143dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/edt_title"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="17dp"
+            android:layout_height="64dp"
             android:layout_weight="1"
-            android:ems="10"
-            android:hint="제목"
-            android:inputType="textPersonName"
-            android:textAlignment="textStart"
-            android:textSize="16sp" />
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edt_title"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:hint="제목"
+                android:inputType="textPersonName"
+                android:paddingLeft="10sp"
+                android:textAlignment="textStart"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_regi"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:layout_marginRight="15sp"
+                android:layout_marginBottom="5sp"
+                android:layout_weight="1"
+                android:background="@drawable/more_gr_btn"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:text="등록"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <EditText
             android:id="@+id/edt_contents"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="85dp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginBottom="10sp"
             android:layout_weight="1"
+            android:background="@drawable/border_white"
             android:ems="10"
+            android:fontFamily="@font/nanumbarunpenb"
+            android:gravity="start|top"
             android:hint="내용"
-            android:inputType="textPersonName"
-            android:textSize="16sp" />
+            android:inputType="textMultiLine"
+            android:paddingLeft="10sp"
+            android:paddingTop="10sp"
+            android:scrollHorizontally="false"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            tools:ignore="SpeakableTextPresentCheck" />
+
     </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btn_regi2"
-            android:layout_width="96dp"
-            android:layout_height="36dp"
-            android:text="안내전송"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.993"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="-44dp">
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="180sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/more_gr_btn"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:text="안내 전송"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:layout_marginRight="15sp"
+                android:layout_marginBottom="10sp"
+                android:background="@drawable/more_gr_btn"
+                android:fontFamily="@font/nanumbarunpenb"
+                android:text="삭제"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ListView
         android:id="@+id/lv_polishlist"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="360dp"
         android:layout_margin="5dp"
         android:layout_marginTop="10dp"
         android:layout_weight="1"
@@ -93,8 +174,11 @@
         android:divider="#999999"
         android:dividerHeight="1dp"
         android:elevation="10dp"
+        android:fontFamily="@font/nanumbarunpenb"
         android:padding="3dp"
         android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/row_polish_items" />
 
 </LinearLayout>

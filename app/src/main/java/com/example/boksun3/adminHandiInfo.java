@@ -75,7 +75,7 @@ public class adminHandiInfo extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/loginUserSelect.do";
+        String url = "http://220.80.88.88:8081/controller/loginUserSelect.do";
 
         // 요청시 필요한 문자열 객체 (전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -94,6 +94,7 @@ public class adminHandiInfo extends AppCompatActivity {
                         String user_phone = jsonObject.optString("user_phone");
                         String user_empn = jsonObject.optString("user_empn");
                         String user_birthdate = jsonObject.optString("user_birthdate");
+                        user_birthdate = user_birthdate.substring(0, 10);
                         String user_addr = jsonObject.optString("user_addr");
 
                         LoginCheck.uInfo = new UserVO(user_id, user_name, user_birthdate, user_addr, user_phone, user_empn);

@@ -151,7 +151,7 @@ public class adminBoxResister extends AppCompatActivity {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/mediBoxInfoSelect.do";
+        String url = "http://220.80.88.88:8081/controller/mediBoxInfoSelect.do";
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -195,8 +195,10 @@ public class adminBoxResister extends AppCompatActivity {
                             edt[i].setText(medarraylist.get(i)+"");
                         }
                     }
+
+
                     Log.v("tv_time",""+med_alarm);
-                    if(med_alarm == null){
+                    if(med_alarm.equals(" ")){
                         tv_time.setText("00:00");
                     }else{
                         tv_time.setText(med_alarm);
@@ -252,7 +254,7 @@ public class adminBoxResister extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/mediBoxUpdateW.do";
+        String url = "http://220.80.88.88:8081/controller/mediBoxUpdateW.do";
 
         // 요청시 필요한 문자열 객체 (전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {

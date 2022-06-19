@@ -30,8 +30,11 @@ public class FragementAdminSet extends Fragment {
                 SharedPreferencesManager.clearPreferences(getContext());
 
                 // 메인으로 이동
-                Intent intent = new Intent(getContext(), MainActivity.class);
+                Intent intent = new Intent(getContext(), adminMainActivity.class);
+                intent.putExtra("logout","logout");
                 startActivity(intent);
+
+
             }
         });
         

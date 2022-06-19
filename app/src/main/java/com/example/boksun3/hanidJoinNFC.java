@@ -71,7 +71,7 @@ public class hanidJoinNFC extends AppCompatActivity {
         // RequestQueue 객체 생성
         requestQueue = Volley.newRequestQueue(getApplicationContext());
         // 서버에 요청할 주소
-        String url = "http://211.227.224.240:8081/controller/joinUserInsert.do";
+        String url = "http://220.80.88.88:8081/controller/joinUserInsert.do";
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {

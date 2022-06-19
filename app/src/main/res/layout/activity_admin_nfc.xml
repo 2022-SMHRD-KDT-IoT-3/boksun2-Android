@@ -32,6 +32,7 @@
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="기타 상비약"
                 android:textAlignment="textEnd"
+                android:textColor="#ffffff"
                 android:textSize="35sp" />
 
             <TextView
@@ -41,6 +42,7 @@
                 android:layout_marginBottom="40sp"
                 android:fontFamily="@font/nanumbarunpenb"
                 android:text="등록"
+                android:textColor="#ffffff"
                 android:textSize="35dp" />
 
             <ImageView
@@ -93,7 +95,8 @@
             android:hint="  저장된 약 정보"
             android:inputType="textMultiLine"
             android:paddingLeft="5sp"
-            android:textSize="25sp" />
+            android:textColor="@color/black"
+            android:textSize="24sp" />
 
 
         <TextView
@@ -130,7 +133,8 @@
             android:gravity="center|left"
             android:inputType="textMultiLine"
             android:paddingLeft="5sp"
-            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textSize="24sp"
             tools:ignore="SpeakableTextPresentCheck" />
 
 

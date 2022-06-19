@@ -107,7 +107,7 @@
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="5sp"
             android:fontFamily="@font/nanumbarunpenb"
-            android:text="투약 방법"
+            android:text="복용 방법"
             android:textColor="#000000"
             android:textSize="15sp" />
 
@@ -131,7 +131,7 @@
             android:layout_marginLeft="15sp"
             android:layout_marginBottom="5sp"
             android:fontFamily="@font/nanumbarunpenb"
-            android:text="투약 횟수"
+            android:text="복용 횟수"
             android:textColor="#000000"
             android:textSize="15sp" />
 

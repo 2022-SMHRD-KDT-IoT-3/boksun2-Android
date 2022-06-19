@@ -131,7 +131,7 @@ public class FragementAdminLife extends Fragment {
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
 
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/userList.do";
+        String url = "http://220.80.88.88:8081/controller/userList.do";
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {

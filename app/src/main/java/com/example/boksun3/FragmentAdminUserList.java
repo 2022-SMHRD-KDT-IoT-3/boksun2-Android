@@ -131,6 +131,9 @@ public class FragmentAdminUserList extends Fragment  {
                 Log.v("idChoice", idChoice); // 아이디 확인
 //                btn_box_choice.setEnabled(true);
 //                btn_user_detail.setEnabled(true);
+
+                // 장애인 선택 정보
+                sendRequestUserChoice(idChoice);
             }
         });
 
@@ -141,8 +144,8 @@ public class FragmentAdminUserList extends Fragment  {
                 try {
                     if(!idChoice.isEmpty()){
                         //Log.v("idChoice", idChoice);
-                        Intent intent = new Intent(getActivity(),adminBox.class);
-                        intent.putExtra("user_id",idChoice);
+                        Intent intent = new Intent(getActivity(), adminBox.class);
+                        intent.putExtra("user_id", idChoice);
                         startActivity(intent);
                     }
                 }
@@ -160,7 +163,7 @@ public class FragmentAdminUserList extends Fragment  {
                     if(!idChoice.isEmpty()){
                         //Log.v("idChoice", idChoice);
                         Intent intent = new Intent(getActivity(), adminHandiInfo.class);
-                        intent.putExtra("user_id",idChoice);
+                        intent.putExtra("user_id", idChoice);
                         startActivity(intent);
                     }
                 }
@@ -202,6 +205,7 @@ public class FragmentAdminUserList extends Fragment  {
     }
 
 
+    // 장애인 목록
     public void sendRequestUserList() {
         jarrylist.clear();
 
@@ -209,7 +213,7 @@ public class FragmentAdminUserList extends Fragment  {
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
 
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/userList.do";
+        String url = "http://220.80.88.88:8081/controller/userList.do";
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -291,7 +295,7 @@ public class FragmentAdminUserList extends Fragment  {
         requestQueue = Volley.newRequestQueue(getActivity().getApplicationContext());
 
         // 서버에 요청할 주소
-        String url = "http://210.223.239.145:8081/controller/userChoice.do";
+        String url = "http://220.80.88.88:8081/controller/userChoice.do";
 
         // 요청 시 필요한 문자열 객체(전송방식, url, 리스너)
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -301,28 +305,24 @@ public class FragmentAdminUserList extends Fragment  {
                 Log.v("userChoice", response);
 
                 if (response.length() > 0) {
-                    Toast.makeText(getContext(), "정보 선택 성공", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), "정보 선택 성공", Toast.LENGTH_SHORT).show();
 
                     try {
                         JSONObject jsonObject = new JSONObject(response);
                         String user_id = jsonObject.optString("user_id");
                         String user_name = jsonObject.optString("user_name");
-                        String user_birthdate = jsonObject.optString("user_birthdate");
-                        String user_gender = jsonObject.optString("user_gender");
                         String user_joindate = jsonObject.optString("user_joindate");
-                        String user_addr = jsonObject.optString("user_addr");
-                        String user_phone = jsonObject.optString("user_phone");
-                        String worker_id = jsonObject.optString("worker_id");
                         String user_empn = jsonObject.optString("user_empn");
                         String user_access = jsonObject.optString("user_access");
+                        int i=0;
 
-                        //LoginCheck.uInfo = new UserVO(user_id, user_name, user_birthdate, user_gender, user_joindate, user_addr, user_phone, worker_id, user_empn, user_access);
+                        LoginCheck.uInfo = new UserVO(user_id, user_name, user_joindate, user_empn, user_access, i);
 
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 } else {
-                    Toast.makeText(getContext(), "정보 선택 실패", Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(getContext(), "정보 선택 실패", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
