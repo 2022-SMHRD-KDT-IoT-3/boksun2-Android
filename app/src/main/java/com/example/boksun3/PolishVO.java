@@ -1,24 +1,31 @@
 package com.example.boksun3;
 
 public class PolishVO {
-
+    private String notice_seq;
     private String notice_type;
     private String worker_id;
     private String notice_title;
     private String notice_content;
     private String notice_date;
-    private int notice_cnt;
+    private String notice_cnt;
+    private String notice_chk;
 
-    public PolishVO() {
-    }
-
-    public PolishVO(String notice_type, String worker_id, String notice_title, String notice_content, String notice_date, int notice_cnt) {
+    public PolishVO(String notice_seq, String notice_type, String worker_id, String notice_title, String notice_content, String notice_date, String notice_cnt, String notice_chk) {
+        this.notice_seq = notice_seq;
         this.notice_type = notice_type;
         this.worker_id = worker_id;
         this.notice_title = notice_title;
         this.notice_content = notice_content;
         this.notice_date = notice_date;
         this.notice_cnt = notice_cnt;
+        this.notice_chk = notice_chk;
+    }
+    public String getNotice_seq() {
+        return notice_seq;
+    }
+
+    public void setNotice_seq(String notice_seq) {
+        this.notice_seq = notice_type;
     }
 
     public String getNotice_type() {
@@ -61,11 +68,19 @@ public class PolishVO {
         this.notice_date = notice_date;
     }
 
-    public int getNotice_cnt() {
+    public String getNotice_cnt() {
         return notice_cnt;
     }
 
-    public void setNotice_cnt(int notice_cnt) {
+    public void setNotice_cnt(String notice_cnt) {
         this.notice_cnt = notice_cnt;
+    }
+
+    public String getNotice_chk() {
+        return notice_chk;
+    }
+
+    public void setNotice_chk(String notice_chk) {
+        this.notice_chk = notice_chk;
     }
 }

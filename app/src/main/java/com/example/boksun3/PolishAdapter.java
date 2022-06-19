@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.TextView;
@@ -21,11 +22,6 @@ public class PolishAdapter extends BaseAdapter {
         PolishData = polishdata;
     }
 
-    public void addItem(String notice_type, String worker_id, String notice_title,
-                        String notice_content, String notice_date, int notice_cnt){
-        PolishVO vo = new PolishVO(notice_type, worker_id, notice_title, notice_content, notice_date, notice_cnt);
-        items.add(vo);
-    }
     @Override
     public int getCount() {
         return PolishData.size();
@@ -49,18 +45,19 @@ public class PolishAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.row_polish_items, viewGroup, false);
         }
-        CheckBox chk_check = view.findViewById(R.id.chk_check);
+        TextView tv_seqpolish = view.findViewById(R.id.tv_seqpolish);
         TextView tv_title = view.findViewById(R.id.tv_title);
         TextView tv_contents = view.findViewById(R.id.tv_contents);
         TextView tv_polishDate = view.findViewById(R.id.tv_polishDate);
         TextView tv_cnt = view.findViewById(R.id.tv_cnt);
 
         vo = PolishData.get(position);
+
+        tv_seqpolish.setText(vo.getNotice_seq());
         tv_title.setText(vo.getNotice_title());
         tv_contents.setText(vo.getNotice_contents());
         tv_polishDate.setText(vo.getNotice_date());
-//        tv_cnt.setText(vo.getNotice_cnt());
-
+        tv_cnt.setText(vo.getNotice_cnt());
         return view;
     }
 }

@@ -96,7 +96,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/edt_contents"
+            android:id="@+id/edt_content"
             android:layout_width="match_parent"
             android:layout_height="85dp"
             android:layout_marginLeft="15sp"
@@ -171,6 +171,7 @@
         android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:background="@drawable/bg_list"
+        android:choiceMode="singleChoice"
         android:divider="#999999"
         android:dividerHeight="1dp"
         android:elevation="10dp"

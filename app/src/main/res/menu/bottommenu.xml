@@ -16,6 +16,10 @@
         android:icon="@drawable/ic_useradd_pdark"
         android:title="회원등록" />
     <item
+        android:id="@+id/policy"
+        android:icon="@android:drawable/stat_notify_chat"
+        android:title="복지알림" />
+    <item
         android:id="@+id/settings"
         android:icon="@drawable/ic_settings_sdark"
         android:title="환경설정" />
