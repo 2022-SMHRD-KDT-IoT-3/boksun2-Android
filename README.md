@@ -1,8 +1,6 @@
 
 ![header](https://capsule-render.vercel.app/api?type=Waving&color=D3A09F&height=250&section=header&text=Welcome!%20This%20is%20BOKSUN&fontSize=55&fontColor=FCEEE9)
-<div>
 <img src="https://user-images.githubusercontent.com/101301915/223323147-08c5d4e7-754d-46cf-81b5-d63907043c5a.png" width="350"/>
-</div>
 
 # 1. 프로젝트소개
 >     💊 IoT Medicine Smart Box Service 
