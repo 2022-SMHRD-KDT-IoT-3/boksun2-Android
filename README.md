@@ -52,5 +52,9 @@
 > 실제로는 비장애인과 동일하게 서비스를 이용하며 시력저하의 정도에 따라,색감으로 구별가능한 시력을 보유하고있다.<br>
 #### 하지만,시각장애인을 사용자를 고려한 서비스는 극히 일부이다.
 
-
-
+# 5. 시연영상
+>     🎥 시각장애인인터뷰 및 실제시연영상
+> * CLICK!(유튜브영상으로 이동)🔽
+<a href="https://youtu.be/PFden3IRWH0">
+<img src="https://user-images.githubusercontent.com/101301915/223380160-78b9c623-da0e-48cb-a2d4-f0aba4d6f784.png" width="800"/>
+</a>
