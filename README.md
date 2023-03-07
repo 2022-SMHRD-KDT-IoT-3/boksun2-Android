@@ -29,7 +29,7 @@
 > * 서버환경 : <img src="https://img.shields.io/badge/Apache Tomcat-F8DC75?style=flat&&logo=Apache Tomcat&logoColor=white">
 > * 데이터베이스 : <img src="https://img.shields.io/badge/Oracle-F80000?style=flat&logo=Oracle&logoColor=white">
 
-<img src="https://user-images.githubusercontent.com/101301915/223344775-4c43d24c-b795-4830-871e-3c8d75684a53.png" width="450"/><img src="https://user-images.githubusercontent.com/101301915/223351551-4d16637c-18f5-40b0-a235-94a8b8b8c0d6.png" width="450"/>
+<img src="https://user-images.githubusercontent.com/101301915/223344775-4c43d24c-b795-4830-871e-3c8d75684a53.png" width="400"/><img src="https://user-images.githubusercontent.com/101301915/223351551-4d16637c-18f5-40b0-a235-94a8b8b8c0d6.png" width="450"/>
 
 <img src = "https://user-images.githubusercontent.com/101301915/223351857-a0e85afe-4541-4b7d-8ce7-634a32c2fdfc.png" width="800"/>
 
