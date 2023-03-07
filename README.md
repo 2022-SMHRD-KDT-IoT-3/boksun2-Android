@@ -58,3 +58,10 @@
 <a href="https://youtu.be/PFden3IRWH0">
 <img src="https://user-images.githubusercontent.com/101301915/223380160-78b9c623-da0e-48cb-a2d4-f0aba4d6f784.png" width="800"/>
 </a>
+
+# 6. 팀원역할
+>      👥 BOKSUN TEAM!
+
+<img src="https://user-images.githubusercontent.com/101301915/223396865-2e7cbee5-c088-4222-a30c-3a13017cf059.png" width="800"/>
+
+![header](https://capsule-render.vercel.app/api?type=Rounded&color=D3A09F&height=120&section=header&text=THANKYOU!%20This%20is%20BOKSUN&fontSize=35&fontColor=FCEEE9)
